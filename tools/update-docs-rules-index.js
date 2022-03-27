@@ -40,7 +40,7 @@ function toRuleRow(rule) {
   ].join('')
   const link = `[${rule.ruleId}](${isOwnRule ? './' : UPSTREAM_BASE}${
     rule.name
-  }.md)`
+  }.${isOwnRule ? 'md' : 'html'})`
   const description = rule.meta.docs.description || '(no description)'
 
   return `| ${pugMark} | ${link} | ${description} | ${mark} |`
