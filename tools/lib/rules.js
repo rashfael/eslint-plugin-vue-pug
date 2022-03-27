@@ -8,10 +8,15 @@
 const fs = require('fs')
 const path = require('path')
 const IGNORED_RULES = require('./ignored-rules')
-const UPSTREAM_RULES_ROOT = path.resolve(__dirname, '../../eslint-plugin-vue/lib/rules')
-const UPSTREAM_TESTS_ROOT = path.resolve(__dirname, '../../tests/eslint-plugin-vue/rules')
+const UPSTREAM_RULES_ROOT = path.resolve(
+  __dirname,
+  '../../eslint-plugin-vue/lib/rules'
+)
+const UPSTREAM_TESTS_ROOT = path.resolve(
+  __dirname,
+  '../../tests/eslint-plugin-vue/rules'
+)
 const OWN_RULES_ROOT = path.resolve(__dirname, '../../lib/rules')
-
 
 const testedUpstreamRules = fs
   .readdirSync(UPSTREAM_TESTS_ROOT)
@@ -40,7 +45,7 @@ const upstreamRules = fs
   .readdirSync(UPSTREAM_RULES_ROOT)
   .filter((file) => path.extname(file) === '.js')
   .map((file) => path.basename(file, '.js'))
-  .filter((name) => !ownRules.some(rule => rule.name === name))
+  .filter((name) => !ownRules.some((rule) => rule.name === name))
   .map((name) => {
     const meta = { ...require(path.join(UPSTREAM_RULES_ROOT, name)).meta }
     if (meta.docs && !meta.docs.categories && meta.docs.category) {
@@ -57,7 +62,4 @@ const upstreamRules = fs
     }
   })
 
-module.exports = [
-  ...upstreamRules,
-  ...ownRules
-]
+module.exports = [...upstreamRules, ...ownRules]

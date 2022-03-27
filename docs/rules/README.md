@@ -371,7 +371,7 @@ For example:
 | 🚧 | [vue/static-class-names-order](https://eslint.vuejs.org/rules/static-class-names-order.md) | enforce static class names order | :wrench: |
 | 🚧 | [vue/v-for-delimiter-style](https://eslint.vuejs.org/rules/v-for-delimiter-style.md) | enforce `v-for` directive's delimiter style | :wrench: |
 | 🚧 | [vue/v-on-function-call](https://eslint.vuejs.org/rules/v-on-function-call.md) | enforce or forbid parentheses after method calls without arguments in `v-on` directives | :wrench: |
-| 🎁 | [vue-pug/component-name-in-template-casing](https://eslint.vuejs.org/rules/component-name-in-template-casing.md) | enforce specific casing for the component naming style in template | :wrench: |
+| 🤝 | [vue-pug/component-name-in-template-casing](./component-name-in-template-casing.md) | enforce specific casing for the component naming style in template | :wrench: |
 
 ### Extension Rules
 

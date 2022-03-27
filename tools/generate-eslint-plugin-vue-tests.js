@@ -173,7 +173,6 @@ for (const testname of ruleTests) {
 
   // some lazy replaces
   test = test
-    .replace('const rule = ', "const path = require('path')\nconst rule = ")
     .replaceAll(
       "require('../../../lib",
       "require('../../../eslint-plugin-vue/lib"
@@ -184,7 +183,7 @@ for (const testname of ruleTests) {
     )
     .replaceAll(
       /parserOptions: {(.*?)}/gs,
-      "parserOptions: { $1, templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}"
+      "parserOptions: {$1, templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}"
     )
     // .replaceAll(/(code|output): ''|^(?!.*\/\/)(.*?)(code|output):\s*(['"`])(.*?[^\\])\4/gs, (match, bad, lineStart, attribute, quotes, code) => {
     // 	if (!code) return match

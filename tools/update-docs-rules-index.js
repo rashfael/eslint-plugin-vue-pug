@@ -27,11 +27,11 @@ const uncategorizedExtensionRule = rules.filter(
 const deprecatedRules = rules.filter((rule) => rule.meta.deprecated)
 
 function toRuleRow(rule) {
-  const isOwnRule = rule.name.startsWith('vue-pug/')
+  const isOwnRule = rule.ruleId.startsWith('vue-pug/')
   let pugMark
-  if (rule.ignored) pugMark = '💤'
+  if (isOwnRule) pugMark = rule.meta.docs.dropIn ? '🤝' : '🐶'
+  else if (rule.ignored) pugMark = '💤'
   else if (rule.todo) pugMark = '🚧'
-  else if (isOwnRule) pugMark = rule.meta.docs.dropIn ? '🤝' : '🐶'
   else pugMark = '🎁'
   const mark = [
     rule.meta.fixable ? ':wrench:' : '',
