@@ -76,7 +76,6 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 💤 | [vue/no-export-in-script-setup](https://eslint.vuejs.org/rules/no-export-in-script-setup.html) | disallow `export` in `<script setup>` |  |
 | 💤 | [vue/no-lifecycle-after-await](https://eslint.vuejs.org/rules/no-lifecycle-after-await.html) | disallow asynchronously registered lifecycle hooks |  |
 | 🎁 | [vue/no-mutating-props](https://eslint.vuejs.org/rules/no-mutating-props.html) | disallow mutation of component props |  |
-| 🚧 | [vue/no-parsing-error](https://eslint.vuejs.org/rules/no-parsing-error.html) | disallow parsing errors in `<template>` |  |
 | 💤 | [vue/no-ref-as-operand](https://eslint.vuejs.org/rules/no-ref-as-operand.html) | disallow use of value wrapped by `ref()` (Composition API) as an operand | :wrench: |
 | 🎁 | [vue/no-reserved-keys](https://eslint.vuejs.org/rules/no-reserved-keys.html) | disallow overwriting reserved keys |  |
 | 💤 | [vue/no-reserved-props](https://eslint.vuejs.org/rules/no-reserved-props.html) | disallow reserved names in props |  |
@@ -85,7 +84,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 💤 | [vue/no-side-effects-in-computed-properties](https://eslint.vuejs.org/rules/no-side-effects-in-computed-properties.html) | disallow side effects in computed properties |  |
 | 🎁 | [vue/no-template-key](https://eslint.vuejs.org/rules/no-template-key.html) | disallow `key` attribute on `<template>` |  |
 | 🎁 | [vue/no-textarea-mustache](https://eslint.vuejs.org/rules/no-textarea-mustache.html) | disallow mustaches in `<textarea>` |  |
-| 🚧 | [vue/no-unused-components](https://eslint.vuejs.org/rules/no-unused-components.html) | disallow registering components that are not used inside templates |  |
+| 🎁 | [vue/no-unused-components](https://eslint.vuejs.org/rules/no-unused-components.html) | disallow registering components that are not used inside templates |  |
 | 🚧 | [vue/no-unused-vars](https://eslint.vuejs.org/rules/no-unused-vars.html) | disallow unused variable definitions of v-for directives or scope attributes | :bulb: |
 | 🚧 | [vue/no-use-v-if-with-v-for](https://eslint.vuejs.org/rules/no-use-v-if-with-v-for.html) | disallow use v-if on the same element as v-for |  |
 | 🚧 | [vue/no-useless-template-attributes](https://eslint.vuejs.org/rules/no-useless-template-attributes.html) | disallow useless attribute on `<template>` |  |
@@ -121,6 +120,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🚧 | [vue/valid-v-show](https://eslint.vuejs.org/rules/valid-v-show.html) | enforce valid `v-show` directives |  |
 | 🚧 | [vue/valid-v-slot](https://eslint.vuejs.org/rules/valid-v-slot.html) | enforce valid `v-slot` directives |  |
 | 🚧 | [vue/valid-v-text](https://eslint.vuejs.org/rules/valid-v-text.html) | enforce valid `v-text` directives |  |
+| 🤝 | [vue-pug/no-parsing-error](./no-parsing-error.md) | disallow parsing errors in `<template lang="pug">` |  |
 
 ## Priority B: Strongly Recommended (Improving Readability) <badge text="for Vue.js 3.x" vertical="middle">for Vue.js 3.x</badge>
 
@@ -202,14 +202,13 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/no-duplicate-attributes](https://eslint.vuejs.org/rules/no-duplicate-attributes.html) | disallow duplication of attributes |  |
 | 🎁 | [vue/no-multiple-template-root](https://eslint.vuejs.org/rules/no-multiple-template-root.html) | disallow adding multiple root nodes to the template |  |
 | 🎁 | [vue/no-mutating-props](https://eslint.vuejs.org/rules/no-mutating-props.html) | disallow mutation of component props |  |
-| 🚧 | [vue/no-parsing-error](https://eslint.vuejs.org/rules/no-parsing-error.html) | disallow parsing errors in `<template>` |  |
 | 🎁 | [vue/no-reserved-keys](https://eslint.vuejs.org/rules/no-reserved-keys.html) | disallow overwriting reserved keys |  |
 | 💤 | [vue/no-reserved-props](https://eslint.vuejs.org/rules/no-reserved-props.html) | disallow reserved names in props |  |
 | 💤 | [vue/no-shared-component-data](https://eslint.vuejs.org/rules/no-shared-component-data.html) | enforce component's data property to be a function | :wrench: |
 | 💤 | [vue/no-side-effects-in-computed-properties](https://eslint.vuejs.org/rules/no-side-effects-in-computed-properties.html) | disallow side effects in computed properties |  |
 | 🎁 | [vue/no-template-key](https://eslint.vuejs.org/rules/no-template-key.html) | disallow `key` attribute on `<template>` |  |
 | 🎁 | [vue/no-textarea-mustache](https://eslint.vuejs.org/rules/no-textarea-mustache.html) | disallow mustaches in `<textarea>` |  |
-| 🚧 | [vue/no-unused-components](https://eslint.vuejs.org/rules/no-unused-components.html) | disallow registering components that are not used inside templates |  |
+| 🎁 | [vue/no-unused-components](https://eslint.vuejs.org/rules/no-unused-components.html) | disallow registering components that are not used inside templates |  |
 | 🚧 | [vue/no-unused-vars](https://eslint.vuejs.org/rules/no-unused-vars.html) | disallow unused variable definitions of v-for directives or scope attributes | :bulb: |
 | 🚧 | [vue/no-use-v-if-with-v-for](https://eslint.vuejs.org/rules/no-use-v-if-with-v-for.html) | disallow use v-if on the same element as v-for |  |
 | 🚧 | [vue/no-useless-template-attributes](https://eslint.vuejs.org/rules/no-useless-template-attributes.html) | disallow useless attribute on `<template>` |  |
@@ -239,6 +238,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🚧 | [vue/valid-v-show](https://eslint.vuejs.org/rules/valid-v-show.html) | enforce valid `v-show` directives |  |
 | 🚧 | [vue/valid-v-slot](https://eslint.vuejs.org/rules/valid-v-slot.html) | enforce valid `v-slot` directives |  |
 | 🚧 | [vue/valid-v-text](https://eslint.vuejs.org/rules/valid-v-text.html) | enforce valid `v-text` directives |  |
+| 🤝 | [vue-pug/no-parsing-error](./no-parsing-error.md) | disallow parsing errors in `<template lang="pug">` |  |
 
 ## Priority B: Strongly Recommended (Improving Readability) <badge text="for Vue.js 2.x" vertical="middle" type="warn">for Vue.js 2.x</badge>
 
