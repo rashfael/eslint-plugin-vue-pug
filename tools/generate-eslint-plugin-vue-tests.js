@@ -43,7 +43,6 @@ const IGNORE_TESTS = [
   'max-attributes-per-line', // fixes break pug
   'max-len', // fixes break pug
   'no-child-content', // does not clean up whitespace, but this might be because we're not using HTMLWhitespace
-  'no-deprecated-slot-attribute', // fixing does not remove trailing commas
   'no-multi-spaces', // Error type should be HTMLIdentifier, found PugIdentifier
 
   // tests without template content rules

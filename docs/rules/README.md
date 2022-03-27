@@ -62,8 +62,8 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/no-deprecated-inline-template](https://eslint.vuejs.org/rules/no-deprecated-inline-template.html) | disallow using deprecated `inline-template` attribute (in Vue.js 3.0.0+) |  |
 | 🎁 | [vue/no-deprecated-props-default-this](https://eslint.vuejs.org/rules/no-deprecated-props-default-this.html) | disallow deprecated `this` access in props default function (in Vue.js 3.0.0+) |  |
 | 🎁 | [vue/no-deprecated-router-link-tag-prop](https://eslint.vuejs.org/rules/no-deprecated-router-link-tag-prop.html) | disallow using deprecated `tag` property on `RouterLink` (in Vue.js 3.0.0+) |  |
-| 🚧 | [vue/no-deprecated-scope-attribute](https://eslint.vuejs.org/rules/no-deprecated-scope-attribute.html) | disallow deprecated `scope` attribute (in Vue.js 2.5.0+) | :wrench: |
-| 🚧 | [vue/no-deprecated-slot-attribute](https://eslint.vuejs.org/rules/no-deprecated-slot-attribute.html) | disallow deprecated `slot` attribute (in Vue.js 2.6.0+) | :wrench: |
+| 🎁 | [vue/no-deprecated-scope-attribute](https://eslint.vuejs.org/rules/no-deprecated-scope-attribute.html) | disallow deprecated `scope` attribute (in Vue.js 2.5.0+) | :wrench: |
+| 🎁 | [vue/no-deprecated-slot-attribute](https://eslint.vuejs.org/rules/no-deprecated-slot-attribute.html) | disallow deprecated `slot` attribute (in Vue.js 2.6.0+) | :wrench: |
 | 🎁 | [vue/no-deprecated-slot-scope-attribute](https://eslint.vuejs.org/rules/no-deprecated-slot-scope-attribute.html) | disallow deprecated `slot-scope` attribute (in Vue.js 2.6.0+) | :wrench: |
 | 🎁 | [vue/no-deprecated-v-bind-sync](https://eslint.vuejs.org/rules/no-deprecated-v-bind-sync.html) | disallow use of deprecated `.sync` modifier on `v-bind` directive (in Vue.js 3.0.0+) | :wrench: |
 | 🎁 | [vue/no-deprecated-v-is](https://eslint.vuejs.org/rules/no-deprecated-v-is.html) | disallow deprecated `v-is` directive (in Vue.js 3.1.0+) | :wrench: |
