@@ -28,23 +28,35 @@ const extendsCategories = {
   'vue3-use-with-caution': 'vue3-recommended'
 }
 
+const disableUpstreamRules = ['component-name-in-template-casing']
+
 function formatRules(rules, categoryId) {
-  const obj = rules
-    .filter((rule) => rule.ruleId.startsWith('vue-pug/'))
-    .reduce((setting, rule) => {
-      let options = errorCategories.includes(categoryId) ? 'error' : 'warn'
-      const defaultOptions =
-        rule.meta && rule.meta.docs && rule.meta.docs.defaultOptions
-      if (defaultOptions) {
-        const v = categoryId.startsWith('vue3') ? 3 : 2
-        const defaultOption = defaultOptions[`vue${v}`]
-        if (defaultOption) {
-          options = [options, ...defaultOption]
-        }
-      }
-      setting[rule.ruleId] = options
+  let disabledRules = {}
+  if (categoryId === 'base') {
+    disabledRules = disableUpstreamRules.reduce((setting, rule) => {
+      setting[`vue/${rule}`] = 'off'
       return setting
     }, {})
+  }
+  const obj = {
+    ...disabledRules,
+    ...rules
+      .filter((rule) => rule.ruleId.startsWith('vue-pug/'))
+      .reduce((setting, rule) => {
+        let options = errorCategories.includes(categoryId) ? 'error' : 'warn'
+        const defaultOptions =
+          rule.meta && rule.meta.docs && rule.meta.docs.defaultOptions
+        if (defaultOptions) {
+          const v = categoryId.startsWith('vue3') ? 3 : 2
+          const defaultOption = defaultOptions[`vue${v}`]
+          if (defaultOption) {
+            options = [options, ...defaultOption]
+          }
+        }
+        setting[rule.ruleId] = options
+        return setting
+      }, {})
+  }
   return JSON.stringify(obj, null, 2)
 }
 
