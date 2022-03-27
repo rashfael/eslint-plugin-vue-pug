@@ -33,7 +33,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 |:---|:--------|:------------|:---|
 | 🎁 | [vue/comment-directive](https://eslint.vuejs.org/rules/comment-directive.html) | support comment-directives in `<template>` |  |
 | 💤 | [vue/jsx-uses-vars](https://eslint.vuejs.org/rules/jsx-uses-vars.html) | prevent variables used in JSX to be marked as unused |  |
-| 🚧 | [vue/script-setup-uses-vars](https://eslint.vuejs.org/rules/script-setup-uses-vars.html) | prevent `<script setup>` variables used in `<template>` to be marked as unused |  |
+| 🎁 | [vue/script-setup-uses-vars](https://eslint.vuejs.org/rules/script-setup-uses-vars.html) | prevent `<script setup>` variables used in `<template>` to be marked as unused |  |
 
 ## Priority A: Essential (Error Prevention) <badge text="for Vue.js 3.x" vertical="middle">for Vue.js 3.x</badge>
 
