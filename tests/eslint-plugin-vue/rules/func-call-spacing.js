@@ -7,7 +7,6 @@
 
 const { RuleTester, ESLint } = require('../../../eslint-plugin-vue/tests/eslint-compat')
 const semver = require('semver')
-const path = require('path')
 const rule = require('../../../eslint-plugin-vue/lib/rules/func-call-spacing')
 
 const tester = new RuleTester({

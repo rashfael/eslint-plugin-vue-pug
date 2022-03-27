@@ -9,7 +9,6 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const path = require('path')
 const rule = require('../../../eslint-plugin-vue/lib/rules/no-spaces-around-equal-signs-in-attribute')
 const RuleTester = require('eslint').RuleTester
 

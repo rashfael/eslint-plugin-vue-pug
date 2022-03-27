@@ -10,7 +10,6 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const path = require('path')
 const rule = require('../../../eslint-plugin-vue/lib/rules/attributes-order')
 const RuleTester = require('eslint').RuleTester
 

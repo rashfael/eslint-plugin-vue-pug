@@ -6,7 +6,6 @@
 
 'use strict'
 
-const path = require('path')
 const rule = require('../../../eslint-plugin-vue/lib/rules/no-restricted-class')
 const RuleTester = require('eslint').RuleTester
 

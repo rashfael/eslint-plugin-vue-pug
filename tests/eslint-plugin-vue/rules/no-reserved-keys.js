@@ -10,7 +10,6 @@
 // ------------------------------------------------------------------------------
 
 const semver = require('semver')
-const path = require('path')
 const rule = require('../../../eslint-plugin-vue/lib/rules/no-reserved-keys')
 const RuleTester = require('eslint').RuleTester
 
