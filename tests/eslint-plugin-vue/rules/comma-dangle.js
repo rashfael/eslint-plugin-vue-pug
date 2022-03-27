@@ -10,7 +10,10 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/comma-dangle')
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2018 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2018,
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 tester.run('comma-dangle', rule, {
@@ -100,7 +103,7 @@ button(@click=\`() => {
           line: 7
         }
       ]
-    },
+    }
     // {
     //   code: `
     //   <template lang="pug">button(:[[a,b,][1]]="a")</template>`,

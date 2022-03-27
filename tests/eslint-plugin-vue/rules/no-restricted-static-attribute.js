@@ -18,7 +18,10 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/no-restricted-static-
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2020 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2020,
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 tester.run('no-restricted-static-attribute', rule, {

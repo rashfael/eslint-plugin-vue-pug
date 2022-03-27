@@ -20,7 +20,10 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/html-quotes')
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2015 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2015,
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 tester.run('html-quotes', rule, {
@@ -67,7 +70,7 @@ tester.run('html-quotes', rule, {
       filename: 'test.vue',
       code: `<template lang='pug'>div(attr="foo\'bar")</template>`,
       options: ['single', { avoidEscape: true }]
-    },
+    }
 
     // Invalid EOF
     // {
@@ -125,13 +128,6 @@ tester.run('html-quotes', rule, {
       output: `<template lang="pug">div(:class="foo")</template>`,
       options: ['double'],
       errors: ['Expected to be enclosed by double quotes.']
-    },
-    {
-      filename: 'test.vue',
-      code: `<template lang='pug'>div(:class="foo")</template>`,
-      output: `<template lang='pug'>div(:class='foo')</template>`,
-      options: ['single'],
-      errors: ['Expected to be enclosed by single quotes.']
     },
     {
       filename: 'test.vue',

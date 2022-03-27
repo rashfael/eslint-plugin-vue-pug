@@ -130,7 +130,10 @@ ruleTester.run('no-reserved-keys', rule, {
           }
         })
       `,
-      parserOptions: {  ecmaVersion: 6 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}},
+      parserOptions: {
+        ecmaVersion: 6,
+        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+      },
       errors: [
         {
           message: "Key '$el' is reserved.",
@@ -149,7 +152,10 @@ ruleTester.run('no-reserved-keys', rule, {
           }
         })
       `,
-      parserOptions: {  ecmaVersion: 6 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}},
+      parserOptions: {
+        ecmaVersion: 6,
+        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+      },
       errors: [
         {
           message: "Key '$el' is reserved.",
@@ -168,7 +174,10 @@ ruleTester.run('no-reserved-keys', rule, {
           }
         })
       `,
-      parserOptions: {  ecmaVersion: 6 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}},
+      parserOptions: {
+        ecmaVersion: 6,
+        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+      },
       errors: [
         {
           message: "Key '$el' is reserved.",
@@ -185,7 +194,10 @@ ruleTester.run('no-reserved-keys', rule, {
           }
         })
       `,
-      parserOptions: {  ecmaVersion: 6 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}},
+      parserOptions: {
+        ecmaVersion: 6,
+        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+      },
       errors: [
         {
           message: "Keys starting with '_' are reserved in '_foo' group.",
@@ -204,7 +216,10 @@ ruleTester.run('no-reserved-keys', rule, {
           }
         })
       `,
-      parserOptions: {  ecmaVersion: 6 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}},
+      parserOptions: {
+        ecmaVersion: 6,
+        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+      },
       errors: [
         {
           message: "Keys starting with '_' are reserved in '_foo' group.",
@@ -221,7 +236,10 @@ ruleTester.run('no-reserved-keys', rule, {
           })
         })
       `,
-      parserOptions: {  ecmaVersion: 6 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}},
+      parserOptions: {
+        ecmaVersion: 6,
+        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+      },
       errors: [
         {
           message: "Keys starting with '_' are reserved in '_foo' group.",
@@ -238,7 +256,10 @@ ruleTester.run('no-reserved-keys', rule, {
           })
         })
       `,
-      parserOptions: {  ecmaVersion: 6 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}},
+      parserOptions: {
+        ecmaVersion: 6,
+        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+      },
       errors: [
         {
           message: "Keys starting with '_' are reserved in '_foo' group.",
@@ -256,7 +277,10 @@ ruleTester.run('no-reserved-keys', rule, {
         })
       `,
       options: [{ reserved: ['bar'], groups: ['foo'] }],
-      parserOptions: {  ecmaVersion: 6 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}},
+      parserOptions: {
+        ecmaVersion: 6,
+        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+      },
       errors: [
         {
           message: "Key 'bar' is reserved.",
@@ -274,7 +298,10 @@ ruleTester.run('no-reserved-keys', rule, {
       </script>
       `,
       parser: require.resolve('vue-eslint-parser'),
-      parserOptions: {  ecmaVersion: 6 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}},
+      parserOptions: {
+        ecmaVersion: 6,
+        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+      },
       errors: [
         {
           message: "Key '$el' is reserved.",
@@ -290,10 +317,11 @@ ruleTester.run('no-reserved-keys', rule, {
       </script>
       `,
       parser: require.resolve('vue-eslint-parser'),
-      parserOptions: { 
+      parserOptions: {
         ecmaVersion: 6,
-        parser: require.resolve('@typescript-eslint/parser')
-      , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}},
+        parser: require.resolve('@typescript-eslint/parser'),
+        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+      },
       errors: [
         {
           message: "Key '$el' is reserved.",
@@ -318,10 +346,13 @@ ruleTester.run('no-reserved-keys', rule, {
       </script>
       `,
             parser: require.resolve('vue-eslint-parser'),
-            parserOptions: { 
+            parserOptions: {
               ecmaVersion: 6,
-              parser: require.resolve('@typescript-eslint/parser')
-            , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}},
+              parser: require.resolve('@typescript-eslint/parser'),
+              templateTokenizer: {
+                pug: 'vue-eslint-parser-template-tokenizer-pug'
+              }
+            },
             errors: [
               {
                 message: "Key '$el' is reserved.",
@@ -340,10 +371,13 @@ ruleTester.run('no-reserved-keys', rule, {
       </script>
       `,
             parser: require.resolve('vue-eslint-parser'),
-            parserOptions: { 
+            parserOptions: {
               ecmaVersion: 6,
-              parser: require.resolve('@typescript-eslint/parser')
-            , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}},
+              parser: require.resolve('@typescript-eslint/parser'),
+              templateTokenizer: {
+                pug: 'vue-eslint-parser-template-tokenizer-pug'
+              }
+            },
             errors: [
               {
                 message: "Key '$el' is reserved.",

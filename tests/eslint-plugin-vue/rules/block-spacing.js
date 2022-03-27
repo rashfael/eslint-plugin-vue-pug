@@ -10,7 +10,10 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/block-spacing')
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2015 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2015,
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 tester.run('block-spacing', rule, {
@@ -104,8 +107,7 @@ tester.run('block-spacing', rule, {
     },
     {
       code: `<template lang="pug">div(:[(function(){return(1)})()]="(function(){return(1)})()")</template>`,
-      output:
-        `<template lang="pug">div(:[(function(){return(1)})()]="(function(){ return(1) })()")</template>`,
+      output: `<template lang="pug">div(:[(function(){return(1)})()]="(function(){ return(1) })()")</template>`,
       errors: [
         {
           messageId: 'missing',

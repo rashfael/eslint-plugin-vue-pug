@@ -20,7 +20,11 @@ const RuleTester = require('eslint').RuleTester
 
 const ruleTester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2020, sourceType: 'module' , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 ruleTester.run('no-deprecated-dollar-listeners-api', rule, {
   valid: [

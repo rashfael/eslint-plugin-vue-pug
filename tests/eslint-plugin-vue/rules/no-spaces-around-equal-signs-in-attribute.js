@@ -18,14 +18,13 @@ const RuleTester = require('eslint').RuleTester
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 tester.run('no-spaces-around-equal-signs-in-attribute', rule, {
   valid: [
-    `<template lang="pug">div(attr="value")</template>`,
-    // `<template lang="pug">div(attr=)</template>`,
-    `<template lang="pug">div(attr="value")</template>`,
     `<template lang="pug">div(attr="value")</template>`,
     `<template lang="pug">div(attr)</template>`,
     `<template lang="pug">div</template>`,

@@ -7,9 +7,10 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/no-deprecated-slot-sc
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: { 
-    ecmaVersion: 2015
-  , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2015,
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 tester.run('no-deprecated-slot-scope-attribute', rule, {
@@ -134,15 +135,15 @@ my-component
 </template>`,
       output: null,
       errors: ['`slot-scope` are deprecated.']
-    },
-//     {
-//       code: `<template lang="pug">
-// my-component
-//   template(slot-scope="{a}") {{a}}
-//   div
-// </template>`,
-//       output: null,
-//       errors: ['`slot-scope` are deprecated.']
-//     }
+    }
+    //     {
+    //       code: `<template lang="pug">
+    // my-component
+    //   template(slot-scope="{a}") {{a}}
+    //   div
+    // </template>`,
+    //       output: null,
+    //       errors: ['`slot-scope` are deprecated.']
+    //     }
   ]
 })

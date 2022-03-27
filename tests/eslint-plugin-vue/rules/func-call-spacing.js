@@ -5,13 +5,19 @@
  */
 'use strict'
 
-const { RuleTester, ESLint } = require('../../../eslint-plugin-vue/tests/eslint-compat')
+const {
+  RuleTester,
+  ESLint
+} = require('../../../eslint-plugin-vue/tests/eslint-compat')
 const semver = require('semver')
 const rule = require('../../../eslint-plugin-vue/lib/rules/func-call-spacing')
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2020 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2020,
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 tester.run('func-call-spacing', rule, {

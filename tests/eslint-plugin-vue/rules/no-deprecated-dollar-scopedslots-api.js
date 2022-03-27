@@ -20,7 +20,11 @@ const RuleTester = require('eslint').RuleTester
 
 const ruleTester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2020, sourceType: 'module' , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 ruleTester.run('no-deprecated-dollar-scopedslots-api', rule, {
   valid: [
@@ -67,31 +71,31 @@ ruleTester.run('no-deprecated-dollar-scopedslots-api', rule, {
       code: `
         <template lang="pug">div(foo="\$scopedSlots")</template>`
     },
-//     {
-//       filename: 'test.vue',
-//       code: `<template lang="pug">
-// div v-on=\`() => {
-//   function click ($scopedSlots) {
-//     fn(foo.$scopedSlots)
-//     fn($scopedSlots)
-//   }
-// }\`)
-// div(v-for="$scopedSlots in list")
-//   div(v-on="$scopedSlots")
-// VueComp
-//   template(v-slot="{$scopedSlots}")
-//     div(v-on="$scopedSlots")
-// </template>
-// <script>
-// export default {
-//   methods: {
-//     click ($scopedSlots) {
-//       foo.$scopedSlots
-//     }
-//   }
-// }
-// </script>`
-//     },
+    //     {
+    //       filename: 'test.vue',
+    //       code: `<template lang="pug">
+    // div v-on=\`() => {
+    //   function click ($scopedSlots) {
+    //     fn(foo.$scopedSlots)
+    //     fn($scopedSlots)
+    //   }
+    // }\`)
+    // div(v-for="$scopedSlots in list")
+    //   div(v-on="$scopedSlots")
+    // VueComp
+    //   template(v-slot="{$scopedSlots}")
+    //     div(v-on="$scopedSlots")
+    // </template>
+    // <script>
+    // export default {
+    //   methods: {
+    //     click ($scopedSlots) {
+    //       foo.$scopedSlots
+    //     }
+    //   }
+    // }
+    // </script>`
+    //     },
     {
       filename: 'test.vue',
       code: `

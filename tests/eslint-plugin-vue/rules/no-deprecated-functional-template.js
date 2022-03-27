@@ -18,7 +18,10 @@ const RuleTester = require('eslint').RuleTester
 
 const ruleTester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2019 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2019,
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 ruleTester.run('no-deprecated-functional-template', rule, {

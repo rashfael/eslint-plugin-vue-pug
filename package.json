@@ -9,7 +9,9 @@
     "debug": "mocha --inspect \"tests/**/*.js\" --reporter dot --timeout 60000",
     "docs:watch": "vuepress dev docs",
     "predocs:build": "npm run update",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "author": "",
   "license": "MIT",

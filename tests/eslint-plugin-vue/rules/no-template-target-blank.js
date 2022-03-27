@@ -19,7 +19,10 @@ const RuleTester = require('eslint').RuleTester
 
 const ruleTester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2015 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2015,
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 ruleTester.run('no-template-target-blank', rule, {
@@ -41,11 +44,15 @@ ruleTester.run('no-template-target-blank', rule, {
       code: `<template lang="pug">a(href="https://eslint.vuejs.org", target="_blank", rel="noopener") link</template>`,
       options: [{ allowReferrer: true }]
     },
-    { code: `<template lang="pug">a(href="/foo", target="_blank") link</template>` },
+    {
+      code: `<template lang="pug">a(href="/foo", target="_blank") link</template>`
+    },
     {
       code: `<template lang="pug">a(href="/foo", target="_blank", rel="noopener noreferrer") link</template>`
     },
-    { code: `<template lang="pug">a(href="foo/bar", target="_blank") link</template>` },
+    {
+      code: `<template lang="pug">a(href="foo/bar", target="_blank") link</template>`
+    },
     {
       code: `<template lang="pug">a(href="foo/bar", target="_blank", rel="noopener noreferrer") link</template>`
     },

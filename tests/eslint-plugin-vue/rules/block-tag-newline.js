@@ -11,7 +11,10 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/block-tag-newline')
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2015 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2015,
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 tester.run('block-tag-newline', rule, {
@@ -45,7 +48,7 @@ tester.run('block-tag-newline', rule, {
     {
       code: `<template lang="pug">div</template>\n<script>\nlet a\nlet b\n</script>`,
       options: [{ singleline: 'never' }]
-    },
+    }
     // invalid
     // `<!-- CONVERT ERROR -->Unexpected EOF in tag.<template><div a="></div>\n</template>\n<script>\nlet a</script>`
   ],
@@ -84,8 +87,7 @@ tester.run('block-tag-newline', rule, {
     },
     {
       code: `<template lang="pug">div\n</template>\n<script>let a\nlet b</script>`,
-      output:
-        `<template lang="pug">\ndiv\n</template>\n<script>\nlet a\nlet b\n</script>`,
+      output: `<template lang="pug">\ndiv\n</template>\n<script>\nlet a\nlet b\n</script>`,
       errors: [
         {
           message: "A line break is required after '<template>'.",
@@ -138,8 +140,7 @@ tester.run('block-tag-newline', rule, {
     },
     {
       code: `<template lang="pug">div \n</template>\n<script>let a</script>`,
-      output:
-        `<template lang="pug">\ndiv \n</template>\n<script>\nlet a\n</script>`,
+      output: `<template lang="pug">\ndiv \n</template>\n<script>\nlet a\n</script>`,
       options: [{ singleline: 'always', multiline: 'always' }],
       errors: [
         {
@@ -166,8 +167,7 @@ tester.run('block-tag-newline', rule, {
     },
     {
       code: `<template lang="pug">\n\ninput\n\n</template>\n<script>\n\nlet a\nlet b\n\n</script>`,
-      output:
-        `<template lang="pug">\ninput\n</template>\n<script>\nlet a\nlet b\n</script>`,
+      output: `<template lang="pug">\ninput\n</template>\n<script>\nlet a\nlet b\n</script>`,
       options: [{ singleline: 'always', multiline: 'always' }],
       errors: [
         {
@@ -198,8 +198,7 @@ tester.run('block-tag-newline', rule, {
     },
     {
       code: `<template lang="pug">\n\n\ninput\n\n</template>\n<script>\n\nlet a\nlet b\n\n\n</script>`,
-      output:
-        `<template lang="pug">\n\ninput\n\n</template>\n<script>\n\nlet a\nlet b\n\n</script>`,
+      output: `<template lang="pug">\n\ninput\n\n</template>\n<script>\n\nlet a\nlet b\n\n</script>`,
       options: [
         { singleline: 'always', multiline: 'always', maxEmptyLines: 1 }
       ],
@@ -220,8 +219,7 @@ tester.run('block-tag-newline', rule, {
     },
     {
       code: `<template lang="pug">input\n\n</template>\n<script>let a\nlet b\n\n\n</script><docs>\n#</docs>`,
-      output:
-        `<template lang="pug">input\n\n</template>\n<script>let a\nlet b</script><docs>\n#\n</docs>`,
+      output: `<template lang="pug">input\n\n</template>\n<script>let a\nlet b</script><docs>\n#\n</docs>`,
       options: [
         {
           blocks: {

@@ -17,7 +17,11 @@ const RuleTester = require('eslint').RuleTester
 
 const ruleTester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2015, sourceType: 'module' , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2015,
+    sourceType: 'module',
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 ruleTester.run('no-multiple-objects-in-class', rule, {

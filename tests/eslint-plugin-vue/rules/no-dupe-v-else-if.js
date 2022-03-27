@@ -11,10 +11,11 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/no-dupe-v-else-if')
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: { 
+  parserOptions: {
     ecmaVersion: 2019,
-    sourceType: 'module'
-  , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+    sourceType: 'module',
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 tester.run('no-dupe-v-else-if', rule, {

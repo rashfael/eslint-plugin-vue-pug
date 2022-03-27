@@ -18,7 +18,11 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/no-restricted-custom-
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2020, sourceType: 'module' , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 tester.run('no-restricted-custom-event', rule, {

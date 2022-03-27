@@ -10,7 +10,10 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/brace-style')
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2015 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2015,
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 tester.run('brace-style', rule, {
@@ -48,48 +51,48 @@ div(:attr=\`function foo() {
           line: 4
         }
       ]
-    },
-//     {
-//       code: `
-//         <template lang="pug">
-// div(:attr=\`function foo() { return true; }\`)
-// </template>`,
-//       output: `
-//         <template lang="pug">
-// div(:attr=\`function foo() {
-//  return true;
-// }\`)
-// </template>`,
-//       errors: [
-//         {
-//           message: 'Statement inside of curly braces should be on next line.',
-//           line: 3
-//         },
-//         {
-//           message:
-//             'Closing curly brace should be on the same line as opening curly brace or on the line after the previous block.',
-//           line: 3
-//         }
-//       ]
-//     },
-//     {
-//       code: `<template lang="pug">
-// div(:[(function(){return(1)})()]="(function(){return(1)})()")
-// </template>`,
-//       output: `<template lang="pug">
-// div(:[(function(){return(1)})()]=\`(function(){
-// return(1)
-// })()\`)
-// </template>`,
-//       errors: [
-//         {
-//           message: 'Statement inside of curly braces should be on next line.'
-//         },
-//         {
-//           message:
-//             'Closing curly brace should be on the same line as opening curly brace or on the line after the previous block.'
-//         }
-//       ]
-//     }
+    }
+    //     {
+    //       code: `
+    //         <template lang="pug">
+    // div(:attr=\`function foo() { return true; }\`)
+    // </template>`,
+    //       output: `
+    //         <template lang="pug">
+    // div(:attr=\`function foo() {
+    //  return true;
+    // }\`)
+    // </template>`,
+    //       errors: [
+    //         {
+    //           message: 'Statement inside of curly braces should be on next line.',
+    //           line: 3
+    //         },
+    //         {
+    //           message:
+    //             'Closing curly brace should be on the same line as opening curly brace or on the line after the previous block.',
+    //           line: 3
+    //         }
+    //       ]
+    //     },
+    //     {
+    //       code: `<template lang="pug">
+    // div(:[(function(){return(1)})()]="(function(){return(1)})()")
+    // </template>`,
+    //       output: `<template lang="pug">
+    // div(:[(function(){return(1)})()]=\`(function(){
+    // return(1)
+    // })()\`)
+    // </template>`,
+    //       errors: [
+    //         {
+    //           message: 'Statement inside of curly braces should be on next line.'
+    //         },
+    //         {
+    //           message:
+    //             'Closing curly brace should be on the same line as opening curly brace or on the line after the previous block.'
+    //         }
+    //       ]
+    //     }
   ]
 })

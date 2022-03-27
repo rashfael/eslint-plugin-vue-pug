@@ -19,10 +19,11 @@ const RuleTester = require('eslint').RuleTester
 
 const ruleTester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: { 
+  parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module'
-  , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+    sourceType: 'module',
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 ruleTester.run('no-duplicate-attr-inheritance', rule, {
   valid: [

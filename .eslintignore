@@ -6,3 +6,5 @@
 
 !.vuepress
 /docs/.vuepress/dist
+
+/eslint-plugin-vue

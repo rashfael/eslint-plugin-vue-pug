@@ -10,7 +10,10 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/no-extra-parens')
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2015 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2015,
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 tester.run('no-extra-parens', rule, {
@@ -130,14 +133,12 @@ button(:class=\`{
     },
     {
       code: `<template lang="pug">button {{ ((foo + bar | bitwise)) }}</template>`,
-      output:
-        `<template lang="pug">button {{ (foo + bar | bitwise) }}</template>`,
+      output: `<template lang="pug">button {{ (foo + bar | bitwise) }}</template>`,
       errors: [{ messageId: 'unexpected' }]
     },
     {
       code: `<template lang="pug">button {{ ((foo | bitwise)) | filter }}</template>`,
-      output:
-        `<template lang="pug">button {{ (foo | bitwise) | filter }}</template>`,
+      output: `<template lang="pug">button {{ (foo | bitwise) | filter }}</template>`,
       errors: [{ messageId: 'unexpected' }]
     },
     {

@@ -11,10 +11,11 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/custom-event-name-cas
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: { 
+  parserOptions: {
     ecmaVersion: 2020,
-    sourceType: 'module'
-  , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+    sourceType: 'module',
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 tester.run('custom-event-name-casing', rule, {

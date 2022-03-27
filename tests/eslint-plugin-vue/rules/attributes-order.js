@@ -19,7 +19,10 @@ const RuleTester = require('eslint').RuleTester
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2015 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2015,
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 tester.run('attributes-order', rule, {
   valid: [
@@ -63,10 +66,6 @@ tester.run('attributes-order', rule, {
     {
       filename: 'test.vue',
       code: `<template lang="pug">div(v-cloak)</template>`
-    },
-    {
-      filename: 'test.vue',
-      code: `<template lang="pug">div</template>`
     },
     {
       filename: 'test.vue',
@@ -337,8 +336,7 @@ tester.run('attributes-order', rule, {
     {
       filename: 'test.vue',
       code: `<template lang="pug">div(data-id="foo", aria-test="bar", is="custom", myProp="prop")</template>`,
-      output:
-        `<template lang="pug">div(data-id="foo", is="custom", aria-test="bar", myProp="prop")</template>`,
+      output: `<template lang="pug">div(data-id="foo", is="custom", aria-test="bar", myProp="prop")</template>`,
       errors: [
         {
           message: 'Attribute "is" should go before "aria-test".',
@@ -366,22 +364,10 @@ tester.run('attributes-order', rule, {
           ]
         }
       ],
-      output:
-        `<template lang="pug">div(ref="header", is="header", propone="prop")</template>`,
+      output: `<template lang="pug">div(ref="header", is="header", propone="prop")</template>`,
       errors: [
         {
           message: 'Attribute "is" should go before "propone".',
-          type: 'VAttribute'
-        }
-      ]
-    },
-    {
-      filename: 'test.vue',
-      code: `<template lang="pug">div(v-cloak, is="header")</template>`,
-      output: `<template lang="pug">div(is="header", v-cloak)</template>`,
-      errors: [
-        {
-          message: 'Attribute "is" should go before "v-cloak".',
           type: 'VAttribute'
         }
       ]
@@ -708,8 +694,7 @@ tester.run('attributes-order', rule, {
         }
       ],
       code: `<template lang="pug">div(ref="foo", v-slot="{ qux }", bar="baz")</template>`,
-      output:
-        `<template lang="pug">div(ref="foo", bar="baz", v-slot="{ qux }")</template>`,
+      output: `<template lang="pug">div(ref="foo", bar="baz", v-slot="{ qux }")</template>`,
       errors: [
         {
           message: 'Attribute "bar" should go before "v-slot".'
@@ -738,8 +723,7 @@ tester.run('attributes-order', rule, {
         }
       ],
       code: `<template lang="pug">div(bar="baz", ref="foo", v-slot="{ qux }")</template>`,
-      output:
-        `<template lang="pug">div(ref="foo", bar="baz", v-slot="{ qux }")</template>`,
+      output: `<template lang="pug">div(ref="foo", bar="baz", v-slot="{ qux }")</template>`,
       errors: [
         {
           message: 'Attribute "ref" should go before "bar".'

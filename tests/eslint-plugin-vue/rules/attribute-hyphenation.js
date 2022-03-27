@@ -20,7 +20,10 @@ const RuleTester = require('eslint').RuleTester
 
 const ruleTester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {  ecmaVersion: 2015 , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+  parserOptions: {
+    ecmaVersion: 2015,
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 })
 
 ruleTester.run('attribute-hyphenation', rule, {
@@ -118,8 +121,7 @@ div
 div
   custom(:my-prop="prop")
 </template>`,
-      output:
-        `<template lang="pug">
+      output: `<template lang="pug">
 div
   custom(:myProp="prop")
 </template>`,
@@ -138,8 +140,7 @@ div
 div
   custom(:MyProp="prop")
 </template>`,
-      output:
-        `<template lang="pug">
+      output: `<template lang="pug">
 div
   custom(:my-prop="prop")
 </template>`,
@@ -158,8 +159,7 @@ div
 div
   custom(v-bind:my-prop="prop")
 </template>`,
-      output:
-        `<template lang="pug">
+      output: `<template lang="pug">
 div
   custom(v-bind:myProp="prop")
 </template>`,
@@ -178,8 +178,7 @@ div
 div
   custom(v-bind:MyProp="prop")
 </template>`,
-      output:
-        `<template lang="pug">
+      output: `<template lang="pug">
 div
   custom(v-bind:my-prop="prop")
 </template>`,
@@ -198,8 +197,7 @@ div
 div
   custom(v-bind:MyProp="prop")
 </template>`,
-      output:
-        `<template lang="pug">
+      output: `<template lang="pug">
 div
   custom(v-bind:my-prop="prop")
 </template>`,
@@ -218,8 +216,7 @@ div
 div
   custom(v-bind:my-prop="prop", :second-prop="test")
 </template>`,
-      output:
-        `<template lang="pug">
+      output: `<template lang="pug">
 div
   custom(v-bind:my-prop="prop", :secondProp="test")
 </template>`,
@@ -238,8 +235,7 @@ div
 div
   custom(v-bind:myProp="prop", :secondProp="test")
 </template>`,
-      output:
-        `<template lang="pug">
+      output: `<template lang="pug">
 div
   custom(v-bind:my-prop="prop", :secondProp="test")
 </template>`,
@@ -258,8 +254,7 @@ div
 div
   custom(v-bind:propID="prop", :secondPropID="test")
 </template>`,
-      output:
-        `<template lang="pug">
+      output: `<template lang="pug">
 div
   custom(v-bind:prop-i-d="prop", :secondPropID="test")
 </template>`,
