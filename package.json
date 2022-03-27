@@ -1,8 +1,8 @@
 {
   "name": "eslint-plugin-vue-pug",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test:base": "mocha \"tests/**/*.js\" --reporter dot",
     "test": "nyc npm run test:base -- \"tests/integrations/*.js\" --timeout 60000",
@@ -11,7 +11,8 @@
     "predocs:build": "npm run update",
     "docs:build": "vuepress build docs",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "update": "node ./tools/update.js"
   },
   "author": "",
   "license": "MIT",
