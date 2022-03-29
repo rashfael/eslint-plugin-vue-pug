@@ -85,7 +85,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/no-template-key](https://eslint.vuejs.org/rules/no-template-key.html) | disallow `key` attribute on `<template>` |  |
 | 🎁 | [vue/no-textarea-mustache](https://eslint.vuejs.org/rules/no-textarea-mustache.html) | disallow mustaches in `<textarea>` |  |
 | 🎁 | [vue/no-unused-components](https://eslint.vuejs.org/rules/no-unused-components.html) | disallow registering components that are not used inside templates |  |
-| 🚧 | [vue/no-unused-vars](https://eslint.vuejs.org/rules/no-unused-vars.html) | disallow unused variable definitions of v-for directives or scope attributes | :bulb: |
+| 🎁 | [vue/no-unused-vars](https://eslint.vuejs.org/rules/no-unused-vars.html) | disallow unused variable definitions of v-for directives or scope attributes | :bulb: |
 | 🚧 | [vue/no-use-v-if-with-v-for](https://eslint.vuejs.org/rules/no-use-v-if-with-v-for.html) | disallow use v-if on the same element as v-for |  |
 | 🚧 | [vue/no-useless-template-attributes](https://eslint.vuejs.org/rules/no-useless-template-attributes.html) | disallow useless attribute on `<template>` |  |
 | 🚧 | [vue/no-v-for-template-key-on-child](https://eslint.vuejs.org/rules/no-v-for-template-key-on-child.html) | disallow key of `<template v-for>` placed on child elements |  |
@@ -209,7 +209,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/no-template-key](https://eslint.vuejs.org/rules/no-template-key.html) | disallow `key` attribute on `<template>` |  |
 | 🎁 | [vue/no-textarea-mustache](https://eslint.vuejs.org/rules/no-textarea-mustache.html) | disallow mustaches in `<textarea>` |  |
 | 🎁 | [vue/no-unused-components](https://eslint.vuejs.org/rules/no-unused-components.html) | disallow registering components that are not used inside templates |  |
-| 🚧 | [vue/no-unused-vars](https://eslint.vuejs.org/rules/no-unused-vars.html) | disallow unused variable definitions of v-for directives or scope attributes | :bulb: |
+| 🎁 | [vue/no-unused-vars](https://eslint.vuejs.org/rules/no-unused-vars.html) | disallow unused variable definitions of v-for directives or scope attributes | :bulb: |
 | 🚧 | [vue/no-use-v-if-with-v-for](https://eslint.vuejs.org/rules/no-use-v-if-with-v-for.html) | disallow use v-if on the same element as v-for |  |
 | 🚧 | [vue/no-useless-template-attributes](https://eslint.vuejs.org/rules/no-useless-template-attributes.html) | disallow useless attribute on `<template>` |  |
 | 🚧 | [vue/no-v-for-template-key](https://eslint.vuejs.org/rules/no-v-for-template-key.html) | disallow `key` attribute on `<template v-for>` |  |
