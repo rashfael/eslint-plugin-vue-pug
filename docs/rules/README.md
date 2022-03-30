@@ -115,7 +115,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/valid-v-memo](https://eslint.vuejs.org/rules/valid-v-memo.html) | enforce valid `v-memo` directives |  |
 | 🎁 | [vue/valid-v-model](https://eslint.vuejs.org/rules/valid-v-model.html) | enforce valid `v-model` directives |  |
 | 🎁 | [vue/valid-v-on](https://eslint.vuejs.org/rules/valid-v-on.html) | enforce valid `v-on` directives |  |
-| 🚧 | [vue/valid-v-once](https://eslint.vuejs.org/rules/valid-v-once.html) | enforce valid `v-once` directives |  |
+| 🎁 | [vue/valid-v-once](https://eslint.vuejs.org/rules/valid-v-once.html) | enforce valid `v-once` directives |  |
 | 🚧 | [vue/valid-v-pre](https://eslint.vuejs.org/rules/valid-v-pre.html) | enforce valid `v-pre` directives |  |
 | 🚧 | [vue/valid-v-show](https://eslint.vuejs.org/rules/valid-v-show.html) | enforce valid `v-show` directives |  |
 | 🚧 | [vue/valid-v-slot](https://eslint.vuejs.org/rules/valid-v-slot.html) | enforce valid `v-slot` directives |  |
@@ -233,7 +233,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/valid-v-if](https://eslint.vuejs.org/rules/valid-v-if.html) | enforce valid `v-if` directives |  |
 | 🎁 | [vue/valid-v-model](https://eslint.vuejs.org/rules/valid-v-model.html) | enforce valid `v-model` directives |  |
 | 🎁 | [vue/valid-v-on](https://eslint.vuejs.org/rules/valid-v-on.html) | enforce valid `v-on` directives |  |
-| 🚧 | [vue/valid-v-once](https://eslint.vuejs.org/rules/valid-v-once.html) | enforce valid `v-once` directives |  |
+| 🎁 | [vue/valid-v-once](https://eslint.vuejs.org/rules/valid-v-once.html) | enforce valid `v-once` directives |  |
 | 🚧 | [vue/valid-v-pre](https://eslint.vuejs.org/rules/valid-v-pre.html) | enforce valid `v-pre` directives |  |
 | 🚧 | [vue/valid-v-show](https://eslint.vuejs.org/rules/valid-v-show.html) | enforce valid `v-show` directives |  |
 | 🚧 | [vue/valid-v-slot](https://eslint.vuejs.org/rules/valid-v-slot.html) | enforce valid `v-slot` directives |  |
