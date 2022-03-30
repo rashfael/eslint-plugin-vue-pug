@@ -159,7 +159,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🚧 | [vue/require-explicit-emits](https://eslint.vuejs.org/rules/require-explicit-emits.html) | require `emits` option with name triggered by `$emit()` | :bulb: |
 | 🚧 | [vue/require-prop-types](https://eslint.vuejs.org/rules/require-prop-types.html) | require type definitions in props |  |
 | 🚧 | [vue/singleline-html-element-content-newline](https://eslint.vuejs.org/rules/singleline-html-element-content-newline.html) | require a line break before and after the contents of a singleline element | :wrench: |
-| 🚧 | [vue/v-bind-style](https://eslint.vuejs.org/rules/v-bind-style.html) | enforce `v-bind` directive style | :wrench: |
+| 🎁 | [vue/v-bind-style](https://eslint.vuejs.org/rules/v-bind-style.html) | enforce `v-bind` directive style | :wrench: |
 | 🎁 | [vue/v-on-event-hyphenation](https://eslint.vuejs.org/rules/v-on-event-hyphenation.html) | enforce v-on event naming style on custom components in template | :wrench: |
 | 🎁 | [vue/v-on-style](https://eslint.vuejs.org/rules/v-on-style.html) | enforce `v-on` directive style | :wrench: |
 | 🎁 | [vue/v-slot-style](https://eslint.vuejs.org/rules/v-slot-style.html) | enforce `v-slot` directive style | :wrench: |
@@ -276,7 +276,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🚧 | [vue/require-default-prop](https://eslint.vuejs.org/rules/require-default-prop.html) | require default value for props |  |
 | 🚧 | [vue/require-prop-types](https://eslint.vuejs.org/rules/require-prop-types.html) | require type definitions in props |  |
 | 🚧 | [vue/singleline-html-element-content-newline](https://eslint.vuejs.org/rules/singleline-html-element-content-newline.html) | require a line break before and after the contents of a singleline element | :wrench: |
-| 🚧 | [vue/v-bind-style](https://eslint.vuejs.org/rules/v-bind-style.html) | enforce `v-bind` directive style | :wrench: |
+| 🎁 | [vue/v-bind-style](https://eslint.vuejs.org/rules/v-bind-style.html) | enforce `v-bind` directive style | :wrench: |
 | 🎁 | [vue/v-on-style](https://eslint.vuejs.org/rules/v-on-style.html) | enforce `v-on` directive style | :wrench: |
 | 🎁 | [vue/v-slot-style](https://eslint.vuejs.org/rules/v-slot-style.html) | enforce `v-slot` directive style | :wrench: |
 
