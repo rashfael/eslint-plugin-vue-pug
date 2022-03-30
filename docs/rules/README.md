@@ -109,7 +109,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/valid-v-else-if](https://eslint.vuejs.org/rules/valid-v-else-if.html) | enforce valid `v-else-if` directives |  |
 | 🎁 | [vue/valid-v-else](https://eslint.vuejs.org/rules/valid-v-else.html) | enforce valid `v-else` directives |  |
 | 🎁 | [vue/valid-v-for](https://eslint.vuejs.org/rules/valid-v-for.html) | enforce valid `v-for` directives |  |
-| 🚧 | [vue/valid-v-html](https://eslint.vuejs.org/rules/valid-v-html.html) | enforce valid `v-html` directives |  |
+| 🎁 | [vue/valid-v-html](https://eslint.vuejs.org/rules/valid-v-html.html) | enforce valid `v-html` directives |  |
 | 🎁 | [vue/valid-v-if](https://eslint.vuejs.org/rules/valid-v-if.html) | enforce valid `v-if` directives |  |
 | 🚧 | [vue/valid-v-is](https://eslint.vuejs.org/rules/valid-v-is.html) | enforce valid `v-is` directives |  |
 | 🚧 | [vue/valid-v-memo](https://eslint.vuejs.org/rules/valid-v-memo.html) | enforce valid `v-memo` directives |  |
@@ -229,7 +229,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/valid-v-else-if](https://eslint.vuejs.org/rules/valid-v-else-if.html) | enforce valid `v-else-if` directives |  |
 | 🎁 | [vue/valid-v-else](https://eslint.vuejs.org/rules/valid-v-else.html) | enforce valid `v-else` directives |  |
 | 🎁 | [vue/valid-v-for](https://eslint.vuejs.org/rules/valid-v-for.html) | enforce valid `v-for` directives |  |
-| 🚧 | [vue/valid-v-html](https://eslint.vuejs.org/rules/valid-v-html.html) | enforce valid `v-html` directives |  |
+| 🎁 | [vue/valid-v-html](https://eslint.vuejs.org/rules/valid-v-html.html) | enforce valid `v-html` directives |  |
 | 🎁 | [vue/valid-v-if](https://eslint.vuejs.org/rules/valid-v-if.html) | enforce valid `v-if` directives |  |
 | 🚧 | [vue/valid-v-model](https://eslint.vuejs.org/rules/valid-v-model.html) | enforce valid `v-model` directives |  |
 | 🚧 | [vue/valid-v-on](https://eslint.vuejs.org/rules/valid-v-on.html) | enforce valid `v-on` directives |  |
