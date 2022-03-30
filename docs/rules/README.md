@@ -94,7 +94,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 💤 | [vue/require-prop-type-constructor](https://eslint.vuejs.org/rules/require-prop-type-constructor.html) | require prop type to be a constructor | :wrench: |
 | 💤 | [vue/require-render-return](https://eslint.vuejs.org/rules/require-render-return.html) | enforce render function to always return value |  |
 | 💤 | [vue/require-slots-as-functions](https://eslint.vuejs.org/rules/require-slots-as-functions.html) | enforce properties of `$slots` to be used as a function |  |
-| 🚧 | [vue/require-toggle-inside-transition](https://eslint.vuejs.org/rules/require-toggle-inside-transition.html) | require control the display of the content inside `<transition>` |  |
+| 🎁 | [vue/require-toggle-inside-transition](https://eslint.vuejs.org/rules/require-toggle-inside-transition.html) | require control the display of the content inside `<transition>` |  |
 | 🎁 | [vue/require-v-for-key](https://eslint.vuejs.org/rules/require-v-for-key.html) | require `v-bind:key` with `v-for` directives |  |
 | 🚧 | [vue/require-valid-default-prop](https://eslint.vuejs.org/rules/require-valid-default-prop.html) | enforce props default values to be valid |  |
 | 💤 | [vue/return-in-computed-property](https://eslint.vuejs.org/rules/return-in-computed-property.html) | enforce that a return statement is present in computed property |  |
