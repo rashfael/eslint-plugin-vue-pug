@@ -119,7 +119,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/valid-v-pre](https://eslint.vuejs.org/rules/valid-v-pre.html) | enforce valid `v-pre` directives |  |
 | 🎁 | [vue/valid-v-show](https://eslint.vuejs.org/rules/valid-v-show.html) | enforce valid `v-show` directives |  |
 | 🎁 | [vue/valid-v-slot](https://eslint.vuejs.org/rules/valid-v-slot.html) | enforce valid `v-slot` directives |  |
-| 🚧 | [vue/valid-v-text](https://eslint.vuejs.org/rules/valid-v-text.html) | enforce valid `v-text` directives |  |
+| 🎁 | [vue/valid-v-text](https://eslint.vuejs.org/rules/valid-v-text.html) | enforce valid `v-text` directives |  |
 | 🤝 | [vue-pug/no-parsing-error](./no-parsing-error.md) | disallow parsing errors in `<template lang="pug">` |  |
 
 ## Priority B: Strongly Recommended (Improving Readability) <badge text="for Vue.js 3.x" vertical="middle">for Vue.js 3.x</badge>
@@ -237,7 +237,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/valid-v-pre](https://eslint.vuejs.org/rules/valid-v-pre.html) | enforce valid `v-pre` directives |  |
 | 🎁 | [vue/valid-v-show](https://eslint.vuejs.org/rules/valid-v-show.html) | enforce valid `v-show` directives |  |
 | 🎁 | [vue/valid-v-slot](https://eslint.vuejs.org/rules/valid-v-slot.html) | enforce valid `v-slot` directives |  |
-| 🚧 | [vue/valid-v-text](https://eslint.vuejs.org/rules/valid-v-text.html) | enforce valid `v-text` directives |  |
+| 🎁 | [vue/valid-v-text](https://eslint.vuejs.org/rules/valid-v-text.html) | enforce valid `v-text` directives |  |
 | 🤝 | [vue-pug/no-parsing-error](./no-parsing-error.md) | disallow parsing errors in `<template lang="pug">` |  |
 
 ## Priority B: Strongly Recommended (Improving Readability) <badge text="for Vue.js 2.x" vertical="middle" type="warn">for Vue.js 2.x</badge>
