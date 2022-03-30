@@ -41,6 +41,7 @@ module.exports = [
   'one-component-per-file',
   'prefer-import-from-vue',
   'prop-name-casing',
+  'require-valid-default-prop',
   'require-direct-export',
   'require-expose',
   'require-name-property',
