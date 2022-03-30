@@ -152,7 +152,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🚧 | [vue/mustache-interpolation-spacing](https://eslint.vuejs.org/rules/mustache-interpolation-spacing.html) | enforce unified spacing in mustache interpolations | :wrench: |
 | 🚧 | [vue/no-multi-spaces](https://eslint.vuejs.org/rules/no-multi-spaces.html) | disallow multiple spaces | :wrench: |
 | 🎁 | [vue/no-spaces-around-equal-signs-in-attribute](https://eslint.vuejs.org/rules/no-spaces-around-equal-signs-in-attribute.html) | disallow spaces around equal signs in attribute | :wrench: |
-| 🚧 | [vue/no-template-shadow](https://eslint.vuejs.org/rules/no-template-shadow.html) | disallow variable declarations from shadowing variables declared in the outer scope |  |
+| 🎁 | [vue/no-template-shadow](https://eslint.vuejs.org/rules/no-template-shadow.html) | disallow variable declarations from shadowing variables declared in the outer scope |  |
 | 💤 | [vue/one-component-per-file](https://eslint.vuejs.org/rules/one-component-per-file.html) | enforce that each component should be in its own file |  |
 | 💤 | [vue/prop-name-casing](https://eslint.vuejs.org/rules/prop-name-casing.html) | enforce specific casing for the Prop name in Vue components |  |
 | 💤 | [vue/require-default-prop](https://eslint.vuejs.org/rules/require-default-prop.html) | require default value for props |  |
@@ -270,7 +270,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🚧 | [vue/mustache-interpolation-spacing](https://eslint.vuejs.org/rules/mustache-interpolation-spacing.html) | enforce unified spacing in mustache interpolations | :wrench: |
 | 🚧 | [vue/no-multi-spaces](https://eslint.vuejs.org/rules/no-multi-spaces.html) | disallow multiple spaces | :wrench: |
 | 🎁 | [vue/no-spaces-around-equal-signs-in-attribute](https://eslint.vuejs.org/rules/no-spaces-around-equal-signs-in-attribute.html) | disallow spaces around equal signs in attribute | :wrench: |
-| 🚧 | [vue/no-template-shadow](https://eslint.vuejs.org/rules/no-template-shadow.html) | disallow variable declarations from shadowing variables declared in the outer scope |  |
+| 🎁 | [vue/no-template-shadow](https://eslint.vuejs.org/rules/no-template-shadow.html) | disallow variable declarations from shadowing variables declared in the outer scope |  |
 | 💤 | [vue/one-component-per-file](https://eslint.vuejs.org/rules/one-component-per-file.html) | enforce that each component should be in its own file |  |
 | 💤 | [vue/prop-name-casing](https://eslint.vuejs.org/rules/prop-name-casing.html) | enforce specific casing for the Prop name in Vue components |  |
 | 💤 | [vue/require-default-prop](https://eslint.vuejs.org/rules/require-default-prop.html) | require default value for props |  |
