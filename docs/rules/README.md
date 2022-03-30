@@ -104,7 +104,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 💤 | [vue/valid-define-props](https://eslint.vuejs.org/rules/valid-define-props.html) | enforce valid `defineProps` compiler macro |  |
 | 💤 | [vue/valid-next-tick](https://eslint.vuejs.org/rules/valid-next-tick.html) | enforce valid `nextTick` function calls | :wrench::bulb: |
 | 🎁 | [vue/valid-template-root](https://eslint.vuejs.org/rules/valid-template-root.html) | enforce valid template root |  |
-| 🚧 | [vue/valid-v-bind](https://eslint.vuejs.org/rules/valid-v-bind.html) | enforce valid `v-bind` directives |  |
+| 🎁 | [vue/valid-v-bind](https://eslint.vuejs.org/rules/valid-v-bind.html) | enforce valid `v-bind` directives |  |
 | 🚧 | [vue/valid-v-cloak](https://eslint.vuejs.org/rules/valid-v-cloak.html) | enforce valid `v-cloak` directives |  |
 | 🎁 | [vue/valid-v-else-if](https://eslint.vuejs.org/rules/valid-v-else-if.html) | enforce valid `v-else-if` directives |  |
 | 🎁 | [vue/valid-v-else](https://eslint.vuejs.org/rules/valid-v-else.html) | enforce valid `v-else` directives |  |
@@ -224,7 +224,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 💤 | [vue/valid-next-tick](https://eslint.vuejs.org/rules/valid-next-tick.html) | enforce valid `nextTick` function calls | :wrench::bulb: |
 | 🎁 | [vue/valid-template-root](https://eslint.vuejs.org/rules/valid-template-root.html) | enforce valid template root |  |
 | 🚧 | [vue/valid-v-bind-sync](https://eslint.vuejs.org/rules/valid-v-bind-sync.html) | enforce valid `.sync` modifier on `v-bind` directives |  |
-| 🚧 | [vue/valid-v-bind](https://eslint.vuejs.org/rules/valid-v-bind.html) | enforce valid `v-bind` directives |  |
+| 🎁 | [vue/valid-v-bind](https://eslint.vuejs.org/rules/valid-v-bind.html) | enforce valid `v-bind` directives |  |
 | 🚧 | [vue/valid-v-cloak](https://eslint.vuejs.org/rules/valid-v-cloak.html) | enforce valid `v-cloak` directives |  |
 | 🎁 | [vue/valid-v-else-if](https://eslint.vuejs.org/rules/valid-v-else-if.html) | enforce valid `v-else-if` directives |  |
 | 🎁 | [vue/valid-v-else](https://eslint.vuejs.org/rules/valid-v-else.html) | enforce valid `v-else` directives |  |
