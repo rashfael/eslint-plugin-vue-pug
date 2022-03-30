@@ -89,7 +89,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/no-use-v-if-with-v-for](https://eslint.vuejs.org/rules/no-use-v-if-with-v-for.html) | disallow use v-if on the same element as v-for |  |
 | 🎁 | [vue/no-useless-template-attributes](https://eslint.vuejs.org/rules/no-useless-template-attributes.html) | disallow useless attribute on `<template>` |  |
 | 🎁 | [vue/no-v-for-template-key-on-child](https://eslint.vuejs.org/rules/no-v-for-template-key-on-child.html) | disallow key of `<template v-for>` placed on child elements |  |
-| 🚧 | [vue/no-watch-after-await](https://eslint.vuejs.org/rules/no-watch-after-await.html) | disallow asynchronously registered `watch` |  |
+| 💤 | [vue/no-watch-after-await](https://eslint.vuejs.org/rules/no-watch-after-await.html) | disallow asynchronously registered `watch` |  |
 | 🎁 | [vue/require-component-is](https://eslint.vuejs.org/rules/require-component-is.html) | require `v-bind:is` of `<component>` elements |  |
 | 💤 | [vue/require-prop-type-constructor](https://eslint.vuejs.org/rules/require-prop-type-constructor.html) | require prop type to be a constructor | :wrench: |
 | 💤 | [vue/require-render-return](https://eslint.vuejs.org/rules/require-render-return.html) | enforce render function to always return value |  |

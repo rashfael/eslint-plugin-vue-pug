@@ -37,6 +37,7 @@ module.exports = [
   'no-setup-props-destructure',
   'no-shared-component-data',
   'no-side-effects-in-computed-properties',
+  'no-watch-after-await',
   'one-component-per-file',
   'prefer-import-from-vue',
   'prop-name-casing',
