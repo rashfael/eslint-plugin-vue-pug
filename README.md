@@ -48,3 +48,7 @@ there are some rules relying on HTML* tokens, like `no-multi-spaces`.
 ### template attributes
 
 having both lang and src attributes on template, what does that even do?
+
+### HTML rules
+
+Rules for HTML don't apply to pug, but do not seem to interfere with pug templates since they check `HTML*` tokens, which we don't emit. Should we still disable those rules or leave them on?

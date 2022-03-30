@@ -13,7 +13,7 @@ sidebarDepth: 0
 
   🤝 `vue-pug/*` drop-in rule available
 
-  💤 does not affect templates
+  💤 does not affect pug templates
 
   🐶 new rule specific to pug
 
@@ -141,8 +141,8 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/attribute-hyphenation](https://eslint.vuejs.org/rules/attribute-hyphenation.html) | enforce attribute naming style on custom components in template | :wrench: |
 | 💤 | [vue/component-definition-name-casing](https://eslint.vuejs.org/rules/component-definition-name-casing.html) | enforce specific casing for component definition name | :wrench: |
 | 🎁 | [vue/first-attribute-linebreak](https://eslint.vuejs.org/rules/first-attribute-linebreak.html) | enforce the location of first attribute | :wrench: |
-| 🚧 | [vue/html-closing-bracket-newline](https://eslint.vuejs.org/rules/html-closing-bracket-newline.html) | require or disallow a line break before tag's closing brackets | :wrench: |
-| 🚧 | [vue/html-closing-bracket-spacing](https://eslint.vuejs.org/rules/html-closing-bracket-spacing.html) | require or disallow a space before tag's closing brackets | :wrench: |
+| 💤 | [vue/html-closing-bracket-newline](https://eslint.vuejs.org/rules/html-closing-bracket-newline.html) | require or disallow a line break before tag's closing brackets | :wrench: |
+| 💤 | [vue/html-closing-bracket-spacing](https://eslint.vuejs.org/rules/html-closing-bracket-spacing.html) | require or disallow a space before tag's closing brackets | :wrench: |
 | 🚧 | [vue/html-end-tags](https://eslint.vuejs.org/rules/html-end-tags.html) | enforce end tag style | :wrench: |
 | 🚧 | [vue/html-indent](https://eslint.vuejs.org/rules/html-indent.html) | enforce consistent indentation in `<template>` | :wrench: |
 | 🎁 | [vue/html-quotes](https://eslint.vuejs.org/rules/html-quotes.html) | enforce quotes style of HTML attributes | :wrench: |
@@ -259,8 +259,8 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/attribute-hyphenation](https://eslint.vuejs.org/rules/attribute-hyphenation.html) | enforce attribute naming style on custom components in template | :wrench: |
 | 💤 | [vue/component-definition-name-casing](https://eslint.vuejs.org/rules/component-definition-name-casing.html) | enforce specific casing for component definition name | :wrench: |
 | 🎁 | [vue/first-attribute-linebreak](https://eslint.vuejs.org/rules/first-attribute-linebreak.html) | enforce the location of first attribute | :wrench: |
-| 🚧 | [vue/html-closing-bracket-newline](https://eslint.vuejs.org/rules/html-closing-bracket-newline.html) | require or disallow a line break before tag's closing brackets | :wrench: |
-| 🚧 | [vue/html-closing-bracket-spacing](https://eslint.vuejs.org/rules/html-closing-bracket-spacing.html) | require or disallow a space before tag's closing brackets | :wrench: |
+| 💤 | [vue/html-closing-bracket-newline](https://eslint.vuejs.org/rules/html-closing-bracket-newline.html) | require or disallow a line break before tag's closing brackets | :wrench: |
+| 💤 | [vue/html-closing-bracket-spacing](https://eslint.vuejs.org/rules/html-closing-bracket-spacing.html) | require or disallow a space before tag's closing brackets | :wrench: |
 | 🚧 | [vue/html-end-tags](https://eslint.vuejs.org/rules/html-end-tags.html) | enforce end tag style | :wrench: |
 | 🚧 | [vue/html-indent](https://eslint.vuejs.org/rules/html-indent.html) | enforce consistent indentation in `<template>` | :wrench: |
 | 🎁 | [vue/html-quotes](https://eslint.vuejs.org/rules/html-quotes.html) | enforce quotes style of HTML attributes | :wrench: |

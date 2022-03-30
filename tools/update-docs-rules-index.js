@@ -150,7 +150,7 @@ sidebarDepth: 0
 
   🤝 \`vue-pug/*\` drop-in rule available
 
-  💤 does not affect templates
+  💤 does not affect pug templates
 
   🐶 new rule specific to pug
 

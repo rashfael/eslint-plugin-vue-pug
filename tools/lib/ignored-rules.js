@@ -52,5 +52,15 @@ module.exports = [
   'return-in-emits-validator',
   'valid-define-emits',
   'valid-define-props',
-  'valid-next-tick'
+  'valid-next-tick',
+  // HTML-specific rules
+  'html-closing-bracket-spacing',
+  'html-closing-bracket-newline',
+  // 'html-comment-content-newline',
+  // 'html-comment-content-spacing',
+  // 'html-comment-indent',
+  // 'html-end-tags', // this might actually create problems https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/rules/html-end-tags.js
+  // 'html-indent', // mixed indentation is actually a pug parsing error, but this rule does a lot more
+  // 'html-self-closing', // might explode since it checks svgs and things?
+  // 'multiline-html-element-content-newline'
 ]
