@@ -4,6 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
+    "new": "node tools/new-rule.js",
     "test:base": "mocha \"tests/**/*.js\" --reporter dot",
     "test": "nyc npm run test:base -- \"tests/integrations/*.js\" --timeout 60000",
     "debug": "mocha --inspect \"tests/**/*.js\" --reporter dot --timeout 60000",

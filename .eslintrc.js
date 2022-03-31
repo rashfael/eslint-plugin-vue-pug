@@ -138,7 +138,7 @@ module.exports = {
         'eslint-plugin/require-meta-docs-url': [
           'error',
           {
-            pattern: `https://eslint.vuejs.org/rules/{{name}}.html`
+            pattern: `https://eslint-plugin-vue-pug.rash.codes/rules/{{name}}.html`
           }
         ],
         'eslint-plugin/require-meta-has-suggestions': 'error',
