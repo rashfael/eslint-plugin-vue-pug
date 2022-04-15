@@ -38,7 +38,7 @@ tester.run('no-parsing-error', rule, {
     {
       filename: 'test.vue',
       code: `<template lang="pug">div(a))</template>`,
-      errors: ['Parsing error: unexpected text ")"']
+      errors: ['Parsing error: unexpected text ")".']
     }
     // {
     //   filename: 'test.vue',
