@@ -1,20 +1,38 @@
 # eslint-plugin-vue-pug
 
-Extends [eslint-plugin-vue](https://eslint.vuejs.org/) to support pug templates
+Extends [eslint-plugin-vue](https://eslint.vuejs.org/) to support pug templates.
 
 ## Installation
 
 ```sh
-npm install --save-dev eslint eslint-plugin-vue eslint-plugin-vue-pug
+npm install --save-dev eslint@8 eslint-plugin-vue eslint-plugin-vue-pug vue-eslint-parser@next vue-eslint-parser-template-tokenizer-pug
+
 ```
 
 ## Usage
 
-Most [eslint-plugin-vue](https://eslint.vuejs.org/) work out of the box with just configuring 
+Most [eslint-plugin-vue](https://eslint.vuejs.org/) rules work out of the box with just adding this plugin in your eslint config:
+
+```js
+module.exports = {
+  extends: [
+    'plugin:vue/vue3-recommended',
+    'plugin:vue-pug/vue3-recommended'
+  ]
+}
+```
 
 If you are changing `parserOptions` yourself, add `templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }` to `parserOptions`.
 
-## Notes
+
+## Supported Syntax
+
+This plugin only lints pug syntax that directly corresponds to html syntax.
+Pug syntax that is not supported includes mixins, js code, loops, if/else, case, include/extends.
+The linter will just skip those features, which means that tags inside mixins will **not** be linted.
+The rule [no-pug-control-flow](docs/rules/no-pug-control-flow.md) will help you to avoid unsupported pug syntax.
+
+## Open Questions
 
 ### Comment Directive
 
