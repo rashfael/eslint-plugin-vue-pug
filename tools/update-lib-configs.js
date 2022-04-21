@@ -28,7 +28,12 @@ const extendsCategories = {
   'vue3-use-with-caution': 'vue3-recommended'
 }
 
-const disableUpstreamRules = ['component-name-in-template-casing']
+const disableUpstreamRules = [
+  'component-name-in-template-casing',
+  'html-self-closing',
+  'multiline-html-element-content-newline',
+  'singleline-html-element-content-newline'
+]
 
 function formatRules(rules, categoryId) {
   let disabledRules = {}

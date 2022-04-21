@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-vue-pug",
   "version": "0.4.0",
-  "description": "",
+  "description": "linting your pug templates in vue single file components",
   "main": "lib/index.js",
   "scripts": {
     "new": "node tools/new-rule.js",
@@ -15,7 +15,9 @@
     "lint:fix": "eslint . --fix",
     "update": "node ./tools/update.js"
   },
-  "author": "",
+  "author": "rash <rash@rash.codes> (https://rash.codes)",
+  "homepage": "https://github.com/rashfael/eslint-plugin-vue-pug",
+  "repository": "github:rashfael/eslint-plugin-vue-pug",
   "license": "MIT",
   "devDependencies": {
     "@typescript-eslint/parser": "^5.16.0",
@@ -37,7 +39,7 @@
     "xhtml2pug": "^3.2.1"
   },
   "dependencies": {
-    "vue-eslint-parser-template-tokenizer-pug": "^0.4.0"
+    "vue-eslint-parser-template-tokenizer-pug": "^0.4.1"
   },
   "peerDependencies": {
     "eslint-plugin-vue": "^8.5.0"
