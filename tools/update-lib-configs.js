@@ -31,6 +31,7 @@ const extendsCategories = {
 const disableUpstreamRules = [
   'component-name-in-template-casing',
   'html-self-closing',
+  'html-end-tags',
   'multiline-html-element-content-newline',
   'singleline-html-element-content-newline'
 ]
