@@ -22,14 +22,11 @@ module.exports = {
 }
 ```
 
-If you are changing `parserOptions` yourself, add `templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }` to `parserOptions`.
-
 ## Limitations
 
 - [pug-lexer](https://github.com/pugjs/pug/blob/master/packages/pug-lexer) seems to convert windows-style CRLF line endings to LF line endings, which may break token position and will give you errors. Make sure to [only use LF line endings](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings).
 
-
-## Supported Syntax
+### Supported Syntax
 
 This plugin only lints pug syntax that directly corresponds to html syntax.
 Pug syntax that is not supported includes mixins, js code, loops, if/else, case, include/extends.
