@@ -5,8 +5,7 @@ Extends [eslint-plugin-vue](https://eslint.vuejs.org/) to support pug templates.
 ## Installation
 
 ```sh
-npm install --save-dev eslint@8 eslint-plugin-vue eslint-plugin-vue-pug vue-eslint-parser@next vue-eslint-parser-template-tokenizer-pug
-
+npm install --save-dev eslint@8 eslint-plugin-vue eslint-plugin-vue-pug
 ```
 
 ## Usage
