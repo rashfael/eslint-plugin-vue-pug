@@ -37,7 +37,6 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 |:---|:--------|:------------|:---|
 | 🎁 | [vue/comment-directive](https://eslint.vuejs.org/rules/comment-directive.html) | support comment-directives in `<template>` |  |
 | 💤 | [vue/jsx-uses-vars](https://eslint.vuejs.org/rules/jsx-uses-vars.html) | prevent variables used in JSX to be marked as unused |  |
-| 🎁 | [vue/script-setup-uses-vars](https://eslint.vuejs.org/rules/script-setup-uses-vars.html) | prevent `<script setup>` variables used in `<template>` to be marked as unused |  |
 
 ## Priority A: Essential (Error Prevention) <badge text="for Vue.js 3.x" vertical="middle">for Vue.js 3.x</badge>
 
@@ -54,6 +53,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 💤 | [vue/multi-word-component-names](https://eslint.vuejs.org/rules/multi-word-component-names.html) | require component names to be always multi-word |  |
 | 💤 | [vue/no-arrow-functions-in-watch](https://eslint.vuejs.org/rules/no-arrow-functions-in-watch.html) | disallow using arrow functions to define watcher |  |
 | 💤 | [vue/no-async-in-computed-properties](https://eslint.vuejs.org/rules/no-async-in-computed-properties.html) | disallow asynchronous actions in computed properties |  |
+| 🚧 | [vue/no-child-content](https://eslint.vuejs.org/rules/no-child-content.html) | disallow element's child contents which would be overwritten by a directive like `v-html` or `v-text` | :bulb: |
 | 💤 | [vue/no-computed-properties-in-data](https://eslint.vuejs.org/rules/no-computed-properties-in-data.html) | disallow accessing computed properties in `data`. |  |
 | 💤 | [vue/no-deprecated-data-object-declaration](https://eslint.vuejs.org/rules/no-deprecated-data-object-declaration.html) | disallow using deprecated object declaration on data (in Vue.js 3.0.0+) | :wrench: |
 | 💤 | [vue/no-deprecated-destroyed-lifecycle](https://eslint.vuejs.org/rules/no-deprecated-destroyed-lifecycle.html) | disallow using deprecated `destroyed` and `beforeDestroy` lifecycle hooks (in Vue.js 3.0.0+) | :wrench: |
@@ -78,9 +78,11 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/no-dupe-v-else-if](https://eslint.vuejs.org/rules/no-dupe-v-else-if.html) | disallow duplicate conditions in `v-if` / `v-else-if` chains |  |
 | 🎁 | [vue/no-duplicate-attributes](https://eslint.vuejs.org/rules/no-duplicate-attributes.html) | disallow duplication of attributes |  |
 | 💤 | [vue/no-export-in-script-setup](https://eslint.vuejs.org/rules/no-export-in-script-setup.html) | disallow `export` in `<script setup>` |  |
+| 💤 | [vue/no-expose-after-await](https://eslint.vuejs.org/rules/no-expose-after-await.html) | disallow asynchronously registered `expose` |  |
 | 💤 | [vue/no-lifecycle-after-await](https://eslint.vuejs.org/rules/no-lifecycle-after-await.html) | disallow asynchronously registered lifecycle hooks |  |
 | 🎁 | [vue/no-mutating-props](https://eslint.vuejs.org/rules/no-mutating-props.html) | disallow mutation of component props |  |
 | 💤 | [vue/no-ref-as-operand](https://eslint.vuejs.org/rules/no-ref-as-operand.html) | disallow use of value wrapped by `ref()` (Composition API) as an operand | :wrench: |
+| 🎁 | [vue/no-reserved-component-names](https://eslint.vuejs.org/rules/no-reserved-component-names.html) | disallow the use of reserved names in component definitions |  |
 | 🎁 | [vue/no-reserved-keys](https://eslint.vuejs.org/rules/no-reserved-keys.html) | disallow overwriting reserved keys |  |
 | 💤 | [vue/no-reserved-props](https://eslint.vuejs.org/rules/no-reserved-props.html) | disallow reserved names in props |  |
 | 💤 | [vue/no-setup-props-destructure](https://eslint.vuejs.org/rules/no-setup-props-destructure.html) | disallow destructuring of `props` passed to `setup` |  |
@@ -90,10 +92,13 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/no-textarea-mustache](https://eslint.vuejs.org/rules/no-textarea-mustache.html) | disallow mustaches in `<textarea>` |  |
 | 🎁 | [vue/no-unused-components](https://eslint.vuejs.org/rules/no-unused-components.html) | disallow registering components that are not used inside templates |  |
 | 🎁 | [vue/no-unused-vars](https://eslint.vuejs.org/rules/no-unused-vars.html) | disallow unused variable definitions of v-for directives or scope attributes | :bulb: |
+| 🎁 | [vue/no-use-computed-property-like-method](https://eslint.vuejs.org/rules/no-use-computed-property-like-method.html) | disallow use computed property like method |  |
 | 🎁 | [vue/no-use-v-if-with-v-for](https://eslint.vuejs.org/rules/no-use-v-if-with-v-for.html) | disallow use v-if on the same element as v-for |  |
 | 🎁 | [vue/no-useless-template-attributes](https://eslint.vuejs.org/rules/no-useless-template-attributes.html) | disallow useless attribute on `<template>` |  |
 | 🎁 | [vue/no-v-for-template-key-on-child](https://eslint.vuejs.org/rules/no-v-for-template-key-on-child.html) | disallow key of `<template v-for>` placed on child elements |  |
+| 🚧 | [vue/no-v-text-v-html-on-component](https://eslint.vuejs.org/rules/no-v-text-v-html-on-component.html) | disallow v-text / v-html on component |  |
 | 💤 | [vue/no-watch-after-await](https://eslint.vuejs.org/rules/no-watch-after-await.html) | disallow asynchronously registered `watch` |  |
+| 💤 | [vue/prefer-import-from-vue](https://eslint.vuejs.org/rules/prefer-import-from-vue.html) | enforce import from 'vue' instead of import from '@vue/*' | :wrench: |
 | 🎁 | [vue/require-component-is](https://eslint.vuejs.org/rules/require-component-is.html) | require `v-bind:is` of `<component>` elements |  |
 | 💤 | [vue/require-prop-type-constructor](https://eslint.vuejs.org/rules/require-prop-type-constructor.html) | require prop type to be a constructor | :wrench: |
 | 💤 | [vue/require-render-return](https://eslint.vuejs.org/rules/require-render-return.html) | enforce render function to always return value |  |
@@ -104,6 +109,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 💤 | [vue/return-in-computed-property](https://eslint.vuejs.org/rules/return-in-computed-property.html) | enforce that a return statement is present in computed property |  |
 | 💤 | [vue/return-in-emits-validator](https://eslint.vuejs.org/rules/return-in-emits-validator.html) | enforce that a return statement is present in emits validator |  |
 | 🎁 | [vue/use-v-on-exact](https://eslint.vuejs.org/rules/use-v-on-exact.html) | enforce usage of `exact` modifier on `v-on` |  |
+| 🚧 | [vue/valid-attribute-name](https://eslint.vuejs.org/rules/valid-attribute-name.html) | require valid attribute names |  |
 | 💤 | [vue/valid-define-emits](https://eslint.vuejs.org/rules/valid-define-emits.html) | enforce valid `defineEmits` compiler macro |  |
 | 💤 | [vue/valid-define-props](https://eslint.vuejs.org/rules/valid-define-props.html) | enforce valid `defineProps` compiler macro |  |
 | 💤 | [vue/valid-next-tick](https://eslint.vuejs.org/rules/valid-next-tick.html) | enforce valid `nextTick` function calls | :wrench::bulb: |
@@ -150,7 +156,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🚧 | [vue/max-attributes-per-line](https://eslint.vuejs.org/rules/max-attributes-per-line.html) | enforce the maximum number of attributes per line | :wrench: |
 | 💤 | [vue/multiline-html-element-content-newline](https://eslint.vuejs.org/rules/multiline-html-element-content-newline.html) | require a line break before and after the contents of a multiline element | :wrench: |
 | 🚧 | [vue/mustache-interpolation-spacing](https://eslint.vuejs.org/rules/mustache-interpolation-spacing.html) | enforce unified spacing in mustache interpolations | :wrench: |
-| 🚧 | [vue/no-multi-spaces](https://eslint.vuejs.org/rules/no-multi-spaces.html) | disallow multiple spaces | :wrench: |
+| 🎁 | [vue/no-multi-spaces](https://eslint.vuejs.org/rules/no-multi-spaces.html) | disallow multiple spaces | :wrench: |
 | 🎁 | [vue/no-spaces-around-equal-signs-in-attribute](https://eslint.vuejs.org/rules/no-spaces-around-equal-signs-in-attribute.html) | disallow spaces around equal signs in attribute | :wrench: |
 | 🎁 | [vue/no-template-shadow](https://eslint.vuejs.org/rules/no-template-shadow.html) | disallow variable declarations from shadowing variables declared in the outer scope |  |
 | 💤 | [vue/one-component-per-file](https://eslint.vuejs.org/rules/one-component-per-file.html) | enforce that each component should be in its own file |  |
@@ -200,32 +206,44 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 💤 | [vue/multi-word-component-names](https://eslint.vuejs.org/rules/multi-word-component-names.html) | require component names to be always multi-word |  |
 | 💤 | [vue/no-arrow-functions-in-watch](https://eslint.vuejs.org/rules/no-arrow-functions-in-watch.html) | disallow using arrow functions to define watcher |  |
 | 💤 | [vue/no-async-in-computed-properties](https://eslint.vuejs.org/rules/no-async-in-computed-properties.html) | disallow asynchronous actions in computed properties |  |
+| 🚧 | [vue/no-child-content](https://eslint.vuejs.org/rules/no-child-content.html) | disallow element's child contents which would be overwritten by a directive like `v-html` or `v-text` | :bulb: |
 | 💤 | [vue/no-computed-properties-in-data](https://eslint.vuejs.org/rules/no-computed-properties-in-data.html) | disallow accessing computed properties in `data`. |  |
 | 🎁 | [vue/no-custom-modifiers-on-v-model](https://eslint.vuejs.org/rules/no-custom-modifiers-on-v-model.html) | disallow custom modifiers on v-model used on the component |  |
 | 💤 | [vue/no-dupe-keys](https://eslint.vuejs.org/rules/no-dupe-keys.html) | disallow duplication of field names |  |
 | 🎁 | [vue/no-dupe-v-else-if](https://eslint.vuejs.org/rules/no-dupe-v-else-if.html) | disallow duplicate conditions in `v-if` / `v-else-if` chains |  |
 | 🎁 | [vue/no-duplicate-attributes](https://eslint.vuejs.org/rules/no-duplicate-attributes.html) | disallow duplication of attributes |  |
+| 💤 | [vue/no-export-in-script-setup](https://eslint.vuejs.org/rules/no-export-in-script-setup.html) | disallow `export` in `<script setup>` |  |
 | 🎁 | [vue/no-multiple-template-root](https://eslint.vuejs.org/rules/no-multiple-template-root.html) | disallow adding multiple root nodes to the template |  |
 | 🎁 | [vue/no-mutating-props](https://eslint.vuejs.org/rules/no-mutating-props.html) | disallow mutation of component props |  |
+| 💤 | [vue/no-ref-as-operand](https://eslint.vuejs.org/rules/no-ref-as-operand.html) | disallow use of value wrapped by `ref()` (Composition API) as an operand | :wrench: |
+| 🎁 | [vue/no-reserved-component-names](https://eslint.vuejs.org/rules/no-reserved-component-names.html) | disallow the use of reserved names in component definitions |  |
 | 🎁 | [vue/no-reserved-keys](https://eslint.vuejs.org/rules/no-reserved-keys.html) | disallow overwriting reserved keys |  |
 | 💤 | [vue/no-reserved-props](https://eslint.vuejs.org/rules/no-reserved-props.html) | disallow reserved names in props |  |
+| 💤 | [vue/no-setup-props-destructure](https://eslint.vuejs.org/rules/no-setup-props-destructure.html) | disallow destructuring of `props` passed to `setup` |  |
 | 💤 | [vue/no-shared-component-data](https://eslint.vuejs.org/rules/no-shared-component-data.html) | enforce component's data property to be a function | :wrench: |
 | 💤 | [vue/no-side-effects-in-computed-properties](https://eslint.vuejs.org/rules/no-side-effects-in-computed-properties.html) | disallow side effects in computed properties |  |
 | 🎁 | [vue/no-template-key](https://eslint.vuejs.org/rules/no-template-key.html) | disallow `key` attribute on `<template>` |  |
 | 🎁 | [vue/no-textarea-mustache](https://eslint.vuejs.org/rules/no-textarea-mustache.html) | disallow mustaches in `<textarea>` |  |
 | 🎁 | [vue/no-unused-components](https://eslint.vuejs.org/rules/no-unused-components.html) | disallow registering components that are not used inside templates |  |
 | 🎁 | [vue/no-unused-vars](https://eslint.vuejs.org/rules/no-unused-vars.html) | disallow unused variable definitions of v-for directives or scope attributes | :bulb: |
+| 🎁 | [vue/no-use-computed-property-like-method](https://eslint.vuejs.org/rules/no-use-computed-property-like-method.html) | disallow use computed property like method |  |
 | 🎁 | [vue/no-use-v-if-with-v-for](https://eslint.vuejs.org/rules/no-use-v-if-with-v-for.html) | disallow use v-if on the same element as v-for |  |
 | 🎁 | [vue/no-useless-template-attributes](https://eslint.vuejs.org/rules/no-useless-template-attributes.html) | disallow useless attribute on `<template>` |  |
 | 🚧 | [vue/no-v-for-template-key](https://eslint.vuejs.org/rules/no-v-for-template-key.html) | disallow `key` attribute on `<template v-for>` |  |
 | 🚧 | [vue/no-v-model-argument](https://eslint.vuejs.org/rules/no-v-model-argument.html) | disallow adding an argument to `v-model` used in custom component |  |
+| 🚧 | [vue/no-v-text-v-html-on-component](https://eslint.vuejs.org/rules/no-v-text-v-html-on-component.html) | disallow v-text / v-html on component |  |
 | 🎁 | [vue/require-component-is](https://eslint.vuejs.org/rules/require-component-is.html) | require `v-bind:is` of `<component>` elements |  |
 | 💤 | [vue/require-prop-type-constructor](https://eslint.vuejs.org/rules/require-prop-type-constructor.html) | require prop type to be a constructor | :wrench: |
 | 💤 | [vue/require-render-return](https://eslint.vuejs.org/rules/require-render-return.html) | enforce render function to always return value |  |
 | 🎁 | [vue/require-v-for-key](https://eslint.vuejs.org/rules/require-v-for-key.html) | require `v-bind:key` with `v-for` directives |  |
 | 💤 | [vue/require-valid-default-prop](https://eslint.vuejs.org/rules/require-valid-default-prop.html) | enforce props default values to be valid |  |
 | 💤 | [vue/return-in-computed-property](https://eslint.vuejs.org/rules/return-in-computed-property.html) | enforce that a return statement is present in computed property |  |
+| 💤 | [vue/return-in-emits-validator](https://eslint.vuejs.org/rules/return-in-emits-validator.html) | enforce that a return statement is present in emits validator |  |
 | 🎁 | [vue/use-v-on-exact](https://eslint.vuejs.org/rules/use-v-on-exact.html) | enforce usage of `exact` modifier on `v-on` |  |
+| 🚧 | [vue/valid-attribute-name](https://eslint.vuejs.org/rules/valid-attribute-name.html) | require valid attribute names |  |
+| 💤 | [vue/valid-define-emits](https://eslint.vuejs.org/rules/valid-define-emits.html) | enforce valid `defineEmits` compiler macro |  |
+| 💤 | [vue/valid-define-props](https://eslint.vuejs.org/rules/valid-define-props.html) | enforce valid `defineProps` compiler macro |  |
+| 🚧 | [vue/valid-model-definition](https://eslint.vuejs.org/rules/valid-model-definition.html) | require valid keys in model option |  |
 | 💤 | [vue/valid-next-tick](https://eslint.vuejs.org/rules/valid-next-tick.html) | enforce valid `nextTick` function calls | :wrench::bulb: |
 | 🎁 | [vue/valid-template-root](https://eslint.vuejs.org/rules/valid-template-root.html) | enforce valid template root |  |
 | 🚧 | [vue/valid-v-bind-sync](https://eslint.vuejs.org/rules/valid-v-bind-sync.html) | enforce valid `.sync` modifier on `v-bind` directives |  |
@@ -269,7 +287,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🚧 | [vue/max-attributes-per-line](https://eslint.vuejs.org/rules/max-attributes-per-line.html) | enforce the maximum number of attributes per line | :wrench: |
 | 💤 | [vue/multiline-html-element-content-newline](https://eslint.vuejs.org/rules/multiline-html-element-content-newline.html) | require a line break before and after the contents of a multiline element | :wrench: |
 | 🚧 | [vue/mustache-interpolation-spacing](https://eslint.vuejs.org/rules/mustache-interpolation-spacing.html) | enforce unified spacing in mustache interpolations | :wrench: |
-| 🚧 | [vue/no-multi-spaces](https://eslint.vuejs.org/rules/no-multi-spaces.html) | disallow multiple spaces | :wrench: |
+| 🎁 | [vue/no-multi-spaces](https://eslint.vuejs.org/rules/no-multi-spaces.html) | disallow multiple spaces | :wrench: |
 | 🎁 | [vue/no-spaces-around-equal-signs-in-attribute](https://eslint.vuejs.org/rules/no-spaces-around-equal-signs-in-attribute.html) | disallow spaces around equal signs in attribute | :wrench: |
 | 🎁 | [vue/no-template-shadow](https://eslint.vuejs.org/rules/no-template-shadow.html) | disallow variable declarations from shadowing variables declared in the outer scope |  |
 | 💤 | [vue/one-component-per-file](https://eslint.vuejs.org/rules/one-component-per-file.html) | enforce that each component should be in its own file |  |
@@ -324,23 +342,21 @@ For example:
 | 💤 | [vue/component-api-style](https://eslint.vuejs.org/rules/component-api-style.html) | enforce component API style |  |
 | 💤 | [vue/component-options-name-casing](https://eslint.vuejs.org/rules/component-options-name-casing.html) | enforce the casing of component name in `components` options | :wrench::bulb: |
 | 🎁 | [vue/custom-event-name-casing](https://eslint.vuejs.org/rules/custom-event-name-casing.html) | enforce specific casing for custom event name |  |
+| 🚧 | [vue/define-macros-order](https://eslint.vuejs.org/rules/define-macros-order.html) | enforce order of `defineEmits` and `defineProps` compiler macros | :wrench: |
 | 🎁 | [vue/html-button-has-type](https://eslint.vuejs.org/rules/html-button-has-type.html) | disallow usage of button without an explicit type attribute |  |
 | 🚧 | [vue/html-comment-content-newline](https://eslint.vuejs.org/rules/html-comment-content-newline.html) | enforce unified line brake in HTML comments | :wrench: |
 | 🚧 | [vue/html-comment-content-spacing](https://eslint.vuejs.org/rules/html-comment-content-spacing.html) | enforce unified spacing in HTML comments | :wrench: |
 | 🚧 | [vue/html-comment-indent](https://eslint.vuejs.org/rules/html-comment-indent.html) | enforce consistent indentation in HTML comments | :wrench: |
-| 🎁 | [vue/match-component-file-name](https://eslint.vuejs.org/rules/match-component-file-name.html) | require component name property to match its file name |  |
+| 🎁 | [vue/match-component-file-name](https://eslint.vuejs.org/rules/match-component-file-name.html) | require component name property to match its file name | :bulb: |
+| 🚧 | [vue/match-component-import-name](https://eslint.vuejs.org/rules/match-component-import-name.html) | require the registered component name to match the imported component name |  |
 | 💤 | [vue/new-line-between-multi-line-property](https://eslint.vuejs.org/rules/new-line-between-multi-line-property.html) | enforce new lines between multi-line properties in Vue components | :wrench: |
 | 💤 | [vue/next-tick-style](https://eslint.vuejs.org/rules/next-tick-style.html) | enforce Promise or callback style in `nextTick` | :wrench: |
 | 🚧 | [vue/no-bare-strings-in-template](https://eslint.vuejs.org/rules/no-bare-strings-in-template.html) | disallow the use of bare strings in `<template>` |  |
 | 💤 | [vue/no-boolean-default](https://eslint.vuejs.org/rules/no-boolean-default.html) | disallow boolean defaults | :wrench: |
-| 🚧 | [vue/no-child-content](https://eslint.vuejs.org/rules/no-child-content.html) | disallow element's child contents which would be overwritten by a directive like `v-html` or `v-text` | :bulb: |
 | 🎁 | [vue/no-duplicate-attr-inheritance](https://eslint.vuejs.org/rules/no-duplicate-attr-inheritance.html) | enforce `inheritAttrs` to be set to `false` when using `v-bind="$attrs"` |  |
 | 💤 | [vue/no-empty-component-block](https://eslint.vuejs.org/rules/no-empty-component-block.html) | disallow the `<template>` `<script>` `<style>` block to be empty |  |
-| 💤 | [vue/no-expose-after-await](https://eslint.vuejs.org/rules/no-expose-after-await.html) | disallow asynchronously registered `expose` |  |
-| 💤 | [vue/no-invalid-model-keys](https://eslint.vuejs.org/rules/no-invalid-model-keys.html) | require valid keys in model option |  |
 | 🎁 | [vue/no-multiple-objects-in-class](https://eslint.vuejs.org/rules/no-multiple-objects-in-class.html) | disallow to pass multiple objects into array to class |  |
 | 💤 | [vue/no-potential-component-option-typo](https://eslint.vuejs.org/rules/no-potential-component-option-typo.html) | disallow a potential typo in your component property | :bulb: |
-| 🎁 | [vue/no-reserved-component-names](https://eslint.vuejs.org/rules/no-reserved-component-names.html) | disallow the use of reserved names in component definitions |  |
 | 💤 | [vue/no-restricted-block](https://eslint.vuejs.org/rules/no-restricted-block.html) | disallow specific block |  |
 | 💤 | [vue/no-restricted-call-after-await](https://eslint.vuejs.org/rules/no-restricted-call-after-await.html) | disallow asynchronously called restricted methods |  |
 | 🎁 | [vue/no-restricted-class](https://eslint.vuejs.org/rules/no-restricted-class.html) | disallow specific classes in Vue components |  |
@@ -358,13 +374,10 @@ For example:
 | 🚧 | [vue/no-unsupported-features](https://eslint.vuejs.org/rules/no-unsupported-features.html) | disallow unsupported Vue.js syntax on the specified version | :wrench: |
 | 🚧 | [vue/no-unused-properties](https://eslint.vuejs.org/rules/no-unused-properties.html) | disallow unused properties |  |
 | 🚧 | [vue/no-unused-refs](https://eslint.vuejs.org/rules/no-unused-refs.html) | disallow unused refs |  |
-| 🎁 | [vue/no-use-computed-property-like-method](https://eslint.vuejs.org/rules/no-use-computed-property-like-method.html) | disallow use computed property like method |  |
 | 🚧 | [vue/no-useless-mustaches](https://eslint.vuejs.org/rules/no-useless-mustaches.html) | disallow unnecessary mustache interpolations | :wrench: |
 | 🚧 | [vue/no-useless-v-bind](https://eslint.vuejs.org/rules/no-useless-v-bind.html) | disallow unnecessary `v-bind` directives | :wrench: |
-| 🚧 | [vue/no-v-text-v-html-on-component](https://eslint.vuejs.org/rules/no-v-text-v-html-on-component.html) | disallow v-text / v-html on component |  |
 | 🚧 | [vue/no-v-text](https://eslint.vuejs.org/rules/no-v-text.html) | disallow use of v-text |  |
 | 🚧 | [vue/padding-line-between-blocks](https://eslint.vuejs.org/rules/padding-line-between-blocks.html) | require or disallow padding lines between blocks | :wrench: |
-| 💤 | [vue/prefer-import-from-vue](https://eslint.vuejs.org/rules/prefer-import-from-vue.html) | enforce import from 'vue' instead of import from '@vue/*' | :wrench: |
 | 🚧 | [vue/prefer-prop-type-boolean-first](https://eslint.vuejs.org/rules/prefer-prop-type-boolean-first.html) | enforce `Boolean` comes first in component prop types | :bulb: |
 | 🚧 | [vue/prefer-separate-static-class](https://eslint.vuejs.org/rules/prefer-separate-static-class.html) | require static class names in template to be in a separate `class` attribute | :wrench: |
 | 🚧 | [vue/prefer-true-attribute-shorthand](https://eslint.vuejs.org/rules/prefer-true-attribute-shorthand.html) | require shorthand form attribute when `v-bind` value is `true` | :bulb: |
@@ -428,7 +441,5 @@ The following rules extend the rules provided by ESLint itself and apply them to
 
 | Rule ID | Replaced by |
 |:--------|:------------|
-| [vue/experimental-script-setup-vars](./experimental-script-setup-vars.md) | (no replacement) |
-| [vue/name-property-casing](./name-property-casing.md) | [vue/component-definition-name-casing](./component-definition-name-casing.md) |
-| [vue/no-confusing-v-for-v-if](./no-confusing-v-for-v-if.md) | [vue/no-use-v-if-with-v-for](./no-use-v-if-with-v-for.md) |
-| [vue/no-unregistered-components](./no-unregistered-components.md) | [vue/no-undef-components](./no-undef-components.md) |
+| [vue/no-invalid-model-keys](./no-invalid-model-keys.md) | [vue/valid-model-definition](./valid-model-definition.md) |
+| [vue/script-setup-uses-vars](./script-setup-uses-vars.md) | (no replacement) |
