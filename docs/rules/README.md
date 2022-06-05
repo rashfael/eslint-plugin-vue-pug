@@ -155,7 +155,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 💤 | [vue/html-self-closing](https://eslint.vuejs.org/rules/html-self-closing.html) | enforce self-closing style | :wrench: |
 | 🚧 | [vue/max-attributes-per-line](https://eslint.vuejs.org/rules/max-attributes-per-line.html) | enforce the maximum number of attributes per line | :wrench: |
 | 💤 | [vue/multiline-html-element-content-newline](https://eslint.vuejs.org/rules/multiline-html-element-content-newline.html) | require a line break before and after the contents of a multiline element | :wrench: |
-| 🚧 | [vue/mustache-interpolation-spacing](https://eslint.vuejs.org/rules/mustache-interpolation-spacing.html) | enforce unified spacing in mustache interpolations | :wrench: |
+| 🎁 | [vue/mustache-interpolation-spacing](https://eslint.vuejs.org/rules/mustache-interpolation-spacing.html) | enforce unified spacing in mustache interpolations | :wrench: |
 | 🎁 | [vue/no-multi-spaces](https://eslint.vuejs.org/rules/no-multi-spaces.html) | disallow multiple spaces | :wrench: |
 | 🎁 | [vue/no-spaces-around-equal-signs-in-attribute](https://eslint.vuejs.org/rules/no-spaces-around-equal-signs-in-attribute.html) | disallow spaces around equal signs in attribute | :wrench: |
 | 🎁 | [vue/no-template-shadow](https://eslint.vuejs.org/rules/no-template-shadow.html) | disallow variable declarations from shadowing variables declared in the outer scope |  |
@@ -286,7 +286,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 💤 | [vue/html-self-closing](https://eslint.vuejs.org/rules/html-self-closing.html) | enforce self-closing style | :wrench: |
 | 🚧 | [vue/max-attributes-per-line](https://eslint.vuejs.org/rules/max-attributes-per-line.html) | enforce the maximum number of attributes per line | :wrench: |
 | 💤 | [vue/multiline-html-element-content-newline](https://eslint.vuejs.org/rules/multiline-html-element-content-newline.html) | require a line break before and after the contents of a multiline element | :wrench: |
-| 🚧 | [vue/mustache-interpolation-spacing](https://eslint.vuejs.org/rules/mustache-interpolation-spacing.html) | enforce unified spacing in mustache interpolations | :wrench: |
+| 🎁 | [vue/mustache-interpolation-spacing](https://eslint.vuejs.org/rules/mustache-interpolation-spacing.html) | enforce unified spacing in mustache interpolations | :wrench: |
 | 🎁 | [vue/no-multi-spaces](https://eslint.vuejs.org/rules/no-multi-spaces.html) | disallow multiple spaces | :wrench: |
 | 🎁 | [vue/no-spaces-around-equal-signs-in-attribute](https://eslint.vuejs.org/rules/no-spaces-around-equal-signs-in-attribute.html) | disallow spaces around equal signs in attribute | :wrench: |
 | 🎁 | [vue/no-template-shadow](https://eslint.vuejs.org/rules/no-template-shadow.html) | disallow variable declarations from shadowing variables declared in the outer scope |  |
