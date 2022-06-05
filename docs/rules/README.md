@@ -109,7 +109,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 💤 | [vue/return-in-computed-property](https://eslint.vuejs.org/rules/return-in-computed-property.html) | enforce that a return statement is present in computed property |  |
 | 💤 | [vue/return-in-emits-validator](https://eslint.vuejs.org/rules/return-in-emits-validator.html) | enforce that a return statement is present in emits validator |  |
 | 🎁 | [vue/use-v-on-exact](https://eslint.vuejs.org/rules/use-v-on-exact.html) | enforce usage of `exact` modifier on `v-on` |  |
-| 🚧 | [vue/valid-attribute-name](https://eslint.vuejs.org/rules/valid-attribute-name.html) | require valid attribute names |  |
+| 🎁 | [vue/valid-attribute-name](https://eslint.vuejs.org/rules/valid-attribute-name.html) | require valid attribute names |  |
 | 💤 | [vue/valid-define-emits](https://eslint.vuejs.org/rules/valid-define-emits.html) | enforce valid `defineEmits` compiler macro |  |
 | 💤 | [vue/valid-define-props](https://eslint.vuejs.org/rules/valid-define-props.html) | enforce valid `defineProps` compiler macro |  |
 | 💤 | [vue/valid-next-tick](https://eslint.vuejs.org/rules/valid-next-tick.html) | enforce valid `nextTick` function calls | :wrench::bulb: |
@@ -240,7 +240,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 💤 | [vue/return-in-computed-property](https://eslint.vuejs.org/rules/return-in-computed-property.html) | enforce that a return statement is present in computed property |  |
 | 💤 | [vue/return-in-emits-validator](https://eslint.vuejs.org/rules/return-in-emits-validator.html) | enforce that a return statement is present in emits validator |  |
 | 🎁 | [vue/use-v-on-exact](https://eslint.vuejs.org/rules/use-v-on-exact.html) | enforce usage of `exact` modifier on `v-on` |  |
-| 🚧 | [vue/valid-attribute-name](https://eslint.vuejs.org/rules/valid-attribute-name.html) | require valid attribute names |  |
+| 🎁 | [vue/valid-attribute-name](https://eslint.vuejs.org/rules/valid-attribute-name.html) | require valid attribute names |  |
 | 💤 | [vue/valid-define-emits](https://eslint.vuejs.org/rules/valid-define-emits.html) | enforce valid `defineEmits` compiler macro |  |
 | 💤 | [vue/valid-define-props](https://eslint.vuejs.org/rules/valid-define-props.html) | enforce valid `defineProps` compiler macro |  |
 | 🚧 | [vue/valid-model-definition](https://eslint.vuejs.org/rules/valid-model-definition.html) | require valid keys in model option |  |
