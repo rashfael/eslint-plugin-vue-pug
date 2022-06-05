@@ -39,6 +39,7 @@ module.exports = [
   'no-side-effects-in-computed-properties',
   'no-watch-after-await',
   'one-component-per-file',
+  'order-in-components',
   'prefer-import-from-vue',
   'prop-name-casing',
   'require-valid-default-prop',

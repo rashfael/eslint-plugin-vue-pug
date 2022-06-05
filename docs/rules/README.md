@@ -188,7 +188,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/no-lone-template](https://eslint.vuejs.org/rules/no-lone-template.html) | disallow unnecessary `<template>` |  |
 | 💤 | [vue/no-multiple-slot-args](https://eslint.vuejs.org/rules/no-multiple-slot-args.html) | disallow to pass multiple arguments to scoped slots |  |
 | 🎁 | [vue/no-v-html](https://eslint.vuejs.org/rules/no-v-html.html) | disallow use of v-html to prevent XSS attack |  |
-| 🚧 | [vue/order-in-components](https://eslint.vuejs.org/rules/order-in-components.html) | enforce order of properties in components | :wrench: |
+| 💤 | [vue/order-in-components](https://eslint.vuejs.org/rules/order-in-components.html) | enforce order of properties in components | :wrench: |
 | 🎁 | [vue/this-in-template](https://eslint.vuejs.org/rules/this-in-template.html) | disallow usage of `this` in template | :wrench: |
 
 ## Priority A: Essential (Error Prevention) <badge text="for Vue.js 2.x" vertical="middle" type="warn">for Vue.js 2.x</badge>
@@ -317,7 +317,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 🎁 | [vue/no-lone-template](https://eslint.vuejs.org/rules/no-lone-template.html) | disallow unnecessary `<template>` |  |
 | 💤 | [vue/no-multiple-slot-args](https://eslint.vuejs.org/rules/no-multiple-slot-args.html) | disallow to pass multiple arguments to scoped slots |  |
 | 🎁 | [vue/no-v-html](https://eslint.vuejs.org/rules/no-v-html.html) | disallow use of v-html to prevent XSS attack |  |
-| 🚧 | [vue/order-in-components](https://eslint.vuejs.org/rules/order-in-components.html) | enforce order of properties in components | :wrench: |
+| 💤 | [vue/order-in-components](https://eslint.vuejs.org/rules/order-in-components.html) | enforce order of properties in components | :wrench: |
 | 🎁 | [vue/this-in-template](https://eslint.vuejs.org/rules/this-in-template.html) | disallow usage of `this` in template | :wrench: |
 
 ## Uncategorized
