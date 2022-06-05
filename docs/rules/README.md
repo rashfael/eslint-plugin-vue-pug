@@ -53,7 +53,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 💤 | [vue/multi-word-component-names](https://eslint.vuejs.org/rules/multi-word-component-names.html) | require component names to be always multi-word |  |
 | 💤 | [vue/no-arrow-functions-in-watch](https://eslint.vuejs.org/rules/no-arrow-functions-in-watch.html) | disallow using arrow functions to define watcher |  |
 | 💤 | [vue/no-async-in-computed-properties](https://eslint.vuejs.org/rules/no-async-in-computed-properties.html) | disallow asynchronous actions in computed properties |  |
-| 🚧 | [vue/no-child-content](https://eslint.vuejs.org/rules/no-child-content.html) | disallow element's child contents which would be overwritten by a directive like `v-html` or `v-text` | :bulb: |
+| 🎁 | [vue/no-child-content](https://eslint.vuejs.org/rules/no-child-content.html) | disallow element's child contents which would be overwritten by a directive like `v-html` or `v-text` | :bulb: |
 | 💤 | [vue/no-computed-properties-in-data](https://eslint.vuejs.org/rules/no-computed-properties-in-data.html) | disallow accessing computed properties in `data`. |  |
 | 💤 | [vue/no-deprecated-data-object-declaration](https://eslint.vuejs.org/rules/no-deprecated-data-object-declaration.html) | disallow using deprecated object declaration on data (in Vue.js 3.0.0+) | :wrench: |
 | 💤 | [vue/no-deprecated-destroyed-lifecycle](https://eslint.vuejs.org/rules/no-deprecated-destroyed-lifecycle.html) | disallow using deprecated `destroyed` and `beforeDestroy` lifecycle hooks (in Vue.js 3.0.0+) | :wrench: |
@@ -206,7 +206,7 @@ Enforce all the rules in this category, as well as all higher priority rules, wi
 | 💤 | [vue/multi-word-component-names](https://eslint.vuejs.org/rules/multi-word-component-names.html) | require component names to be always multi-word |  |
 | 💤 | [vue/no-arrow-functions-in-watch](https://eslint.vuejs.org/rules/no-arrow-functions-in-watch.html) | disallow using arrow functions to define watcher |  |
 | 💤 | [vue/no-async-in-computed-properties](https://eslint.vuejs.org/rules/no-async-in-computed-properties.html) | disallow asynchronous actions in computed properties |  |
-| 🚧 | [vue/no-child-content](https://eslint.vuejs.org/rules/no-child-content.html) | disallow element's child contents which would be overwritten by a directive like `v-html` or `v-text` | :bulb: |
+| 🎁 | [vue/no-child-content](https://eslint.vuejs.org/rules/no-child-content.html) | disallow element's child contents which would be overwritten by a directive like `v-html` or `v-text` | :bulb: |
 | 💤 | [vue/no-computed-properties-in-data](https://eslint.vuejs.org/rules/no-computed-properties-in-data.html) | disallow accessing computed properties in `data`. |  |
 | 🎁 | [vue/no-custom-modifiers-on-v-model](https://eslint.vuejs.org/rules/no-custom-modifiers-on-v-model.html) | disallow custom modifiers on v-model used on the component |  |
 | 💤 | [vue/no-dupe-keys](https://eslint.vuejs.org/rules/no-dupe-keys.html) | disallow duplication of field names |  |
