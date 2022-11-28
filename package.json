@@ -39,7 +39,7 @@
     "xhtml2pug": "^3.2.1"
   },
   "dependencies": {
-    "vue-eslint-parser-template-tokenizer-pug": "^0.4.9"
+    "vue-eslint-parser-template-tokenizer-pug": "^0.4.10"
   },
   "peerDependencies": {
     "eslint-plugin-vue": "^9.8.0"
