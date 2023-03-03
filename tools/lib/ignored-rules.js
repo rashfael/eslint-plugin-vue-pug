@@ -64,7 +64,7 @@ module.exports = [
   // 'html-comment-content-spacing',
   // 'html-comment-indent',
   'html-end-tags',
-  // 'html-indent', // mixed indentation is actually a pug parsing error, but this rule does a lot more
+  'html-indent', // mixed indentation is actually a pug parsing error, but this rule does a lot more
   'html-self-closing', // might explode since it checks svgs and things?
   'multiline-html-element-content-newline',
   'singleline-html-element-content-newline'
