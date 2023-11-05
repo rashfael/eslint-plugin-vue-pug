@@ -628,6 +628,27 @@ KeepAlive
         'Component name "client-only" is not PascalCase.',
         'Component name "keep-alive" is not PascalCase.'
       ]
+    },
+    {
+      code: `
+<script setup="" lang="ts">
+import TheComponent from './TheComponent.vue'
+</script>
+<template lang="pug">
+the-component
+</template>
+      `,
+      filename: 'test.vue',
+      output: `
+<script setup="" lang="ts">
+import TheComponent from './TheComponent.vue'
+</script>
+<template lang="pug">
+TheComponent
+</template>
+      `,
+      options: ['PascalCase'],
+      errors: ['Component name "the-component" is not PascalCase.']
     }
   ]
 })
