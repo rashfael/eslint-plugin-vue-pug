@@ -3,6 +3,10 @@
   "version": "0.6.2",
   "description": "linting your pug templates in vue single file components",
   "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./flat": "./lib/flat/index.mjs"
+  },
   "scripts": {
     "new": "node tools/new-rule.js",
     "test:base": "mocha \"tests/**/*.js\" --reporter dot",
