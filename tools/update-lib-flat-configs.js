@@ -1,12 +1,12 @@
 /**
- * @author Toru Nagashima
- * @copyright 2017 Toru Nagashima. All rights reserved.
+ * @author 唯然<weiran.zsd@outlook.com>
+ * @copyright 2023- 唯然. All rights reserved.
  * See LICENSE file in root directory for full license.
  */
 'use strict'
 
 /*
-This script updates `lib/configs/*.js` files from rule's meta data.
+This script updates `lib/configs/flat/*.js` files from rule's meta data.
 */
 
 const fs = require('fs')
@@ -68,29 +68,37 @@ function formatRules(rules, categoryId) {
 
 function formatCategory(category) {
   const extendsCategoryId = extendsCategories[category.categoryId]
-  if (extendsCategoryId == null) {
+  if (category.categoryId === 'base') {
     return `/*
  * IMPORTANT!
  * This file has been automatically generated,
  * in order to update its content execute "npm run update"
  */
-module.exports = {
-  plugins: [
-    'vue-pug'
-  ],
-  rules: ${formatRules(category.rules, category.categoryId)},
-  overrides: [
-    {
-      files: '*.vue',
-      parser: require.resolve('vue-eslint-parser'),
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
-      },
+module.exports = [
+  {
+    name: 'vue-pug/base/setup',
+    plugins: {
+      get 'vue-pug'() {
+        return require('../../index')
+      }
     }
-  ]
-}
+  },
+  {
+    name: 'vue-pug/base/setup-for-vue',
+    files: ['*.vue', '**/*.vue'],
+    plugins: {
+      get 'vue-pug'() {
+        return require('../../index')
+      }
+    },
+    languageOptions: {
+      parserOptions: {
+        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+      }
+    },
+    rules: ${formatRules(category.rules, category.categoryId)}
+  }
+]
 `
   }
   return `/*
@@ -98,21 +106,27 @@ module.exports = {
  * This file has been automatically generated,
  * in order to update its content execute "npm run update"
  */
-module.exports = {
-  extends: require.resolve('./${extendsCategoryId}'),
-  rules: ${formatRules(category.rules, category.categoryId)}
-}
+'use strict'
+const config = require('./${extendsCategoryId}.js')
+
+module.exports = [
+  ...config,
+  {
+    name: 'vue/${category.categoryId.replace(/^vue3-/u, '')}/rules',
+    rules: ${formatRules(category.rules, category.categoryId)},
+  }
+]
 `
 }
 
 // Update files.
-const ROOT = path.resolve(__dirname, '../lib/configs/')
-categories.forEach((category) => {
+const ROOT = path.resolve(__dirname, '../lib/configs/flat/')
+for (const category of categories) {
   const filePath = path.join(ROOT, `${category.categoryId}.js`)
   const content = formatCategory(category)
 
   fs.writeFileSync(filePath, content)
-})
+}
 
 // Format files.
 async function format() {
