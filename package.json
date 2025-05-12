@@ -6,7 +6,7 @@
   "scripts": {
     "new": "node tools/new-rule.js",
     "test:base": "mocha \"tests/**/*.js\" --reporter dot",
-    "test": "nyc npm run test:base -- \"tests/**/*.js\" --timeout 60000",
+    "test": "npm run test:base -- \"tests/**/*.js\" --timeout 60000",
     "debug": "mocha --inspect \"tests/**/*.js\" --reporter dot --timeout 60000",
     "docs:watch": "vuepress dev docs",
     "predocs:build": "npm run update",
@@ -41,7 +41,7 @@
     "assert": "^2.1.0",
     "env-cmd": "^10.1.0",
     "esbuild": "^0.24.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.23.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-eslint-plugin": "~6.4.0",
     "eslint-plugin-import": "^2.31.0",
@@ -69,6 +69,6 @@
     "vue-eslint-parser-template-tokenizer-pug": "^1.0.0"
   },
   "peerDependencies": {
-    "eslint-plugin-vue": "10.0.0"
+    "eslint-plugin-vue": "^10.0.0"
   }
 }
