@@ -17,15 +17,17 @@ const RuleTester = require('eslint').RuleTester
 // Tests
 // ------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
-    ecmaVersion: 2018,
+const tester = new RuleTester({
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
+    ecmaVersion: 'latest',
     sourceType: 'module',
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
-ruleTester.run('no-duplicate-attr-inheritance', rule, {
+tester.run('no-duplicate-attr-inheritance', rule, {
   valid: [
     {
       filename: 'test.vue',

@@ -17,15 +17,17 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/first-attribute-lineb
 // Tests
 // ------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
-    ecmaVersion: 2015,
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+const tester = new RuleTester({
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
+    ecmaVersion: 'latest',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 
-ruleTester.run('first-attribute-linebreak', rule, {
+tester.run('first-attribute-linebreak', rule, {
   valid: [
     {
       code: `<template lang="pug">component</template>`

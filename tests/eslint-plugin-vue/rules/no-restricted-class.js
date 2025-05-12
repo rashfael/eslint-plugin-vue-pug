@@ -9,16 +9,18 @@
 const rule = require('../../../eslint-plugin-vue/lib/rules/no-restricted-class')
 const RuleTester = require('eslint').RuleTester
 
-const ruleTester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
-    ecmaVersion: 2020,
+const tester = new RuleTester({
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
+    ecmaVersion: 'latest',
     sourceType: 'module',
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 
-ruleTester.run('no-restricted-class', rule, {
+tester.run('no-restricted-class', rule, {
   valid: [
     { code: `<template lang="pug">.allowed Content</template>` },
     {

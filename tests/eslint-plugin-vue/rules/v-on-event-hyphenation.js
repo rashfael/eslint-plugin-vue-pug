@@ -5,10 +5,12 @@ const RuleTester = require('eslint').RuleTester
 const rule = require('../../../eslint-plugin-vue/lib/rules/v-on-event-hyphenation.js')
 
 const tester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
-    ecmaVersion: 2019,
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
+    ecmaVersion: 'latest',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 

@@ -15,16 +15,18 @@ const RuleTester = require('eslint').RuleTester
 // Tests
 // ------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
-    ecmaVersion: 2015,
+const tester = new RuleTester({
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
+    ecmaVersion: 'latest',
     sourceType: 'module',
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 
-ruleTester.run('no-multiple-objects-in-class', rule, {
+tester.run('no-multiple-objects-in-class', rule, {
   valid: [
     `<template lang="pug">div(:class="[{'foo': isFoo}]")</template>`,
     `<template lang="pug">div(:class="[{'foo': isFoo, 'bar': isBar}]")</template>`,

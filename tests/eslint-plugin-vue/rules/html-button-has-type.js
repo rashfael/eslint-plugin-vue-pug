@@ -18,14 +18,16 @@ const RuleTester = require('eslint').RuleTester
 // Tests
 // ------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
-    ecmaVersion: 2015,
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+const tester = new RuleTester({
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
+    ecmaVersion: 'latest',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
-ruleTester.run('html-button-has-type', rule, {
+tester.run('html-button-has-type', rule, {
   valid: [
     {
       filename: 'test.vue',

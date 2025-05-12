@@ -17,16 +17,18 @@ const RuleTester = require('eslint').RuleTester
 // Tests
 // ------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
-    ecmaVersion: 2020,
+const tester = new RuleTester({
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
+    ecmaVersion: 'latest',
     sourceType: 'module',
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 
-ruleTester.run('no-mutating-props', rule, {
+tester.run('no-mutating-props', rule, {
   valid: [
     {
       filename: 'test.vue',

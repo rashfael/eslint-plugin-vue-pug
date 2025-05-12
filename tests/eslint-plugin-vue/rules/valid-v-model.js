@@ -18,10 +18,12 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/valid-v-model')
 // ------------------------------------------------------------------------------
 
 const tester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
     ecmaVersion: 2020,
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 

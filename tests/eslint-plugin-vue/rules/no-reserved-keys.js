@@ -13,7 +13,7 @@ const semver = require('semver')
 const rule = require('../../../eslint-plugin-vue/lib/rules/no-reserved-keys')
 const RuleTester = require('eslint').RuleTester
 
-const parserOptions = {
+const languageOptions = {
   ecmaVersion: 2018,
   sourceType: 'module'
 }
@@ -22,8 +22,8 @@ const parserOptions = {
 // Tests
 // ------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester()
-ruleTester.run('no-reserved-keys', rule, {
+const tester = new RuleTester()
+tester.run('no-reserved-keys', rule, {
   valid: [
     {
       filename: 'test.vue',
@@ -46,7 +46,7 @@ ruleTester.run('no-reserved-keys', rule, {
           }
         }
       `,
-      parserOptions
+      languageOptions
     },
     {
       filename: 'test.vue',
@@ -69,7 +69,7 @@ ruleTester.run('no-reserved-keys', rule, {
           }
         }
       `,
-      parserOptions
+      languageOptions
     },
     {
       filename: 'test.vue',
@@ -90,7 +90,7 @@ ruleTester.run('no-reserved-keys', rule, {
           }
         }
       `,
-      parserOptions
+      languageOptions
     },
     {
       filename: 'test.vue',
@@ -116,7 +116,7 @@ ruleTester.run('no-reserved-keys', rule, {
           }
         }
       `,
-      parserOptions
+      languageOptions
     }
   ],
 
@@ -130,9 +130,11 @@ ruleTester.run('no-reserved-keys', rule, {
           }
         })
       `,
-      parserOptions: {
+      languageOptions: {
         ecmaVersion: 6,
-        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       },
       errors: [
         {
@@ -152,9 +154,11 @@ ruleTester.run('no-reserved-keys', rule, {
           }
         })
       `,
-      parserOptions: {
+      languageOptions: {
         ecmaVersion: 6,
-        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       },
       errors: [
         {
@@ -174,9 +178,11 @@ ruleTester.run('no-reserved-keys', rule, {
           }
         })
       `,
-      parserOptions: {
+      languageOptions: {
         ecmaVersion: 6,
-        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       },
       errors: [
         {
@@ -194,9 +200,11 @@ ruleTester.run('no-reserved-keys', rule, {
           }
         })
       `,
-      parserOptions: {
+      languageOptions: {
         ecmaVersion: 6,
-        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       },
       errors: [
         {
@@ -216,9 +224,11 @@ ruleTester.run('no-reserved-keys', rule, {
           }
         })
       `,
-      parserOptions: {
+      planguageOptions: {
         ecmaVersion: 6,
-        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       },
       errors: [
         {
@@ -236,9 +246,11 @@ ruleTester.run('no-reserved-keys', rule, {
           })
         })
       `,
-      parserOptions: {
+      languageOptions: {
         ecmaVersion: 6,
-        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       },
       errors: [
         {
@@ -256,9 +268,11 @@ ruleTester.run('no-reserved-keys', rule, {
           })
         })
       `,
-      parserOptions: {
+      languageOptions: {
         ecmaVersion: 6,
-        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       },
       errors: [
         {
@@ -277,9 +291,11 @@ ruleTester.run('no-reserved-keys', rule, {
         })
       `,
       options: [{ reserved: ['bar'], groups: ['foo'] }],
-      parserOptions: {
+      languageOptions: {
         ecmaVersion: 6,
-        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       },
       errors: [
         {
@@ -297,10 +313,12 @@ ruleTester.run('no-reserved-keys', rule, {
         })
       </script>
       `,
-      parser: require.resolve('vue-eslint-parser'),
-      parserOptions: {
+      languageOptions: {
+        parser: require('vue-eslint-parser'),
         ecmaVersion: 6,
-        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       },
       errors: [
         {
@@ -316,11 +334,13 @@ ruleTester.run('no-reserved-keys', rule, {
         defineProps<{$el: string}>()
       </script>
       `,
-      parser: require.resolve('vue-eslint-parser'),
-      parserOptions: {
+      languageOptions: {
         ecmaVersion: 6,
-        parser: require.resolve('@typescript-eslint/parser'),
-        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        parser: require('vue-eslint-parser'),
+        parserOptions: {
+          parser: require('@typescript-eslint/parser'),
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       },
       errors: [
         {
@@ -345,14 +365,14 @@ ruleTester.run('no-reserved-keys', rule, {
         defineProps<Props>()
       </script>
       `,
-            parser: require.resolve('vue-eslint-parser'),
-            parserOptions: {
-              ecmaVersion: 6,
-              parser: require.resolve('@typescript-eslint/parser'),
-              templateTokenizer: {
-                pug: 'vue-eslint-parser-template-tokenizer-pug'
-              }
-            },
+      languageOptions: {
+        ecmaVersion: 6,
+        parser: require('vue-eslint-parser'),
+        parserOptions: {
+          parser: require('@typescript-eslint/parser'),
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
+      },
             errors: [
               {
                 message: "Key '$el' is reserved.",
@@ -370,14 +390,14 @@ ruleTester.run('no-reserved-keys', rule, {
         defineProps<A>()
       </script>
       `,
-            parser: require.resolve('vue-eslint-parser'),
-            parserOptions: {
-              ecmaVersion: 6,
-              parser: require.resolve('@typescript-eslint/parser'),
-              templateTokenizer: {
-                pug: 'vue-eslint-parser-template-tokenizer-pug'
-              }
-            },
+      languageOptions: {
+        ecmaVersion: 6,
+        parser: require('vue-eslint-parser'),
+        parserOptions: {
+          parser: require('@typescript-eslint/parser'),
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
+      },
             errors: [
               {
                 message: "Key '$el' is reserved.",

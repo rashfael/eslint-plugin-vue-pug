@@ -15,15 +15,17 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/no-child-content')
 // ------------------------------------------------------------------------------
 // Tests
 // ------------------------------------------------------------------------------
-const ruleTester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
-    ecmaVersion: 2015,
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+const tester = new RuleTester({
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
+    ecmaVersion: 'latest',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 
-ruleTester.run('no-child-content', rule, {
+tester.run('no-child-content', rule, {
   valid: [
     {
       // element without directive

@@ -17,15 +17,17 @@ const RuleTester = require('eslint').RuleTester
 // Tests
 // ------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
-    ecmaVersion: 2015,
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+const tester = new RuleTester({
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
+    ecmaVersion: 'latest',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 
-ruleTester.run('no-template-target-blank', rule, {
+tester.run('no-template-target-blank', rule, {
   valid: [
     { code: `<template lang="pug">a link</template>` },
     { code: `<template lang="pug">a(attr) link</template>` },

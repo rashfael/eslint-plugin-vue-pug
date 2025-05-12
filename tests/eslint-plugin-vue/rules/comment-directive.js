@@ -20,21 +20,24 @@ const { ESLint } = require('../../../eslint-plugin-vue/tests/eslint-compat')
 // Initialize linter.
 const eslint = new ESLint({
   overrideConfig: {
-    parser: require.resolve('vue-eslint-parser'),
-    parserOptions: {
+    files: ['*.*'],
+    languageOptions: {
+      parser: require('vue-eslint-parser'),
       ecmaVersion: 2015,
-      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+      parserOptions: {
+        ecmaVersion: 2015,
+        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+      },
     },
-    plugins: ['vue'],
+    plugins: { vue: require('../../../eslint-plugin-vue/lib/index')},
     rules: {
       'no-unused-vars': 'error',
       'vue/comment-directive': 'error',
-      'vue/html-quotes': 'error',
+      'vue/no-parsing-error': 'error',
       'vue/no-duplicate-attributes': 'error'
-    }
+    },
+    processor: require('../../../eslint-plugin-vue/lib/processor')
   },
-  useEslintrc: false,
-  plugins: { vue: require('../../../eslint-plugin-vue/lib/index') }
 })
 
 describe('comment-directive', () => {
@@ -380,12 +383,16 @@ div(id, id='a') Hello
   describe('reportUnusedDisableDirectives', () => {
     const eslint = new ESLint({
       overrideConfig: {
-        parser: require.resolve('vue-eslint-parser'),
-        parserOptions: {
+        files: ['*.*'],
+        languageOptions: {
+          parser: require('vue-eslint-parser'),
           ecmaVersion: 2015,
-          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+          parserOptions: {
+            ecmaVersion: 2015,
+            templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+          },
         },
-        plugins: ['vue'],
+        plugins: { vue: require('../../../eslint-plugin-vue/lib/index')},
         rules: {
           'no-unused-vars': 'error',
           'vue/comment-directive': [
@@ -394,9 +401,9 @@ div(id, id='a') Hello
           ],
           'vue/html-quotes': 'error',
           'vue/no-duplicate-attributes': 'error'
-        }
+        },
+        processor: require('../../../eslint-plugin-vue/lib/processor')
       },
-      useEslintrc: false
     })
     it('report unused // eslint-disable', async () => {
       const code = `

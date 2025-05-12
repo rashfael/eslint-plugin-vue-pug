@@ -16,7 +16,7 @@ const RuleTester = require('eslint').RuleTester
 // Tests
 // ------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({
+const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),
   parserOptions: {
     ecmaVersion: 2019,
@@ -24,7 +24,7 @@ const ruleTester = new RuleTester({
   }
 })
 
-ruleTester.run('no-deprecated-functional-template', rule, {
+tester.run('no-deprecated-functional-template', rule, {
   valid: [
     {
       filename: 'test.vue',

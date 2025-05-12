@@ -14,11 +14,13 @@ const semver = require('semver')
 const rule = require('../../../eslint-plugin-vue/lib/rules/no-loss-of-precision')
 
 const tester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
     ecmaVersion: 2020,
     sourceType: 'module',
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 tester.run('no-loss-of-precision', rule, {

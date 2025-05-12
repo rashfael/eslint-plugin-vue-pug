@@ -17,11 +17,13 @@ const RuleTester = require('eslint').RuleTester
 // Tests
 // ------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
-    ecmaVersion: 2020,
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+const tester = new RuleTester({
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
+    ecmaVersion: 'latest',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 
@@ -220,7 +222,7 @@ function createInvalidTests(prefix, options, message, type) {
   )
 }
 
-ruleTester.run('this-in-template', rule, {
+tester.run('this-in-template', rule, {
   valid: ['', `<template></template>`, '<template><div></div></template>']
     .concat(createValidTests('', []))
     .concat(createValidTests('', ['never']))

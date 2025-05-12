@@ -5,10 +5,12 @@ const RuleTester = require('eslint').RuleTester
 const rule = require('../../../eslint-plugin-vue/lib/rules/no-deprecated-scope-attribute')
 
 const tester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
     ecmaVersion: 2015,
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 

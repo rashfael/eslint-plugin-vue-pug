@@ -15,15 +15,17 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/no-v-html')
 // ------------------------------------------------------------------------------
 // Tests
 // ------------------------------------------------------------------------------
-const ruleTester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
-    ecmaVersion: 2015,
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+const tester = new RuleTester({
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
+    ecmaVersion: 'latest',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 
-ruleTester.run('no-v-html', rule, {
+tester.run('no-v-html', rule, {
   valid: [
     {
       filename: 'test.vue',

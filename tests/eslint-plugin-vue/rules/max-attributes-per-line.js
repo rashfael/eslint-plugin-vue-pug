@@ -16,15 +16,17 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/max-attributes-per-li
 // Tests
 // ------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
-    ecmaVersion: 2015,
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+const tester = new RuleTester({
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
+    ecmaVersion: 'latest',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 
-ruleTester.run('max-attributes-per-line', rule, {
+tester.run('max-attributes-per-line', rule, {
   valid: [
     {
       code: `<template lang="pug">component</template>`

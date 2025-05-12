@@ -17,11 +17,13 @@ const rule = require('../../../eslint-plugin-vue/lib/rules/no-unused-components'
 // ------------------------------------------------------------------------------
 
 const tester = new RuleTester({
-  parser: require.resolve('vue-eslint-parser'),
-  parserOptions: {
+  languageOptions: {
+    parser: require('vue-eslint-parser'),
     ecmaVersion: 2018,
     sourceType: 'module',
-    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 

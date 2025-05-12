@@ -23,13 +23,13 @@ const parserOptions = {
   sourceType: 'module'
 }
 
-const ruleTester = new RuleTester()
+const tester = new RuleTester()
 
 // ------------------------------------------------------------------------------
 // Tests
 // ------------------------------------------------------------------------------
 
-ruleTester.run('match-component-file-name', rule, {
+tester.run('match-component-file-name', rule, {
   valid: [
     // .jsx
     {

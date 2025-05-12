@@ -437,13 +437,13 @@ const vue2BuiltInComponents = [
 
 const vue3BuiltInComponents = ['teleport', 'Teleport', 'suspense', 'Suspense']
 
-const parserOptions = {
+const languageOptions = {
   ecmaVersion: 2018,
   sourceType: 'module'
 }
 
-const ruleTester = new RuleTester()
-ruleTester.run('no-reserved-component-names', rule, {
+const tester = new RuleTester()
+tester.run('no-reserved-component-names', rule, {
   valid: [
     {
       filename: 'test.vue',
@@ -451,7 +451,7 @@ ruleTester.run('no-reserved-component-names', rule, {
         export default {
         }
       `,
-      parserOptions
+      languageOptions
     },
     {
       filename: 'test.vue',
@@ -460,7 +460,7 @@ ruleTester.run('no-reserved-component-names', rule, {
           ...name
         }
       `,
-      parserOptions
+      languageOptions
     },
     {
       filename: 'test.vue',
@@ -469,7 +469,7 @@ ruleTester.run('no-reserved-component-names', rule, {
           name: 'FooBar'
         }
       `,
-      parserOptions
+      languageOptions
     },
     {
       filename: 'test.vue',
@@ -484,17 +484,17 @@ ruleTester.run('no-reserved-component-names', rule, {
           disallowVue3BuiltInComponents: true
         }
       ],
-      parserOptions
+      languageOptions
     },
     {
       filename: 'test.vue',
       code: `Vue.component('FooBar', {})`,
-      parserOptions
+      languageOptions
     },
     {
       filename: 'test.vue',
       code: `app.component('FooBar', {})`,
-      parserOptions
+      languageOptions
     },
     {
       filename: 'test.js',
@@ -503,12 +503,12 @@ ruleTester.run('no-reserved-component-names', rule, {
           name: 'foo!bar'
         })
       `,
-      parserOptions
+      languageOptions
     },
     {
       filename: 'test.vue',
       code: `Vue.component(\`fooBar\${foo}\`, component)`,
-      parserOptions
+      languageOptions
     },
     {
       filename: 'test.vue',
@@ -519,8 +519,11 @@ ruleTester.run('no-reserved-component-names', rule, {
           }
         </script>
       `,
-      parser: require.resolve('vue-eslint-parser'),
-      parserOptions
+      languageOptions: {
+        cmaVersion: 2018,
+        sourceType: 'module',
+        parser: require('vue-eslint-parser'),
+      }
     },
     {
       filename: 'test.vue',
@@ -531,14 +534,17 @@ ruleTester.run('no-reserved-component-names', rule, {
           }
         </script>
       `,
-      parser: require.resolve('vue-eslint-parser'),
-      parserOptions
+      languageOptions: {
+        cmaVersion: 2018,
+        sourceType: 'module',
+        parser: require('vue-eslint-parser'),
+      }
     },
     // https://github.com/vuejs/eslint-plugin-vue/issues/1018
     {
       filename: 'test.js',
       code: `fn1(component.data)`,
-      parserOptions
+      languageOptions
     },
     ...vue2BuiltInComponents.map((name) => {
       return {
@@ -548,7 +554,7 @@ ruleTester.run('no-reserved-component-names', rule, {
             name: '${name}'
           }
         `,
-        parserOptions
+        languageOptions
       }
     }),
     ...vue3BuiltInComponents.map((name) => {
@@ -559,7 +565,7 @@ ruleTester.run('no-reserved-component-names', rule, {
             name: '${name}'
           }
         `,
-        parserOptions
+        languageOptions
       }
     }),
     ...vue3BuiltInComponents.map((name) => {
@@ -570,7 +576,7 @@ ruleTester.run('no-reserved-component-names', rule, {
             name: '${name}'
           }
         `,
-        parserOptions,
+        languageOptions,
         options: [{ disallowVueBuiltInComponents: true }]
       }
     })
@@ -585,7 +591,7 @@ ruleTester.run('no-reserved-component-names', rule, {
             name: '${name}'
           }
         `,
-        parserOptions,
+        languageOptions,
         errors: [
           {
             messageId: RESERVED_NAMES_IN_HTML.has(name)
@@ -602,7 +608,7 @@ ruleTester.run('no-reserved-component-names', rule, {
       return {
         filename: 'test.vue',
         code: `Vue.component('${name}', component)`,
-        parserOptions,
+        languageOptions,
         errors: [
           {
             messageId: RESERVED_NAMES_IN_HTML.has(name)
@@ -619,7 +625,7 @@ ruleTester.run('no-reserved-component-names', rule, {
       return {
         filename: 'test.vue',
         code: `app.component('${name}', component)`,
-        parserOptions,
+        languageOptions,
         errors: [
           {
             messageId: RESERVED_NAMES_IN_HTML.has(name)
@@ -636,7 +642,7 @@ ruleTester.run('no-reserved-component-names', rule, {
       return {
         filename: 'test.vue',
         code: `Vue.component(\`${name}\`, {})`,
-        parserOptions,
+        languageOptions,
         errors: [
           {
             messageId: RESERVED_NAMES_IN_HTML.has(name)
@@ -653,7 +659,7 @@ ruleTester.run('no-reserved-component-names', rule, {
       return {
         filename: 'test.vue',
         code: `app.component(\`${name}\`, {})`,
-        parserOptions,
+        languageOptions,
         errors: [
           {
             messageId: RESERVED_NAMES_IN_HTML.has(name)
@@ -674,7 +680,7 @@ ruleTester.run('no-reserved-component-names', rule, {
             '${name}': {},
           }
         }`,
-        parserOptions,
+        languageOptions,
         errors: [
           {
             messageId: RESERVED_NAMES_IN_HTML.has(name)
@@ -695,7 +701,7 @@ ruleTester.run('no-reserved-component-names', rule, {
             name: '${name}'
           }
         `,
-        parserOptions,
+        languageOptions,
         options: [{ disallowVueBuiltInComponents: true }],
         errors: [
           {
@@ -715,7 +721,7 @@ ruleTester.run('no-reserved-component-names', rule, {
             name: '${name}'
           }
         `,
-        parserOptions,
+        languageOptions,
         options: [{ disallowVue3BuiltInComponents: true }],
         errors: [
           {
@@ -735,7 +741,7 @@ ruleTester.run('no-reserved-component-names', rule, {
             name: '${name}'
           }
         `,
-        parserOptions,
+        languageOptions,
         options: [{ disallowVue3BuiltInComponents: true }],
         errors: [
           {
