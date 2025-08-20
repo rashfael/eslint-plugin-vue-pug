@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-vue-pug",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "linting your pug templates in vue single file components",
   "main": "lib/index.js",
   "scripts": {
