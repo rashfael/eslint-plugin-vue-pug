@@ -112,7 +112,7 @@ const config = require('./${extendsCategoryId}.js')
 module.exports = [
   ...config,
   {
-    name: 'vue/${category.categoryId.replace(/^vue3-/u, '')}/rules',
+    name: 'vue-pug/${category.categoryId.replace(/^vue3-/u, '')}/rules',
     rules: ${formatRules(category.rules, category.categoryId)},
   }
 ]
