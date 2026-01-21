@@ -6,7 +6,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/arrow-spacing')
+const rule = require('../../../eslint-plugin-vue/dist/rules/arrow-spacing').default
 
 const tester = new RuleTester({
   languageOptions: {

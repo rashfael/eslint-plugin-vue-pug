@@ -9,7 +9,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-deprecated-props-default-this')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-deprecated-props-default-this').default
 const RuleTester = require('eslint').RuleTester
 
 // ------------------------------------------------------------------------------

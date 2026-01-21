@@ -6,7 +6,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-v-text-v-html-on-component')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-v-text-v-html-on-component').default
 
 const tester = new RuleTester({
   languageOptions: {

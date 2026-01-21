@@ -9,7 +9,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-v-for-template-key-on-child')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-v-for-template-key-on-child').default
 
 // ------------------------------------------------------------------------------
 // Tests

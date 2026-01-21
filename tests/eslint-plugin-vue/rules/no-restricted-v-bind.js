@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-restricted-v-bind')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-restricted-v-bind').default
 
 // ------------------------------------------------------------------------------
 // Tests

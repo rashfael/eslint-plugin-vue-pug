@@ -6,7 +6,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-useless-template-attributes')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-useless-template-attributes').default
 
 const tester = new RuleTester({
   languageOptions: {

@@ -10,7 +10,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/attribute-hyphenation')
+const rule = require('../../../eslint-plugin-vue/dist/rules/attribute-hyphenation').default
 
 const RuleTester = require('eslint').RuleTester
 

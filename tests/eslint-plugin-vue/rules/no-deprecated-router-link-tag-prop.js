@@ -7,7 +7,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-deprecated-router-link-tag-prop')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-deprecated-router-link-tag-prop').default
 
 const tester = new RuleTester({
   languageOptions: {

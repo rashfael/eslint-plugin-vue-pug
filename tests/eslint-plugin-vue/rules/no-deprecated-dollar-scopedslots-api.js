@@ -10,7 +10,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-deprecated-dollar-scopedslots-api')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-deprecated-dollar-scopedslots-api').default
 
 const RuleTester = require('eslint').RuleTester
 

@@ -10,7 +10,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-deprecated-v-on-native-modifier')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-deprecated-v-on-native-modifier').default
 const RuleTester = require('eslint').RuleTester
 
 // ------------------------------------------------------------------------------

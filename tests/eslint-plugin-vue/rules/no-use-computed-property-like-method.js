@@ -9,7 +9,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-use-computed-property-like-method')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-use-computed-property-like-method').default
 
 // ------------------------------------------------------------------------------
 // Tests

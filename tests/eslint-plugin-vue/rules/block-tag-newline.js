@@ -7,7 +7,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/block-tag-newline')
+const rule = require('../../../eslint-plugin-vue/dist/rules/block-tag-newline').default
 
 const tester = new RuleTester({
   languageOptions: {

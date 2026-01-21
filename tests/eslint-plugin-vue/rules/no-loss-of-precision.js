@@ -11,7 +11,7 @@ const {
   ESLint
 } = require('../../../eslint-plugin-vue/tests/eslint-compat')
 const semver = require('semver')
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-loss-of-precision')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-loss-of-precision').default
 
 const tester = new RuleTester({
   languageOptions: {

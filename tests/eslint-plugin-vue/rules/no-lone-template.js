@@ -7,7 +7,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-lone-template')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-lone-template').default
 
 const tester = new RuleTester({
   languageOptions: {

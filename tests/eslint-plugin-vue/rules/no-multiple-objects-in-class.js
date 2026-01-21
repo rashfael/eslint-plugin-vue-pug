@@ -8,7 +8,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-multiple-objects-in-class')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-multiple-objects-in-class').default
 const RuleTester = require('eslint').RuleTester
 
 // ------------------------------------------------------------------------------

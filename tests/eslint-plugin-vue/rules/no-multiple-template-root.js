@@ -10,7 +10,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-multiple-template-root')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-multiple-template-root').default
 
 const RuleTester = require('eslint').RuleTester
 

@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-restricted-static-attribute')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-restricted-static-attribute').default
 
 // ------------------------------------------------------------------------------
 // Tests

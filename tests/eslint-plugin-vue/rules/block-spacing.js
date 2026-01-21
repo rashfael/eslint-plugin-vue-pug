@@ -6,7 +6,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/block-spacing')
+const rule = require('../../../eslint-plugin-vue/dist/rules/block-spacing').default
 
 const tester = new RuleTester({
   languageOptions: {

@@ -9,7 +9,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-use-v-if-with-v-for')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-use-v-if-with-v-for').default
 
 // ------------------------------------------------------------------------------
 // Tests

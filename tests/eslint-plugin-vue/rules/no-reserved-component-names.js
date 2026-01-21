@@ -10,7 +10,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-reserved-component-names')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-reserved-component-names').default
 const RuleTester = require('eslint').RuleTester
 
 const htmlElements = require('../../../eslint-plugin-vue/lib/utils/html-elements.json')

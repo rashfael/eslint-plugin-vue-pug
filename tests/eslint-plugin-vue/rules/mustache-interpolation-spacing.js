@@ -9,7 +9,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/mustache-interpolation-spacing')
+const rule = require('../../../eslint-plugin-vue/dist/rules/mustache-interpolation-spacing').default
 const RuleTester = require('eslint').RuleTester
 
 // ------------------------------------------------------------------------------

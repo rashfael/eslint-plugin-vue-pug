@@ -9,7 +9,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-template-shadow')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-template-shadow').default
 const RuleTester = require('eslint').RuleTester
 
 // ------------------------------------------------------------------------------

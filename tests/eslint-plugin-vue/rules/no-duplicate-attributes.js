@@ -12,7 +12,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-duplicate-attributes')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-duplicate-attributes').default
 
 // ------------------------------------------------------------------------------
 // Tests

@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/valid-v-else')
+const rule = require('../../../eslint-plugin-vue/dist/rules/valid-v-else').default
 
 // ------------------------------------------------------------------------------
 // Tests

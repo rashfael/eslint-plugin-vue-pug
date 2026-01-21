@@ -6,7 +6,7 @@
 'use strict'
 
 const { RuleTester } = require('eslint')
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-extra-parens')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-extra-parens').default
 
 const tester = new RuleTester({
   languageOptions: {

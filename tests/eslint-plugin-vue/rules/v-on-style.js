@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/v-on-style')
+const rule = require('../../../eslint-plugin-vue/dist/rules/v-on-style').default
 
 // ------------------------------------------------------------------------------
 // Tests

@@ -9,7 +9,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-multi-spaces')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-multi-spaces').default
 const RuleTester = require('eslint').RuleTester
 
 // ------------------------------------------------------------------------------

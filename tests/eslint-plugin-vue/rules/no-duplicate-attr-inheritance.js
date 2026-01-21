@@ -9,7 +9,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-duplicate-attr-inheritance')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-duplicate-attr-inheritance').default
 
 const RuleTester = require('eslint').RuleTester
 

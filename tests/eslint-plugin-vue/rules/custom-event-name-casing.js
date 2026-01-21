@@ -7,7 +7,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/custom-event-name-casing')
+const rule = require('../../../eslint-plugin-vue/dist/rules/custom-event-name-casing').default
 
 const tester = new RuleTester({
   languageOptions: {

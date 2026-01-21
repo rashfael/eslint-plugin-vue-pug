@@ -2,7 +2,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-deprecated-slot-attribute.js')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-deprecated-slot-attribute.js').default
 
 const tester = new RuleTester({
   languageOptions: {

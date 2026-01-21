@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-child-content')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-child-content').default
 
 // ------------------------------------------------------------------------------
 // Tests

@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/require-toggle-inside-transition')
+const rule = require('../../../eslint-plugin-vue/dist/rules/require-toggle-inside-transition').default
 
 // ------------------------------------------------------------------------------
 // Tests

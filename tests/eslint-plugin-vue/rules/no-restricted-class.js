@@ -6,7 +6,7 @@
 
 'use strict'
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-restricted-class')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-restricted-class').default
 const RuleTester = require('eslint').RuleTester
 
 const tester = new RuleTester({

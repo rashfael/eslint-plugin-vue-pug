@@ -9,7 +9,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/valid-v-is')
+const rule = require('../../../eslint-plugin-vue/dist/rules/valid-v-is').default
 
 // ------------------------------------------------------------------------------
 // Tests

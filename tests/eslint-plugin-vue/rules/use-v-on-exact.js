@@ -10,7 +10,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/use-v-on-exact')
+const rule = require('../../../eslint-plugin-vue/dist/rules/use-v-on-exact').default
 
 const RuleTester = require('eslint').RuleTester
 

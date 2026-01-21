@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-unused-components')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-unused-components').default
 
 // ------------------------------------------------------------------------------
 // Tests

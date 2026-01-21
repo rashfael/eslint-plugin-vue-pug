@@ -6,7 +6,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/brace-style')
+const rule = require('../../../eslint-plugin-vue/dist/rules/brace-style').default
 
 const tester = new RuleTester({
   languageOptions: {

@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/require-v-for-key')
+const rule = require('../../../eslint-plugin-vue/dist/rules/require-v-for-key').default
 
 // ------------------------------------------------------------------------------
 // Tests

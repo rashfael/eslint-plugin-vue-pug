@@ -10,7 +10,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/html-button-has-type')
+const rule = require('../../../eslint-plugin-vue/dist/rules/html-button-has-type').default
 
 const RuleTester = require('eslint').RuleTester
 

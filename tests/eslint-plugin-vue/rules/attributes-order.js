@@ -10,7 +10,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/attributes-order')
+const rule = require('../../../eslint-plugin-vue/dist/rules/attributes-order').default
 const RuleTester = require('eslint').RuleTester
 
 // ------------------------------------------------------------------------------

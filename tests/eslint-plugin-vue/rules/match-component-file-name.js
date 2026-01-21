@@ -9,7 +9,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/match-component-file-name')
+const rule = require('../../../eslint-plugin-vue/dist/rules/match-component-file-name').default
 const RuleTester = require('eslint').RuleTester
 
 const jsxParserOptions = {

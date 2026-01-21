@@ -9,7 +9,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/this-in-template')
+const rule = require('../../../eslint-plugin-vue/dist/rules/this-in-template').default
 
 const RuleTester = require('eslint').RuleTester
 

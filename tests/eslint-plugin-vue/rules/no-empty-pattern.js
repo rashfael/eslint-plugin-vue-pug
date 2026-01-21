@@ -6,7 +6,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-empty-pattern')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-empty-pattern').default
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),

@@ -5,7 +5,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/dot-notation')
+const rule = require('../../../eslint-plugin-vue/dist/rules/dot-notation').default
 
 const tester = new RuleTester({
   languageOptions: {

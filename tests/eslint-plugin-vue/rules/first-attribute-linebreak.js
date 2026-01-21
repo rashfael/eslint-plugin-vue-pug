@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/first-attribute-linebreak')
+const rule = require('../../../eslint-plugin-vue/dist/rules/first-attribute-linebreak').default
 
 // ------------------------------------------------------------------------------
 // Tests

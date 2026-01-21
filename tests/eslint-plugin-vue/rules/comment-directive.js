@@ -29,14 +29,14 @@ const eslint = new ESLint({
         templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
       },
     },
-    plugins: { vue: require('../../../eslint-plugin-vue/lib/index')},
+    plugins: { vue: require('../../../eslint-plugin-vue/dist/index').default},
     rules: {
       'no-unused-vars': 'error',
       'vue/comment-directive': 'error',
       'vue/no-parsing-error': 'error',
       'vue/no-duplicate-attributes': 'error'
     },
-    processor: require('../../../eslint-plugin-vue/lib/processor')
+    processor: require('../../../eslint-plugin-vue/dist/processor').default
   },
 })
 
@@ -392,7 +392,7 @@ div(id, id='a') Hello
             templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
           },
         },
-        plugins: { vue: require('../../../eslint-plugin-vue/lib/index')},
+        plugins: { vue: require('../../../eslint-plugin-vue/dist/index').default},
         rules: {
           'no-unused-vars': 'error',
           'vue/comment-directive': [
@@ -402,7 +402,7 @@ div(id, id='a') Hello
           'vue/html-quotes': 'error',
           'vue/no-duplicate-attributes': 'error'
         },
-        processor: require('../../../eslint-plugin-vue/lib/processor')
+        processor: require('../../../eslint-plugin-vue/dist/processor').default
       },
     })
     it('report unused // eslint-disable', async () => {

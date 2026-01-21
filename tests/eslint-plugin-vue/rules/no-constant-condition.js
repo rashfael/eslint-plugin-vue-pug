@@ -6,7 +6,7 @@
 'use strict'
 
 const { RuleTester } = require('eslint')
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-constant-condition.js')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-constant-condition.js').default
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),

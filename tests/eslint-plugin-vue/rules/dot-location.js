@@ -6,7 +6,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/dot-location')
+const rule = require('../../../eslint-plugin-vue/dist/rules/dot-location').default
 
 const tester = new RuleTester({
   languageOptions: {

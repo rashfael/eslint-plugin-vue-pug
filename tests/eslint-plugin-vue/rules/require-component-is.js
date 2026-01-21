@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/require-component-is')
+const rule = require('../../../eslint-plugin-vue/dist/rules/require-component-is').default
 
 // ------------------------------------------------------------------------------
 // Tests

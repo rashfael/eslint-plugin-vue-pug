@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-textarea-mustache')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-textarea-mustache').default
 
 // ------------------------------------------------------------------------------
 // Tests

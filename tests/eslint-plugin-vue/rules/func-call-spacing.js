@@ -10,7 +10,7 @@ const {
   ESLint
 } = require('../../../eslint-plugin-vue/tests/eslint-compat')
 const semver = require('semver')
-const rule = require('../../../eslint-plugin-vue/lib/rules/func-call-spacing')
+const rule = require('../../../eslint-plugin-vue/dist/rules/func-call-spacing').default
 
 const tester = new RuleTester({
   languageOptions: {

@@ -9,7 +9,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-template-target-blank')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-template-target-blank').default
 
 const RuleTester = require('eslint').RuleTester
 

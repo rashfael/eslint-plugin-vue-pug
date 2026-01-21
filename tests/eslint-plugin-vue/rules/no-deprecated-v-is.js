@@ -3,7 +3,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-deprecated-v-is')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-deprecated-v-is').default
 
 const tester = new RuleTester({
   languageOptions: {

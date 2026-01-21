@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/v-slot-style')
+const rule = require('../../../eslint-plugin-vue/dist/rules/v-slot-style').default
 
 // ------------------------------------------------------------------------------
 // Tests

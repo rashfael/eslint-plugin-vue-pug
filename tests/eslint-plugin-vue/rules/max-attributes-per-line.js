@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/max-attributes-per-line')
+const rule = require('../../../eslint-plugin-vue/dist/rules/max-attributes-per-line').default
 
 // ------------------------------------------------------------------------------
 // Tests

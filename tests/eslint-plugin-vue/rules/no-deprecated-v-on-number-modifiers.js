@@ -9,7 +9,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-deprecated-v-on-number-modifiers')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-deprecated-v-on-number-modifiers').default
 const RuleTester = require('eslint').RuleTester
 
 // ------------------------------------------------------------------------------

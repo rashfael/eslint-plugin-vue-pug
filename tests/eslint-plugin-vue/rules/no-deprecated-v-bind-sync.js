@@ -9,7 +9,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-deprecated-v-bind-sync')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-deprecated-v-bind-sync').default
 const RuleTester = require('eslint').RuleTester
 
 // ------------------------------------------------------------------------------

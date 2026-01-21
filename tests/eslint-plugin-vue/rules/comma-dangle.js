@@ -6,7 +6,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/comma-dangle')
+const rule = require('../../../eslint-plugin-vue/dist/rules/comma-dangle').default
 
 const tester = new RuleTester({
   parser: require.resolve('vue-eslint-parser'),

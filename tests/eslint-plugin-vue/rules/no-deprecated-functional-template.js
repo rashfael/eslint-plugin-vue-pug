@@ -9,7 +9,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-const rule = require('../../../eslint-plugin-vue/lib/rules/no-deprecated-functional-template')
+const rule = require('../../../eslint-plugin-vue/dist/rules/no-deprecated-functional-template').default
 const RuleTester = require('eslint').RuleTester
 
 // ------------------------------------------------------------------------------

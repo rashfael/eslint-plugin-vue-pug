@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/valid-v-slot')
+const rule = require('../../../eslint-plugin-vue/dist/rules/valid-v-slot').default
 
 // ------------------------------------------------------------------------------
 // Tests

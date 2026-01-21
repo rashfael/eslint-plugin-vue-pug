@@ -6,7 +6,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/keyword-spacing')
+const rule = require('../../../eslint-plugin-vue/dist/rules/keyword-spacing').default
 
 const tester = new RuleTester({
   languageOptions: {

@@ -6,7 +6,7 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/valid-attribute-name')
+const rule = require('../../../eslint-plugin-vue/dist/rules/valid-attribute-name').default
 
 const tester = new RuleTester({
   languageOptions: {

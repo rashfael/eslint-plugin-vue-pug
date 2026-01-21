@@ -12,7 +12,7 @@
 // ------------------------------------------------------------------------------
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../eslint-plugin-vue/lib/rules/html-quotes')
+const rule = require('../../../eslint-plugin-vue/dist/rules/html-quotes').default
 
 // ------------------------------------------------------------------------------
 // Tests
