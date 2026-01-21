@@ -69,6 +69,6 @@
     "vue-eslint-parser-template-tokenizer-pug": "^1.0.0"
   },
   "peerDependencies": {
-    "eslint-plugin-vue": "^10.0.0"
+    "eslint-plugin-vue": "^10.7.0"
   }
 }
