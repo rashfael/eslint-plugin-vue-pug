@@ -10,7 +10,9 @@ npm install --save-dev eslint@8 eslint-plugin-vue eslint-plugin-vue-pug
 
 ## Usage
 
-Most [eslint-plugin-vue](https://eslint.vuejs.org/) rules work out of the box with just adding this plugin in your eslint config:
+Most [eslint-plugin-vue](https://eslint.vuejs.org/) rules work out of the box with just adding this plugin in your eslint config.
+
+### Eslint v9 Config
 
 ```js
 module.exports = {
@@ -19,6 +21,35 @@ module.exports = {
     'plugin:vue-pug/vue3-recommended'
   ]
 }
+```
+
+### Eslint v10 Flat Config
+
+`eslint-plugin-vue-pug` config works the same as the [eslint-plugin-vue config](https://eslint.vuejs.org/user-guide/#configuration-eslint-config-js).
+
+Example **eslint.config.js**:
+```js
+import pluginVue from 'eslint-plugin-vue'
+import pluginVuePug from 'eslint-plugin-vue-pug'
+import globals from 'globals'
+
+export default [
+  // add more generic rulesets here
+  ...pluginVue.configs['flat/recommended'],
+  ...pluginVuePug.configs['flat/recommended']
+  {
+    rules: {
+      // override/add rules settings here, such as:
+      // 'vue/no-unused-vars': 'error'
+    },
+    languageOptions: {
+      sourceType: 'module',
+      globals: {
+        ...globals.browser
+      }
+    }
+  }
+]
 ```
 
 ## Limitations
