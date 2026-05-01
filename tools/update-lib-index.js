@@ -6,7 +6,7 @@
 'use strict'
 
 /*
-This script updates `lib/index.js` file from rule's meta data.
+This script updates `lib/index.ts` from rule's meta data.
 */
 
 const fs = require('fs')
@@ -14,53 +14,75 @@ const path = require('path')
 const { FlatESLint } = require('eslint/use-at-your-own-risk')
 const rules = require('./lib/rules')
 
-// Update files.
-const filePath = path.resolve(__dirname, '../lib/index.js')
+const filePath = path.resolve(__dirname, '../lib/index.ts')
+const ownRules = rules.filter((rule) => rule.ruleId.startsWith('vue-pug/'))
+
+function camelify(name) {
+  return name.replace(/-([a-z])/g, (_, c) => c.toUpperCase())
+}
+
+const ruleImports = ownRules
+  .map((rule) => `import ${camelify(rule.name)} from './rules/${rule.name}.ts'`)
+  .join('\n')
+
+const ruleEntries = ownRules
+  .map((rule) => `    '${rule.name}': ${camelify(rule.name)}`)
+  .join(',\n')
+
 const content = `/*
  * IMPORTANT!
  * This file has been automatically generated,
  * in order to update its content execute "npm run update"
  */
-'use strict'
+import plugin from './plugin.ts'
 
-const plugin = {
-  meta: require('./meta'),
+import base from './configs/base.ts'
+import vue2Essential from './configs/vue2-essential.ts'
+import vue2StronglyRecommended from './configs/vue2-strongly-recommended.ts'
+import vue2Recommended from './configs/vue2-recommended.ts'
+import vue3Essential from './configs/vue3-essential.ts'
+import vue3StronglyRecommended from './configs/vue3-strongly-recommended.ts'
+import vue3Recommended from './configs/vue3-recommended.ts'
+
+import flatBase from './configs/flat/base.ts'
+import flatVue2Essential from './configs/flat/vue2-essential.ts'
+import flatVue2StronglyRecommended from './configs/flat/vue2-strongly-recommended.ts'
+import flatVue2Recommended from './configs/flat/vue2-recommended.ts'
+import flatVue3Essential from './configs/flat/vue3-essential.ts'
+import flatVue3StronglyRecommended from './configs/flat/vue3-strongly-recommended.ts'
+import flatVue3Recommended from './configs/flat/vue3-recommended.ts'
+
+${ruleImports}
+
+export default {
+  ...plugin,
+  rules: {
+${ruleEntries}
+  },
   configs: {
     // eslintrc configs
-    base: require('./configs/base'),
-
-    'vue2-essential': require('./configs/vue2-essential'),
-    'vue2-strongly-recommended': require('./configs/vue2-strongly-recommended'),
-    'vue2-recommended': require('./configs/vue2-recommended'),
-
-    essential: require('./configs/vue3-essential'),
-    'strongly-recommended': require('./configs/vue3-strongly-recommended'),
-    recommended: require('./configs/vue3-recommended'),
+    base,
+    'vue2-essential': vue2Essential,
+    'vue2-strongly-recommended': vue2StronglyRecommended,
+    'vue2-recommended': vue2Recommended,
+    essential: vue3Essential,
+    'strongly-recommended': vue3StronglyRecommended,
+    recommended: vue3Recommended,
 
     // flat configs
-    'flat/base': require('./configs/flat/base.js'),
-
-    'flat/vue2-essential': require('./configs/flat/vue2-essential.js'),
-    'flat/vue2-strongly-recommended': require('./configs/flat/vue2-strongly-recommended.js'),
-    'flat/vue2-recommended': require('./configs/flat/vue2-recommended.js'),
-
-    'flat/essential': require('./configs/flat/vue3-essential.js'),
-    'flat/strongly-recommended': require('./configs/flat/vue3-strongly-recommended.js'),
-    'flat/recommended': require('./configs/flat/vue3-recommended.js'),
-  },
-  rules: {
-    ${rules
-      .filter((rule) => rule.ruleId.startsWith('vue-pug/'))
-      .map((rule) => `'${rule.name}': require('./rules/${rule.name}')`)
-      .join(',\n')}
+    'flat/base': flatBase,
+    'flat/vue2-essential': flatVue2Essential,
+    'flat/vue2-strongly-recommended': flatVue2StronglyRecommended,
+    'flat/vue2-recommended': flatVue2Recommended,
+    'flat/essential': flatVue3Essential,
+    'flat/strongly-recommended': flatVue3StronglyRecommended,
+    'flat/recommended': flatVue3Recommended
   }
 }
-
-module.exports = plugin
 `
+
 fs.writeFileSync(filePath, content)
 
-// Format files.
 async function format() {
   const linter = new FlatESLint({ fix: true })
   const report = await linter.lintFiles([filePath])

@@ -2,12 +2,21 @@
   "name": "eslint-plugin-vue-pug",
   "version": "1.0.0-alpha.5",
   "description": "linting your pug templates in vue single file components",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+  },
   "scripts": {
     "new": "node tools/new-rule.js",
-    "test:base": "mocha \"tests/**/*.js\" --reporter dot",
-    "test": "npm run test:base -- \"tests/**/*.js\" --timeout 60000",
-    "debug": "mocha --inspect \"tests/**/*.js\" --reporter dot --timeout 60000",
+    "build": "tsdown",
+    "tsc": "tsc",
+    "test:base": "vitest run --reporter=dot tests/lib",
+    "test": "vitest run",
+    "debug": "vitest run --inspect --no-file-parallelism --reporter=dot tests/lib",
     "docs:watch": "vuepress dev docs",
     "predocs:build": "npm run update",
     "docs:build": "vuepress build docs",
@@ -33,15 +42,15 @@
     "@stylistic/eslint-plugin": "^2.12.1",
     "@types/eslint": "^8.56.2",
     "@types/natural-compare": "^1.4.3",
-    "@types/node": "^14.18.63",
+    "@types/node": "^22.0.0",
     "@types/semver": "^7.5.8",
     "@types/xml-name-validator": "^4.0.3",
     "@typescript-eslint/parser": "^8.53.1",
     "@typescript-eslint/types": "^8.53.1",
-    "assert": "^2.1.0",
     "env-cmd": "^10.1.0",
     "esbuild": "^0.24.0",
     "eslint": "^9.23.0",
+    "eslint-compat-utils": "^0.6.5",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-eslint-plugin": "~6.4.0",
     "eslint-plugin-import": "^2.31.0",
@@ -49,7 +58,7 @@
     "eslint-plugin-node-dependencies": "^0.12.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-unicorn": "^56.0.0",
-    "eslint-plugin-vue": "^10.7.0",
+    "eslint-plugin-vue": "file:./eslint-plugin-vue",
     "eslint-plugin-vue-pug": "file:",
     "eslint-visitor-keys": "^4.2.0",
     "espree": "^9.6.1",
@@ -57,18 +66,21 @@
     "globals": "^15.14.0",
     "jsdom": "^22.0.0",
     "markdownlint-cli": "^0.42.0",
-    "mocha": "^10.7.3",
-    "nyc": "^17.1.0",
     "pathe": "^1.1.2",
     "prettier": "^3.3.3",
+    "semver": "^7.6.3",
+    "tsdown": "^0.20.3",
     "typescript": "^5.7.2",
     "vitepress": "^1.4.1",
-    "vue-eslint-parser": "^10.0.0"
+    "vitest": "^4.0.17",
+    "vue-eslint-parser": "^10.0.0",
+    "@vue/compiler-dom": "^3.5.0",
+    "xhtml2pug": "^4.0.0"
   },
   "dependencies": {
     "vue-eslint-parser-template-tokenizer-pug": "^1.0.0"
   },
   "peerDependencies": {
-    "eslint-plugin-vue": ">=10.7.0"
+    "eslint-plugin-vue": ">=10.9.0"
   }
 }

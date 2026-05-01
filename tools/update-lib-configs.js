@@ -6,7 +6,7 @@
 'use strict'
 
 /*
-This script updates `lib/configs/*.js` files from rule's meta data.
+This script updates `lib/configs/*.ts` files from rule's meta data.
 */
 
 const fs = require('fs')
@@ -36,6 +36,10 @@ const disableUpstreamRules = [
   'singleline-html-element-content-newline'
 ]
 
+function camelify(name) {
+  return name.replace(/-([a-z0-9])/g, (_, c) => c.toUpperCase())
+}
+
 function formatRules(rules, categoryId) {
   let disabledRules = {}
   if (categoryId === 'base') {
@@ -46,21 +50,22 @@ function formatRules(rules, categoryId) {
   }
   const obj = {
     ...disabledRules,
-    ...Object.fromEntries(rules
-      .filter((rule) => rule.ruleId.startsWith('vue-pug/'))
-      .map(( rule) => {
-        let options = errorCategories.has(categoryId) ? 'error' : 'warn'
-        const defaultOptions =
-          rule.meta && rule.meta.docs && rule.meta.docs.defaultOptions
-        if (defaultOptions) {
-          const v = categoryId.startsWith('vue3') ? 3 : 2
-          const defaultOption = defaultOptions[`vue${v}`]
-          if (defaultOption) {
-            options = [options, ...defaultOption]
+    ...Object.fromEntries(
+      rules
+        .filter((rule) => rule.ruleId.startsWith('vue-pug/'))
+        .map((rule) => {
+          let options = errorCategories.has(categoryId) ? 'error' : 'warn'
+          const defaultOptions =
+            rule.meta && rule.meta.docs && rule.meta.docs.defaultOptions
+          if (defaultOptions) {
+            const v = categoryId.startsWith('vue3') ? 3 : 2
+            const defaultOption = defaultOptions[`vue${v}`]
+            if (defaultOption) {
+              options = [options, ...defaultOption]
+            }
           }
-        }
-        return [rule.ruleId, options]
-      }, {})
+          return [rule.ruleId, options]
+        }, {})
     )
   }
   return JSON.stringify(obj, null, 2)
@@ -68,53 +73,54 @@ function formatRules(rules, categoryId) {
 
 function formatCategory(category) {
   const extendsCategoryId = extendsCategories[category.categoryId]
+  const rulesObj = formatRules(category.rules, category.categoryId)
   if (extendsCategoryId == null) {
     return `/*
  * IMPORTANT!
  * This file has been automatically generated,
  * in order to update its content execute "npm run update"
  */
-module.exports = {
-  plugins: [
-    'vue-pug'
-  ],
-  rules: ${formatRules(category.rules, category.categoryId)},
+export default {
+  plugins: ['vue-pug'],
+  rules: ${rulesObj},
   overrides: [
     {
       files: '*.vue',
-      parser: require.resolve('vue-eslint-parser'),
+      parser: 'vue-eslint-parser',
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
-      },
+      }
     }
   ]
 }
 `
   }
+  const parentImport = camelify(extendsCategoryId)
   return `/*
  * IMPORTANT!
  * This file has been automatically generated,
  * in order to update its content execute "npm run update"
  */
-module.exports = {
-  extends: require.resolve('./${extendsCategoryId}'),
-  rules: ${formatRules(category.rules, category.categoryId)}
+import ${parentImport} from './${extendsCategoryId}.ts'
+
+export default {
+  ...${parentImport},
+  rules: {
+    ...${parentImport}.rules,
+    ...${rulesObj}
+  }
 }
 `
 }
 
-// Update files.
 const ROOT = path.resolve(__dirname, '../lib/configs/')
-categories.forEach((category) => {
-  const filePath = path.join(ROOT, `${category.categoryId}.js`)
-  const content = formatCategory(category)
+for (const category of categories) {
+  const filePath = path.join(ROOT, `${category.categoryId}.ts`)
+  fs.writeFileSync(filePath, formatCategory(category))
+}
 
-  fs.writeFileSync(filePath, content)
-})
-
-// Format files.
 async function format() {
   const linter = new FlatESLint({ fix: true })
   const report = await linter.lintFiles([ROOT])
