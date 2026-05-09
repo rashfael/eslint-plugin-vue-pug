@@ -224,7 +224,9 @@ div(:foo="$slots")
         {
           line: 6,
           column: 23,
-          messageId: 'deprecated'
+          messageId: 'deprecated',
+          endLine: 6,
+          endColumn: 35
         }
       ]
     },
@@ -260,7 +262,9 @@ div(:foo="$slots")
         {
           line: 7,
           column: 25,
-          messageId: 'deprecated'
+          messageId: 'deprecated',
+          endLine: 7,
+          endColumn: 37
         }
       ]
     },
@@ -292,10 +296,18 @@ div(:foo="$slots")
       `,
       errors: [
         {
-          messageId: 'deprecated'
+          messageId: 'deprecated',
+          line: 6,
+          column: 27,
+          endLine: 6,
+          endColumn: 39
         },
         {
-          messageId: 'deprecated'
+          messageId: 'deprecated',
+          line: 7,
+          column: 29,
+          endLine: 7,
+          endColumn: 41
         }
       ]
     }

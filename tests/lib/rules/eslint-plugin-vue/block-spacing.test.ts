@@ -40,7 +40,10 @@ tester.run('block-spacing', rule, {
             token: '{'
           },
           // message: 'Requires a space after \'{\'',
-          line: 2
+          line: 2,
+          column: 56,
+          endLine: 2,
+          endColumn: 57
         },
         {
           messageId: 'missing',
@@ -49,7 +52,10 @@ tester.run('block-spacing', rule, {
             token: '}'
           },
           // message: 'Requires a space before \'}\'',
-          line: 2
+          line: 2,
+          column: 69,
+          endLine: 2,
+          endColumn: 70
         }
       ]
     },
@@ -66,7 +72,10 @@ tester.run('block-spacing', rule, {
             token: '{'
           },
           // message: 'Requires a space after \'{\'',
-          line: 2
+          line: 2,
+          column: 51,
+          endLine: 2,
+          endColumn: 52
         },
         {
           messageId: 'missing',
@@ -75,7 +84,10 @@ tester.run('block-spacing', rule, {
             token: '}'
           },
           // message: 'Requires a space before \'}\'',
-          line: 2
+          line: 2,
+          column: 64,
+          endLine: 2,
+          endColumn: 65
         }
       ]
     },
@@ -93,7 +105,10 @@ tester.run('block-spacing', rule, {
             token: '{'
           },
           // message: 'Unexpected space(s) after \'{\'',
-          line: 2
+          line: 2,
+          column: 57,
+          endLine: 2,
+          endColumn: 58
         },
         {
           messageId: 'extra',
@@ -102,7 +117,10 @@ tester.run('block-spacing', rule, {
             token: '}'
           },
           // message: 'Unexpected space(s) before \'}\'',
-          line: 2
+          line: 2,
+          column: 70,
+          endLine: 2,
+          endColumn: 71
         }
       ]
     },
@@ -115,7 +133,11 @@ tester.run('block-spacing', rule, {
           data: {
             location: 'after',
             token: '{'
-          }
+          },
+          line: 1,
+          column: 67,
+          endLine: 1,
+          endColumn: 68
           // message: 'Requires a space after \'{\'',
         },
         {
@@ -123,7 +145,11 @@ tester.run('block-spacing', rule, {
           data: {
             location: 'before',
             token: '}'
-          }
+          },
+          line: 1,
+          column: 77,
+          endLine: 1,
+          endColumn: 78
           // message: 'Requires a space before \'}\'',
         }
       ]

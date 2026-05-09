@@ -628,10 +628,10 @@ div(@click="emit('bar')")
       errors: [
         {
           messageId: 'missing',
-          line: 3,
-          column: 28,
-          endLine: 3,
-          endColumn: 33,
+          line: 2,
+          column: 46,
+          endLine: 2,
+          endColumn: 51,
           suggestions: [
             {
               desc: 'Add the `emits` option with array syntax and define "foo" event.',
@@ -669,10 +669,10 @@ emits: {'foo': null}
       errors: [
         {
           messageId: 'missing',
-          line: 3,
-          column: 28,
-          endLine: 3,
-          endColumn: 33,
+          line: 2,
+          column: 46,
+          endLine: 2,
+          endColumn: 51,
           suggestions: [
             {
               desc: 'Add the "foo" to `emits` option.',
@@ -700,10 +700,10 @@ emits: {'foo': null}
       errors: [
         {
           messageId: 'missing',
-          line: 3,
-          column: 28,
-          endLine: 3,
-          endColumn: 33,
+          line: 2,
+          column: 46,
+          endLine: 2,
+          endColumn: 51,
           suggestions: [
             {
               desc: 'Add the "foo" to `emits` option.',
@@ -731,10 +731,10 @@ emits: {'foo': null}
       errors: [
         {
           messageId: 'missing',
-          line: 3,
-          column: 28,
-          endLine: 3,
-          endColumn: 33,
+          line: 2,
+          column: 46,
+          endLine: 2,
+          endColumn: 51,
           suggestions: [
             {
               desc: 'Add the "foo" to `emits` option.',
@@ -1112,10 +1112,10 @@ emits: {'foo': null}
         {
           message:
             'The "foo" event has been triggered but not declared on `emits` option.',
-          line: 3,
-          column: 28,
-          endLine: 3,
-          endColumn: 33,
+          line: 2,
+          column: 46,
+          endLine: 2,
+          endColumn: 51,
           suggestions: [
             {
               desc: 'Add the "foo" to `emits` option.',
@@ -1144,9 +1144,9 @@ emits: {'foo': null}
         {
           message:
             'The "bar" event has been triggered but not declared on `emits` option.',
-          line: 12,
+          line: 10,
           column: 20,
-          endLine: 12,
+          endLine: 10,
           endColumn: 25,
           suggestions: [
             {
@@ -1176,9 +1176,9 @@ emits: {'foo': null}
         {
           message:
             'The "foo" event has been triggered but not declared on `emits` option.',
-          line: 18,
+          line: 16,
           column: 24,
-          endLine: 18,
+          endLine: 16,
           endColumn: 29,
           suggestions: [
             {
@@ -1236,10 +1236,10 @@ emits: {'foo': null}
         {
           message:
             'The "foo" event has been triggered but not declared on `emits` option.',
-          line: 3,
-          column: 28,
-          endLine: 3,
-          endColumn: 33,
+          line: 2,
+          column: 46,
+          endLine: 2,
+          endColumn: 51,
           suggestions: [
             {
               desc: 'Add the "foo" to `emits` option.',
@@ -1272,9 +1272,9 @@ emits: {'foo': null}
         {
           message:
             'The "bar" event has been triggered but not declared on `emits` option.',
-          line: 13,
+          line: 11,
           column: 28,
-          endLine: 13,
+          endLine: 11,
           endColumn: 33,
           suggestions: [
             {
@@ -1308,9 +1308,9 @@ emits: {'foo': null}
         {
           message:
             'The "foo" event has been triggered but not declared on `emits` option.',
-          line: 21,
+          line: 19,
           column: 24,
-          endLine: 21,
+          endLine: 19,
           endColumn: 29,
           suggestions: [
             {
@@ -1356,10 +1356,10 @@ emits: {'foo': null}
         {
           message:
             'The "foo" event has been triggered but not declared on `emits` option.',
-          line: 3,
-          column: 28,
-          endLine: 3,
-          endColumn: 33,
+          line: 2,
+          column: 46,
+          endLine: 2,
+          endColumn: 51,
           suggestions: [
             {
               desc: 'Add the "foo" to `emits` option.',
@@ -1389,10 +1389,10 @@ emits: {'foo': null}
         {
           message:
             'The "foo" event has been triggered but not declared on `emits` option.',
-          line: 3,
-          column: 28,
-          endLine: 3,
-          endColumn: 33,
+          line: 2,
+          column: 46,
+          endLine: 2,
+          endColumn: 51,
           suggestions: [
             {
               desc: 'Add the `emits` option with array syntax and define "foo" event.',
@@ -1436,10 +1436,10 @@ emits: {'foo': null}
         {
           message:
             'The "foo" event has been triggered but not declared on `emits` option.',
-          line: 3,
-          column: 28,
-          endLine: 3,
-          endColumn: 33,
+          line: 2,
+          column: 46,
+          endLine: 2,
+          endColumn: 51,
           suggestions: [
             {
               desc: 'Add the `emits` option with array syntax and define "foo" event.',
@@ -1482,10 +1482,10 @@ emits: {'foo': null},
         {
           message:
             'The "foo" event has been triggered but not declared on `emits` option.',
-          line: 3,
-          column: 28,
-          endLine: 3,
-          endColumn: 33,
+          line: 2,
+          column: 46,
+          endLine: 2,
+          endColumn: 51,
           suggestions: [
             {
               desc: 'Add the `emits` option with array syntax and define "foo" event.',
@@ -1526,10 +1526,10 @@ emits: {'foo': null},
         {
           message:
             'The "foo" event has been triggered but not declared on `emits` option.',
-          line: 3,
-          column: 28,
-          endLine: 3,
-          endColumn: 33,
+          line: 2,
+          column: 46,
+          endLine: 2,
+          endColumn: 51,
           suggestions: [
             {
               desc: 'Add the `emits` option with array syntax and define "foo" event.',
@@ -1570,10 +1570,10 @@ emits: {'foo': null}
         {
           message:
             'The "foo" event has been triggered but not declared on `emits` option.',
-          line: 3,
-          column: 28,
-          endLine: 3,
-          endColumn: 33,
+          line: 2,
+          column: 46,
+          endLine: 2,
+          endColumn: 51,
           suggestions: [
             {
               desc: 'Add the `emits` option with array syntax and define "foo" event.',
@@ -1818,10 +1818,10 @@ emits: {'bar': null},
       errors: [
         {
           messageId: 'missing',
-          line: 3,
-          column: 31,
-          endLine: 3,
-          endColumn: 36,
+          line: 2,
+          column: 49,
+          endLine: 2,
+          endColumn: 54,
           suggestions: [
             {
               desc: 'Add the `emits` option with array syntax and define "foo" event.',
@@ -1861,9 +1861,9 @@ emits: {'foo': null},
         },
         {
           messageId: 'missing',
-          line: 9,
+          line: 7,
           column: 29,
-          endLine: 9,
+          endLine: 7,
           endColumn: 34,
           suggestions: [
             {
@@ -1904,9 +1904,9 @@ emits: {'foo': null},
         },
         {
           messageId: 'missing',
-          line: 12,
+          line: 10,
           column: 20,
-          endLine: 12,
+          endLine: 10,
           endColumn: 25,
           suggestions: [
             {

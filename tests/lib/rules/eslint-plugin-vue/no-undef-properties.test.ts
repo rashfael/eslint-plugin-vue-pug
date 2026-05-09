@@ -847,23 +847,23 @@ div {{ unknown }}
       errors: [
         {
           message: "'foo2' is not defined.",
-          line: 3,
-          column: 21,
-          endLine: 3,
-          endColumn: 25
+          line: 2,
+          column: 39,
+          endLine: 2,
+          endColumn: 43
         },
         {
           message: "'bar2' is not defined.",
-          line: 3,
-          column: 31,
-          endLine: 3,
-          endColumn: 35
+          line: 2,
+          column: 49,
+          endLine: 2,
+          endColumn: 53
         },
         {
           message: "'baz2' is not defined.",
-          line: 14,
+          line: 12,
           column: 18,
-          endLine: 14,
+          endLine: 12,
           endColumn: 22
         }
       ]
@@ -893,23 +893,23 @@ div {{ unknown }}
       errors: [
         {
           message: "'foo2' is not defined.",
-          line: 3,
-          column: 21,
-          endLine: 3,
-          endColumn: 25
+          line: 2,
+          column: 39,
+          endLine: 2,
+          endColumn: 43
         },
         {
           message: "'bar2' is not defined.",
-          line: 3,
-          column: 31,
-          endLine: 3,
-          endColumn: 35
+          line: 2,
+          column: 49,
+          endLine: 2,
+          endColumn: 53
         },
         {
           message: "'baz2' is not defined.",
-          line: 19,
+          line: 17,
           column: 30,
-          endLine: 19,
+          endLine: 17,
           endColumn: 34
         }
       ]
@@ -933,9 +933,9 @@ div {{ unknown }}
       errors: [
         {
           message: "'foo2' is not defined.",
-          line: 9,
+          line: 7,
           column: 18,
-          endLine: 9,
+          endLine: 7,
           endColumn: 22
         }
       ]
@@ -1177,9 +1177,9 @@ div {{ unknown }}
         {
           message: "'foo.baz' is not defined.",
           line: 2,
-          column: 25,
+          column: 37,
           endLine: 2,
-          endColumn: 28
+          endColumn: 40
         }
       ]
     },
@@ -1204,9 +1204,9 @@ div {{ unknown }}
         {
           message: "'foo.bar.baz2' is not defined.",
           line: 2,
-          column: 29,
+          column: 41,
           endLine: 2,
-          endColumn: 33
+          endColumn: 45
         }
       ]
     },
@@ -1762,10 +1762,10 @@ div {{ undef }}
       errors: [
         {
           message: "'q' is not defined.",
-          line: 14,
-          column: 26,
-          endLine: 14,
-          endColumn: 27
+          line: 18,
+          column: 6,
+          endLine: 18,
+          endColumn: 7
         }
       ]
     },
@@ -1868,10 +1868,10 @@ div {{ undef }}
       errors: [
         {
           message: "'q' is not defined.",
-          line: 20,
-          column: 26,
-          endLine: 20,
-          endColumn: 27
+          line: 24,
+          column: 6,
+          endLine: 24,
+          endColumn: 7
         }
       ]
     },

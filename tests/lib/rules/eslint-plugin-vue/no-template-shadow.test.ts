@@ -207,10 +207,10 @@ div(v-for="i in 5")
       errors: [
         {
           message: "Variable 'i' is already declared in the upper scope.",
-          line: 2,
-          column: 21,
-          endLine: 2,
-          endColumn: 22
+          line: 1,
+          column: 33,
+          endLine: 1,
+          endColumn: 34
         }
       ]
     },
@@ -231,16 +231,16 @@ div(v-for="i in 5")
         {
           message: "Variable 'i' is already declared in the upper scope.",
           line: 2,
-          column: 21,
+          column: 12,
           endLine: 2,
-          endColumn: 22
+          endColumn: 13
         },
         {
           message: "Variable 'i' is already declared in the upper scope.",
           line: 3,
-          column: 21,
+          column: 12,
           endLine: 3,
-          endColumn: 22
+          endColumn: 13
         }
       ]
     },
@@ -261,16 +261,16 @@ div(v-for="i in 5")
         {
           message: "Variable 'i' is already declared in the upper scope.",
           line: 2,
-          column: 21,
+          column: 12,
           endLine: 2,
-          endColumn: 22
+          endColumn: 13
         },
         {
           message: "Variable 'i' is already declared in the upper scope.",
           line: 3,
-          column: 23,
+          column: 14,
           endLine: 3,
-          endColumn: 24
+          endColumn: 15
         }
       ]
     },
@@ -289,10 +289,10 @@ div(v-for="i in 5")
       errors: [
         {
           message: "Variable 'i' is already declared in the upper scope.",
-          line: 2,
-          column: 21,
-          endLine: 2,
-          endColumn: 22
+          line: 1,
+          column: 33,
+          endLine: 1,
+          endColumn: 34
         }
       ]
     },
@@ -316,16 +316,16 @@ div(v-for="f in 5")
         {
           message: "Variable 'i' is already declared in the upper scope.",
           line: 2,
-          column: 21,
+          column: 12,
           endLine: 2,
-          endColumn: 22
+          endColumn: 13
         },
         {
           message: "Variable 'f' is already declared in the upper scope.",
           line: 3,
-          column: 21,
+          column: 12,
           endLine: 3,
-          endColumn: 22
+          endColumn: 13
         }
       ]
     },
@@ -359,16 +359,16 @@ div(v-for="f in c")
         {
           message: "Variable 'e' is already declared in the upper scope.",
           line: 6,
-          column: 21,
+          column: 12,
           endLine: 6,
-          endColumn: 22
+          endColumn: 13
         },
         {
           message: "Variable 'f' is already declared in the upper scope.",
           line: 7,
-          column: 21,
+          column: 12,
           endLine: 7,
-          endColumn: 22
+          endColumn: 13
         }
       ]
     },
@@ -402,16 +402,16 @@ div(v-for="f in c")
         {
           message: "Variable 'e' is already declared in the upper scope.",
           line: 6,
-          column: 21,
+          column: 12,
           endLine: 6,
-          endColumn: 22
+          endColumn: 13
         },
         {
           message: "Variable 'f' is already declared in the upper scope.",
           line: 7,
-          column: 21,
+          column: 12,
           endLine: 7,
-          endColumn: 22
+          endColumn: 13
         }
       ]
     },
@@ -443,16 +443,16 @@ div(v-for="f in c")
         {
           message: "Variable 'e' is already declared in the upper scope.",
           line: 6,
-          column: 21,
+          column: 12,
           endLine: 6,
-          endColumn: 22
+          endColumn: 13
         },
         {
           message: "Variable 'f' is already declared in the upper scope.",
           line: 7,
-          column: 21,
+          column: 12,
           endLine: 7,
-          endColumn: 22
+          endColumn: 13
         }
       ]
     },
@@ -476,9 +476,9 @@ div(v-for="i in 5")
         {
           message: "Variable 'j' is already declared in the upper scope.",
           line: 4,
-          column: 23,
+          column: 14,
           endLine: 4,
-          endColumn: 24
+          endColumn: 15
         }
       ]
     },

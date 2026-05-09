@@ -266,7 +266,10 @@ button(@click="emit('ignore')")
       errors: [
         {
           message: 'Using `foo` event is not allowed.',
-          line: 5
+          line: 5,
+          column: 16,
+          endLine: 5,
+          endColumn: 21
         }
       ]
     },
@@ -286,7 +289,10 @@ button(@click="emit('ignore')")
       errors: [
         {
           message: 'Using `foo` event is not allowed.',
-          line: 5
+          line: 5,
+          column: 20,
+          endLine: 5,
+          endColumn: 25
         }
       ]
     }

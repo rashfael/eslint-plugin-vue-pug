@@ -224,7 +224,11 @@ ul
       errors: [
         {
           message:
-            "The 'users' variable inside 'v-for' directive should be replaced with a computed property that returns filtered array instead. You should not mix 'v-for' with 'v-if'."
+            "The 'users' variable inside 'v-for' directive should be replaced with a computed property that returns filtered array instead. You should not mix 'v-for' with 'v-if'.",
+          line: 3,
+          column: 29,
+          endLine: 3,
+          endColumn: 49
         }
       ]
     },
@@ -236,7 +240,11 @@ ul
 </template>`,
       errors: [
         {
-          message: "This 'v-if' should be moved to the wrapper element."
+          message: "This 'v-if' should be moved to the wrapper element.",
+          line: 3,
+          column: 29,
+          endLine: 3,
+          endColumn: 51
         }
       ]
     },
@@ -249,7 +257,11 @@ ul
       errors: [
         {
           message:
-            "The 'users' variable inside 'v-for' directive should be replaced with a computed property that returns filtered array instead. You should not mix 'v-for' with 'v-if'."
+            "The 'users' variable inside 'v-for' directive should be replaced with a computed property that returns filtered array instead. You should not mix 'v-for' with 'v-if'.",
+          line: 3,
+          column: 41,
+          endLine: 3,
+          endColumn: 61
         }
       ]
     },
@@ -261,7 +273,11 @@ ul
 </template>`,
       errors: [
         {
-          message: "This 'v-if' should be moved to the wrapper element."
+          message: "This 'v-if' should be moved to the wrapper element.",
+          line: 3,
+          column: 41,
+          endLine: 3,
+          endColumn: 63
         }
       ]
     }

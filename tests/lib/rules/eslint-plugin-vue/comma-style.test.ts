@@ -78,7 +78,10 @@ CustomButton(@click=\`() => fn({
       errors: [
         {
           message: "',' should be placed last.",
-          line: 5
+          line: 5,
+          column: 3,
+          endLine: 5,
+          endColumn: 4
         }
       ]
     },
@@ -97,7 +100,10 @@ CustomButton(@click=\`($event,
       errors: [
         {
           message: "',' should be placed last.",
-          line: 4
+          line: 4,
+          column: 1,
+          endLine: 4,
+          endColumn: 2
         }
       ]
     },
@@ -115,7 +121,11 @@ CustomButton(@click=\`($event
 </template>`,
       errors: [
         {
-          message: "',' should be placed first."
+          message: "',' should be placed first.",
+          line: 3,
+          column: 29,
+          endLine: 3,
+          endColumn: 30
           // line: 3 // eslint v7.0
         }
       ]
@@ -136,7 +146,11 @@ CustomButton(v-slot=\`foo
 </template>`,
       errors: [
         {
-          message: "',' should be placed first."
+          message: "',' should be placed first.",
+          line: 3,
+          column: 25,
+          endLine: 3,
+          endColumn: 26
           // line: 3 // eslint v7.0
         }
       ]
@@ -157,7 +171,11 @@ c\`)
 </template>`,
       errors: [
         {
-          message: "',' should be placed last."
+          message: "',' should be placed last.",
+          line: 5,
+          column: 1,
+          endLine: 5,
+          endColumn: 2
           // line: 3 // eslint v7.0
         }
       ]

@@ -3375,9 +3375,9 @@ tester.run('no-unused-properties', rule, {
       errors: [
         {
           message: "'count' of property found, but never used.",
-          line: 7,
+          line: 5,
           column: 21,
-          endLine: 7,
+          endLine: 5,
           endColumn: 28
         }
       ]
@@ -3401,9 +3401,9 @@ tester.run('no-unused-properties', rule, {
       errors: [
         {
           message: "'count' of data found, but never used.",
-          line: 9,
+          line: 7,
           column: 17,
-          endLine: 9,
+          endLine: 7,
           endColumn: 22
         }
       ]
@@ -3427,9 +3427,9 @@ tester.run('no-unused-properties', rule, {
       errors: [
         {
           message: "'count' of async data found, but never used.",
-          line: 9,
+          line: 7,
           column: 17,
-          endLine: 9,
+          endLine: 7,
           endColumn: 22
         }
       ]
@@ -3453,9 +3453,9 @@ tester.run('no-unused-properties', rule, {
       errors: [
         {
           message: "'count' of computed property found, but never used.",
-          line: 8,
+          line: 6,
           column: 15,
-          endLine: 8,
+          endLine: 6,
           endColumn: 20
         }
       ]
@@ -5074,9 +5074,9 @@ tester.run('no-unused-properties', rule, {
       errors: [
         {
           message: "'bar' of property found, but never used.",
-          line: 7,
+          line: 5,
           column: 28,
-          endLine: 7,
+          endLine: 5,
           endColumn: 33
         }
       ]

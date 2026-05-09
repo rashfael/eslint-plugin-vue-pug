@@ -525,8 +525,8 @@ tester.run('padding-lines-in-component-definition', rule, {
       errors: [
         {
           message: 'Unexpected blank line before this definition.',
-          line: 3,
-          column: 9,
+          line: 7,
+          column: 13,
           endLine: 12,
           endColumn: 14
         }
@@ -580,8 +580,8 @@ tester.run('padding-lines-in-component-definition', rule, {
       errors: [
         {
           message: 'Expected blank line before this definition.',
-          line: 3,
-          column: 9,
+          line: 6,
+          column: 13,
           endLine: 15,
           endColumn: 14
         }
@@ -628,8 +628,8 @@ tester.run('padding-lines-in-component-definition', rule, {
       errors: [
         {
           message: 'Unexpected blank line between single line properties.',
-          line: 3,
-          column: 9,
+          line: 7,
+          column: 13,
           endLine: 7,
           endColumn: 32
         }
@@ -1043,8 +1043,8 @@ tester.run('padding-lines-in-component-definition', rule, {
       errors: [
         {
           message: 'Unexpected blank line before this definition.',
-          line: 3,
-          column: 9,
+          line: 8,
+          column: 11,
           endLine: 8,
           endColumn: 54
         }

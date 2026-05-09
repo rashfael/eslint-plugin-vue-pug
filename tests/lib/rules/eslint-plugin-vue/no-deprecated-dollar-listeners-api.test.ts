@@ -196,7 +196,9 @@ div(:foo="$listeners")
         {
           line: 7,
           column: 25,
-          messageId: 'deprecated'
+          messageId: 'deprecated',
+          endLine: 7,
+          endColumn: 35
         }
       ]
     },
@@ -221,7 +223,9 @@ div(:foo="$listeners")
         {
           line: 8,
           column: 27,
-          messageId: 'deprecated'
+          messageId: 'deprecated',
+          endLine: 8,
+          endColumn: 37
         }
       ]
     },
@@ -242,10 +246,18 @@ div(:foo="$listeners")
       `,
       errors: [
         {
-          messageId: 'deprecated'
+          messageId: 'deprecated',
+          line: 7,
+          column: 29,
+          endLine: 7,
+          endColumn: 39
         },
         {
-          messageId: 'deprecated'
+          messageId: 'deprecated',
+          line: 8,
+          column: 31,
+          endLine: 8,
+          endColumn: 41
         }
       ]
     }
