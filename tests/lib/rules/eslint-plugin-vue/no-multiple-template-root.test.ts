@@ -94,7 +94,7 @@ div(v-else-if="bar")
     {
       code: `<template lang="pug">
 Link.flex.items-center(:to="to")
-  span.mr-1(v-if="prefixIcon || \$slots.prefix")
+  span.mr-1(v-if="prefixIcon || $slots.prefix")
     slot(name="prefix")
       FontAwesomeIcon(v-if="prefixIcon", :icon="prefixIcon", fixedWidth)
   slot

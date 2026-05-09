@@ -22,7 +22,7 @@ tester.run('comma-dangle', rule, {
     `<template lang="pug">button(@click="() => fn([a, b])")</template>`,
     {
       code: `
-        <template lang="pug">CustomButton(@click="(\$event) => fn()")</template>`,
+        <template lang="pug">CustomButton(@click="($event) => fn()")</template>`,
       options: [
         {
           functions: 'never'
@@ -53,7 +53,10 @@ tester.run('comma-dangle', rule, {
       errors: [
         {
           message: 'Unexpected trailing comma.',
-          line: 1
+          line: 1,
+          column: 51,
+          endLine: 1,
+          endColumn: 52
         }
       ]
     },
@@ -68,7 +71,10 @@ tester.run('comma-dangle', rule, {
       errors: [
         {
           message: 'Unexpected trailing comma.',
-          line: 1
+          line: 1,
+          column: 50,
+          endLine: 1,
+          endColumn: 51
         }
       ]
     },
@@ -97,11 +103,17 @@ button(@click=\`() => {
       errors: [
         {
           message: 'Unexpected trailing comma.',
-          line: 4
+          line: 4,
+          column: 11,
+          endLine: 4,
+          endColumn: 12
         },
         {
           message: 'Missing trailing comma.',
-          line: 7
+          line: 7,
+          column: 6,
+          endLine: 8,
+          endColumn: 1
         }
       ]
     }

@@ -75,7 +75,9 @@ nuxt-link(to="/")
           message:
             "'tag' property on 'RouterLink' component is deprecated. Use scoped slots instead.",
           line: 1,
-          column: 33
+          column: 33,
+          endLine: 1,
+          endColumn: 36
         }
       ]
     },
@@ -87,7 +89,9 @@ nuxt-link(to="/")
           message:
             "'tag' property on 'router-link' component is deprecated. Use scoped slots instead.",
           line: 1,
-          column: 34
+          column: 34,
+          endLine: 1,
+          endColumn: 37
         }
       ]
     },
@@ -100,7 +104,9 @@ nuxt-link(to="/")
           message:
             "'tag' property on 'RouterLink' component is deprecated. Use scoped slots instead.",
           line: 1,
-          column: 33
+          column: 33,
+          endLine: 1,
+          endColumn: 36
         }
       ]
     },
@@ -113,7 +119,9 @@ nuxt-link(to="/")
           message:
             "'tag' property on 'RouterLink' component is deprecated. Use scoped slots instead.",
           line: 1,
-          column: 33
+          column: 33,
+          endLine: 1,
+          endColumn: 36
         }
       ]
     },
@@ -126,7 +134,9 @@ nuxt-link(to="/")
           message:
             "'tag' property on 'router-link' component is deprecated. Use scoped slots instead.",
           line: 1,
-          column: 34
+          column: 34,
+          endLine: 1,
+          endColumn: 37
         }
       ]
     },
@@ -138,7 +148,9 @@ nuxt-link(to="/")
           message:
             "'tag' property on 'RouterLink' component is deprecated. Use scoped slots instead.",
           line: 1,
-          column: 34
+          column: 34,
+          endLine: 1,
+          endColumn: 37
         }
       ]
     },
@@ -150,7 +162,9 @@ nuxt-link(to="/")
           message:
             "'tag' property on 'router-link' component is deprecated. Use scoped slots instead.",
           line: 1,
-          column: 35
+          column: 35,
+          endLine: 1,
+          endColumn: 38
         }
       ]
     },
@@ -163,7 +177,9 @@ nuxt-link(to="/")
           message:
             "'tag' property on 'RouterLink' component is deprecated. Use scoped slots instead.",
           line: 1,
-          column: 34
+          column: 34,
+          endLine: 1,
+          endColumn: 37
         }
       ]
     },
@@ -176,7 +192,9 @@ nuxt-link(to="/")
           message:
             "'tag' property on 'router-link' component is deprecated. Use scoped slots instead.",
           line: 1,
-          column: 35
+          column: 35,
+          endLine: 1,
+          endColumn: 38
         }
       ]
     },
@@ -189,7 +207,9 @@ nuxt-link(to="/")
           message:
             "'tag' property on 'NuxtLink' component is deprecated. Use scoped slots instead.",
           line: 1,
-          column: 31
+          column: 31,
+          endLine: 1,
+          endColumn: 34
         }
       ]
     },
@@ -202,7 +222,9 @@ nuxt-link(to="/")
           message:
             "'tag' property on 'nuxt-link' component is deprecated. Use scoped slots instead.",
           line: 1,
-          column: 32
+          column: 32,
+          endLine: 1,
+          endColumn: 35
         }
       ]
     },
@@ -215,7 +237,9 @@ nuxt-link(to="/")
           message:
             "'tag' property on 'NuxtLink' component is deprecated. Use scoped slots instead.",
           line: 1,
-          column: 32
+          column: 32,
+          endLine: 1,
+          endColumn: 35
         }
       ]
     },
@@ -228,7 +252,9 @@ nuxt-link(to="/")
           message:
             "'tag' property on 'nuxt-link' component is deprecated. Use scoped slots instead.",
           line: 1,
-          column: 33
+          column: 33,
+          endLine: 1,
+          endColumn: 36
         }
       ]
     }

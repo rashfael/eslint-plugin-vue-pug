@@ -69,7 +69,9 @@ input(bar)
         {
           message: 'Using `foo` is not allowed.',
           line: 1,
-          column: 26
+          column: 26,
+          endLine: 1,
+          endColumn: 35
         }
       ]
     },

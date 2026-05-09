@@ -24,7 +24,7 @@ tester.run('no-deprecated-dollar-scopedslots-api', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">div(v-bind="\$attrs")</template>
+        <template lang="pug">div(v-bind="$attrs")</template>
         <script>
         export default {
           mounted () {
@@ -62,7 +62,7 @@ tester.run('no-deprecated-dollar-scopedslots-api', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">div(foo="\$scopedSlots")</template>`
+        <template lang="pug">div(foo="$scopedSlots")</template>`
     },
     //     {
     //       filename: 'test.vue',
@@ -110,7 +110,7 @@ tester.run('no-deprecated-dollar-scopedslots-api', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">div(v-if="\$scopedSlots.default")</template>
+        <template lang="pug">div(v-if="$scopedSlots.default")</template>
         <script>
         export default {
           render() {
@@ -119,7 +119,7 @@ tester.run('no-deprecated-dollar-scopedslots-api', rule, {
         }
         </script>`,
       output: `
-        <template lang="pug">div(v-if="\$slots.default")</template>
+        <template lang="pug">div(v-if="$slots.default")</template>
         <script>
         export default {
           render() {
@@ -148,8 +148,8 @@ tester.run('no-deprecated-dollar-scopedslots-api', rule, {
       filename: 'test.vue',
       code: `
         <template lang="pug">
-div(v-for="slot in \$scopedSlots")
-div(:foo="\$scopedSlots")
+div(v-for="slot in $scopedSlots")
+div(:foo="$scopedSlots")
 </template>
         <script>
         export default {
@@ -162,8 +162,8 @@ div(:foo="\$scopedSlots")
         </script>`,
       output: `
         <template lang="pug">
-div(v-for="slot in \$slots")
-div(:foo="\$slots")
+div(v-for="slot in $slots")
+div(:foo="$slots")
 </template>
         <script>
         export default {

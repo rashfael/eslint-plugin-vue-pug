@@ -160,7 +160,9 @@ component(name="John Doe"
         {
           message: 'Expected a linebreak before this attribute.',
           line: 7,
-          column: 11
+          column: 11,
+          endLine: 7,
+          endColumn: 26
         }
       ]
     },
@@ -200,12 +202,16 @@ component(name="John Doe"
         {
           message: 'Expected no linebreak before this attribute.',
           line: 3,
-          column: 3
+          column: 3,
+          endLine: 3,
+          endColumn: 18
         },
         {
           message: 'Expected no linebreak before this attribute.',
           line: 12,
-          column: 3
+          column: 3,
+          endLine: 12,
+          endColumn: 18
         }
       ]
     },
@@ -251,12 +257,16 @@ name="John Doe"
         {
           message: 'Expected a linebreak before this attribute.',
           line: 8,
-          column: 11
+          column: 11,
+          endLine: 8,
+          endColumn: 26
         },
         {
           message: 'Expected a linebreak before this attribute.',
           line: 15,
-          column: 11
+          column: 11,
+          endLine: 15,
+          endColumn: 26
         }
       ]
     }

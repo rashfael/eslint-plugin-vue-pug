@@ -75,12 +75,16 @@ button(@click=\`
         {
           message: "There should be no space before ','.",
           line: 4,
-          column: 15
+          column: 15,
+          endLine: 4,
+          endColumn: 16
         },
         {
           message: "A space is required after ','.",
           line: 4,
-          column: 15
+          column: 15,
+          endLine: 4,
+          endColumn: 16
         }
       ]
     },
@@ -90,19 +94,31 @@ button(@click=\`
       errors: [
         {
           message: "There should be no space before ','.",
-          line: 1
+          line: 1,
+          column: 46,
+          endLine: 1,
+          endColumn: 47
         },
         {
           message: "A space is required after ','.",
-          line: 1
+          line: 1,
+          column: 46,
+          endLine: 1,
+          endColumn: 47
         },
         {
           message: "There should be no space before ','.",
-          line: 1
+          line: 1,
+          column: 50,
+          endLine: 1,
+          endColumn: 51
         },
         {
           message: "A space is required after ','.",
-          line: 1
+          line: 1,
+          column: 50,
+          endLine: 1,
+          endColumn: 51
         }
       ]
     },
@@ -112,19 +128,31 @@ button(@click=\`
       errors: [
         {
           message: "There should be no space before ','.",
-          line: 1
+          line: 1,
+          column: 49,
+          endLine: 1,
+          endColumn: 50
         },
         {
           message: "A space is required after ','.",
-          line: 1
+          line: 1,
+          column: 49,
+          endLine: 1,
+          endColumn: 50
         },
         {
           message: "There should be no space before ','.",
-          line: 1
+          line: 1,
+          column: 56,
+          endLine: 1,
+          endColumn: 57
         },
         {
           message: "A space is required after ','.",
-          line: 1
+          line: 1,
+          column: 56,
+          endLine: 1,
+          endColumn: 57
         }
       ]
     },
@@ -134,11 +162,17 @@ button(@click=\`
       errors: [
         {
           message: "There should be no space before ','.",
-          line: 1
+          line: 1,
+          column: 43,
+          endLine: 1,
+          endColumn: 44
         },
         {
           message: "A space is required after ','.",
-          line: 1
+          line: 1,
+          column: 43,
+          endLine: 1,
+          endColumn: 44
         }
       ]
     },
@@ -148,11 +182,17 @@ button(@click=\`
       errors: [
         {
           message: "There should be no space before ','.",
-          line: 1
+          line: 1,
+          column: 40,
+          endLine: 1,
+          endColumn: 41
         },
         {
           message: "A space is required after ','.",
-          line: 1
+          line: 1,
+          column: 40,
+          endLine: 1,
+          endColumn: 41
         }
       ]
     },
@@ -162,11 +202,17 @@ button(@click=\`
       errors: [
         {
           message: "There should be no space before ','.",
-          line: 1
+          line: 1,
+          column: 49,
+          endLine: 1,
+          endColumn: 50
         },
         {
           message: "A space is required after ','.",
-          line: 1
+          line: 1,
+          column: 49,
+          endLine: 1,
+          endColumn: 50
         }
       ]
     },
@@ -184,11 +230,17 @@ CustomList
       errors: [
         {
           message: "There should be no space before ','.",
-          line: 4
+          line: 4,
+          column: 20,
+          endLine: 4,
+          endColumn: 21
         },
         {
           message: "A space is required after ','.",
-          line: 4
+          line: 4,
+          column: 20,
+          endLine: 4,
+          endColumn: 21
         }
       ]
     },
@@ -198,11 +250,17 @@ CustomList
       errors: [
         {
           message: "There should be no space before ','.",
-          line: 1
+          line: 1,
+          column: 42,
+          endLine: 1,
+          endColumn: 43
         },
         {
           message: "A space is required after ','.",
-          line: 1
+          line: 1,
+          column: 42,
+          endLine: 1,
+          endColumn: 43
         }
       ]
     },
@@ -223,11 +281,17 @@ button(@click=\`
       errors: [
         {
           message: "A space is required before ','.",
-          line: 4
+          line: 4,
+          column: 7,
+          endLine: 4,
+          endColumn: 8
         },
         {
           message: "There should be no space after ','.",
-          line: 4
+          line: 4,
+          column: 7,
+          endLine: 4,
+          endColumn: 8
         }
       ]
     },
@@ -247,7 +311,10 @@ button(@click=\`
       errors: [
         {
           message: "A space is required after ','.",
-          line: 4
+          line: 4,
+          column: 29,
+          endLine: 4,
+          endColumn: 30
         }
       ]
     }

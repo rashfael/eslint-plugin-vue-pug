@@ -23,8 +23,8 @@ tester.run('camelcase', rule, {
     {
       code: `
         <template lang="pug">
-div(@click=\`(\$event) => {
-  const { my_pref } = \$event
+div(@click=\`($event) => {
+  const { my_pref } = $event
 }\`)
 </template>`,
       options: [{ ignoreDestructuring: true }]
@@ -36,31 +36,40 @@ div(@click=\`(\$event) => {
       errors: [
         {
           message: "Identifier 'my_pref' is not in camel case.",
-          line: 1
+          line: 1,
+          column: 35,
+          endLine: 1,
+          endColumn: 42
         }
       ]
     },
     {
       code: `
         <template lang="pug">
-div(@click="(\$event) => {  const { my_pref } = \$event}")
+div(@click="($event) => {  const { my_pref } = $event}")
 </template>`,
       errors: [
         {
           message: "Identifier 'my_pref' is not in camel case.",
-          line: 3
+          line: 3,
+          column: 36,
+          endLine: 3,
+          endColumn: 43
         }
       ]
     },
     {
       code: `
         <template lang="pug">
-div(@click="const { my_pref } = \$event")
+div(@click="const { my_pref } = $event")
 </template>`,
       errors: [
         {
           message: "Identifier 'my_pref' is not in camel case.",
-          line: 3
+          line: 3,
+          column: 21,
+          endLine: 3,
+          endColumn: 28
         }
       ]
     }

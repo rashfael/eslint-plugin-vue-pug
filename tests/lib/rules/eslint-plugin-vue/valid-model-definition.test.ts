@@ -9,7 +9,10 @@ import { RuleTester } from '../../../eslint-compat'
 const ruleTester = new RuleTester({
   languageOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module'
+    sourceType: 'module',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 ruleTester.run('valid-model-definition', rule, {

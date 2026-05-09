@@ -8,7 +8,13 @@ import rule from 'eslint-plugin-vue/dist/rules/no-sparse-arrays'
 import vueEslintParser from 'vue-eslint-parser'
 
 const tester = new RuleTester({
-  languageOptions: { parser: vueEslintParser, ecmaVersion: 2015 }
+  languageOptions: {
+    parser: vueEslintParser,
+    ecmaVersion: 2015,
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
+  }
 })
 
 tester.run('no-sparse-arrays', rule, {

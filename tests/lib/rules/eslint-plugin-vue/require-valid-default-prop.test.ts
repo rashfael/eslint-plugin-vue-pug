@@ -17,12 +17,21 @@ const languageOptions: Linter.LanguageOptions = {
   ecmaVersion: 2020,
   sourceType: 'module',
   parserOptions: {
-    ecmaFeatures: { jsx: true , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+    ecmaFeatures: {
+      jsx: true,
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 }
 
 const ruleTester = new RuleTester({
-  languageOptions: { ecmaVersion: 2020, sourceType: 'module' }
+  languageOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
+  }
 })
 ruleTester.run('require-valid-default-prop', rule, {
   valid: [
@@ -267,8 +276,9 @@ ruleTester.run('require-valid-default-prop', rule, {
         ecmaVersion: 6,
         sourceType: 'module',
         parserOptions: {
-          parser: require.resolve('@typescript-eslint/parser')
-        , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+          parser: require.resolve('@typescript-eslint/parser'),
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       }
     },
     {
@@ -855,8 +865,8 @@ ruleTester.run('require-valid-default-prop', rule, {
       errors: [
         {
           message: `Type of the default value for 'foo' prop must be a function or number.`,
-          line: 5,
-          column: 22,
+          line: 1,
+          column: 21,
           endLine: 5,
           endColumn: 24
         }
@@ -1240,8 +1250,8 @@ ruleTester.run('require-valid-default-prop', rule, {
       errors: [
         {
           message: `Type of the default value for 'foo' prop must be a function.`,
-          line: 5,
-          column: 24,
+          line: 4,
+          column: 27,
           endLine: 5,
           endColumn: 26
         }
@@ -1266,8 +1276,8 @@ ruleTester.run('require-valid-default-prop', rule, {
       errors: [
         {
           message: `Type of the default value for 'foo' prop must be a function.`,
-          line: 5,
-          column: 24,
+          line: 4,
+          column: 28,
           endLine: 5,
           endColumn: 26
         }
@@ -1292,8 +1302,8 @@ ruleTester.run('require-valid-default-prop', rule, {
       errors: [
         {
           message: `Type of the default value for 'foo' prop must be a function.`,
-          line: 5,
-          column: 24,
+          line: 4,
+          column: 30,
           endLine: 5,
           endColumn: 26
         }
@@ -1340,14 +1350,15 @@ ruleTester.run('require-valid-default-prop', rule, {
         sourceType: 'module',
         parser: vueEslintParser,
         parserOptions: {
-          parser: require.resolve('@typescript-eslint/parser')
-        , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+          parser: require.resolve('@typescript-eslint/parser'),
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       },
       errors: [
         {
           message: "Type of the default value for 'foo' prop must be a string.",
-          line: 4,
-          column: 22,
+          line: 3,
+          column: 47,
           endLine: 4,
           endColumn: 25
         }
@@ -1600,8 +1611,8 @@ ruleTester.run('require-valid-default-prop', rule, {
       errors: [
         {
           message: "Type of the default value for 'foo' prop must be a string.",
-          line: 4,
-          column: 21,
+          line: 3,
+          column: 11,
           endLine: 4,
           endColumn: 22
         }

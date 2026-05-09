@@ -44,7 +44,10 @@ div(:attr=\`foo.
       errors: [
         {
           message: 'Expected dot to be on same line as object.',
-          line: 3
+          line: 3,
+          column: 5,
+          endLine: 3,
+          endColumn: 6
         }
       ]
     },
@@ -61,7 +64,10 @@ div(:attr=\`foo
       errors: [
         {
           message: 'Expected dot to be on same line as property.',
-          line: 2
+          line: 2,
+          column: 15,
+          endLine: 2,
+          endColumn: 16
         }
       ]
     }

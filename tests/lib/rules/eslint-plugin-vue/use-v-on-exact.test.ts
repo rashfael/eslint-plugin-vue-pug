@@ -146,53 +146,149 @@ button(@click.ctrl="foo")
   invalid: [
     {
       code: '<template lang="pug">button(@click="foo", @click.ctrl="bar")</template>',
-      errors: [{ message: "Consider to use '.exact' modifier.", line: 1 }]
+      errors: [
+        {
+          message: "Consider to use '.exact' modifier.",
+          line: 1,
+          column: 29,
+          endLine: 1,
+          endColumn: 35
+        }
+      ]
     },
     {
       code: '<template lang="pug">button(@click="foo", @click.ctrl.stop="bar")</template>',
-      errors: [{ message: "Consider to use '.exact' modifier.", line: 1 }]
+      errors: [
+        {
+          message: "Consider to use '.exact' modifier.",
+          line: 1,
+          column: 29,
+          endLine: 1,
+          endColumn: 35
+        }
+      ]
     },
     {
       code: '<template lang="pug">button(@click.prevent="foo", @click.ctrl="bar")</template>',
-      errors: [{ message: "Consider to use '.exact' modifier.", line: 1 }]
+      errors: [
+        {
+          message: "Consider to use '.exact' modifier.",
+          line: 1,
+          column: 29,
+          endLine: 1,
+          endColumn: 43
+        }
+      ]
     },
     {
       code: '<template lang="pug">button(@click.exact="foo", @click.ctrl="bar", @click.ctrl.shift="baz")</template>',
-      errors: [{ message: "Consider to use '.exact' modifier.", line: 1 }]
+      errors: [
+        {
+          message: "Consider to use '.exact' modifier.",
+          line: 1,
+          column: 49,
+          endLine: 1,
+          endColumn: 60
+        }
+      ]
     },
     {
       code: '<template lang="pug">button(@click="foo", @click.ctrl="bar", @click.ctrl.shift="baz")</template>',
       errors: [
-        { message: "Consider to use '.exact' modifier.", line: 1 },
-        { message: "Consider to use '.exact' modifier.", line: 1 }
+        {
+          message: "Consider to use '.exact' modifier.",
+          line: 1,
+          column: 29,
+          endLine: 1,
+          endColumn: 35
+        },
+        {
+          message: "Consider to use '.exact' modifier.",
+          line: 1,
+          column: 43,
+          endLine: 1,
+          endColumn: 54
+        }
       ]
     },
     {
       code: '<template lang="pug">input(@keypress.27="foo", @keypress.27.shift="bar")</template>',
-      errors: [{ message: "Consider to use '.exact' modifier.", line: 1 }]
+      errors: [
+        {
+          message: "Consider to use '.exact' modifier.",
+          line: 1,
+          column: 28,
+          endLine: 1,
+          endColumn: 40
+        }
+      ]
     },
     {
       code: '<template lang="pug">input(@keypress.exact="foo", @keypress.esc="bar", @keypress.ctrl="baz")</template>',
-      errors: [{ message: "Consider to use '.exact' modifier.", line: 1 }]
+      errors: [
+        {
+          message: "Consider to use '.exact' modifier.",
+          line: 1,
+          column: 51,
+          endLine: 1,
+          endColumn: 64
+        }
+      ]
     },
     {
       code: '<template lang="pug">UiButton(@click="foo", @click.native="bar", @click.ctrl.native="baz")</template>',
-      errors: [{ message: "Consider to use '.exact' modifier.", line: 1 }]
+      errors: [
+        {
+          message: "Consider to use '.exact' modifier.",
+          line: 1,
+          column: 45,
+          endLine: 1,
+          endColumn: 58
+        }
+      ]
     },
     {
       code: '<template lang="pug">UiButton(@click.native.ctrl="foo", @click.native.ctrl.shift="bar")</template>',
-      errors: [{ message: "Consider to use '.exact' modifier.", line: 1 }]
+      errors: [
+        {
+          message: "Consider to use '.exact' modifier.",
+          line: 1,
+          column: 31,
+          endLine: 1,
+          endColumn: 49
+        }
+      ]
     },
     {
       code: '<template lang="pug">UiButton(@click.native="foo", @click.native.ctrl="bar", @click.native.ctrl.shift="baz")</template>',
       errors: [
-        { message: "Consider to use '.exact' modifier.", line: 1 },
-        { message: "Consider to use '.exact' modifier.", line: 1 }
+        {
+          message: "Consider to use '.exact' modifier.",
+          line: 1,
+          column: 31,
+          endLine: 1,
+          endColumn: 44
+        },
+        {
+          message: "Consider to use '.exact' modifier.",
+          line: 1,
+          column: 52,
+          endLine: 1,
+          endColumn: 70
+        }
       ]
     },
     {
       code: '<template lang="pug">button(@[foo]="foo", @[foo].ctrl="bar")</template>',
-      errors: [{ message: "Consider to use '.exact' modifier.", line: 1 }]
+      errors: [
+        {
+          message: "Consider to use '.exact' modifier.",
+          line: 1,
+          column: 29,
+          endLine: 1,
+          endColumn: 35
+        }
+      ]
     }
   ]
 })

@@ -319,12 +319,12 @@ tester.run('no-useless-mustaches', rule, {
 
 | {{ &quot;\\&quot;Happy\\&quot;&quot; }}
 
-| {{ \`backtick \\\` and dollar \\$\` }}
+| {{ \`backtick \\\` and dollar $\` }}
 
 | {{ &quot;\\\\&quot; }}
 </template>`,
       output: `
-      <template lang="pug">| I&apos;m &quot;Happy&quot; backtick \` and dollar \$ \\</template>`,
+      <template lang="pug">| I&apos;m &quot;Happy&quot; backtick \` and dollar $ \\</template>`,
       errors: [
         {
           message:

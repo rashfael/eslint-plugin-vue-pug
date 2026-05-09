@@ -3,10 +3,7 @@
 /**
  * @author Yosuke Ota
  */
-const {
-  RuleTester,
-  ESLint
-} = (await import('../../../eslint-compat'))
+const { RuleTester, ESLint } = await import('../../../eslint-compat')
 import semver from 'semver'
 import rule from 'eslint-plugin-vue/dist/rules/func-call-spacing'
 import vueEslintParser from 'vue-eslint-parser'
@@ -50,7 +47,8 @@ tester.run('func-call-spacing', rule, {
           message: semver.lt(ESLint.version, '7.0.0')
             ? 'Unexpected newline between function name and paren.'
             : 'Unexpected whitespace between function name and paren.',
-          line: 1
+          line: 1,
+          column: 32
         }
       ]
     },
@@ -61,7 +59,8 @@ tester.run('func-call-spacing', rule, {
       errors: [
         {
           message: 'Missing space between function name and paren.',
-          line: 1
+          line: 1,
+          column: 32
         }
       ]
     },
@@ -85,7 +84,8 @@ tester.run('func-call-spacing', rule, {
           message: semver.lt(ESLint.version, '7.0.0')
             ? 'Unexpected newline between function name and paren.'
             : 'Unexpected whitespace between function name and paren.',
-          line: 4
+          line: 4,
+          column: 24
         }
       ]
     }

@@ -56,7 +56,11 @@ tester.run('no-restricted-class', rule, {
       errors: [
         {
           message: "'forbidden' class is not allowed.",
-          type: 'Literal'
+          type: 'Literal',
+          line: 1,
+          column: 34,
+          endLine: 1,
+          endColumn: 45
         }
       ],
       options: ['forbidden']
@@ -66,7 +70,11 @@ tester.run('no-restricted-class', rule, {
       errors: [
         {
           message: "'forbidden' class is not allowed.",
-          type: 'Literal'
+          type: 'Literal',
+          line: 1,
+          column: 35,
+          endLine: 1,
+          endColumn: 46
         }
       ],
       options: ['forbidden']
@@ -76,7 +84,11 @@ tester.run('no-restricted-class', rule, {
       errors: [
         {
           message: "'forbidden' class is not allowed.",
-          type: 'Identifier'
+          type: 'Identifier',
+          line: 1,
+          column: 35,
+          endLine: 1,
+          endColumn: 44
         }
       ],
       options: ['forbidden']
@@ -86,7 +98,11 @@ tester.run('no-restricted-class', rule, {
       errors: [
         {
           message: "'forbidden' class is not allowed.",
-          type: 'TemplateElement'
+          type: 'TemplateElement',
+          line: 1,
+          column: 34,
+          endLine: 1,
+          endColumn: 47
         }
       ],
       options: ['forbidden']
@@ -96,7 +112,11 @@ tester.run('no-restricted-class', rule, {
       errors: [
         {
           message: "'forbidden' class is not allowed.",
-          type: 'Literal'
+          type: 'Literal',
+          line: 1,
+          column: 34,
+          endLine: 1,
+          endColumn: 45
         }
       ],
       options: ['forbidden']
@@ -106,7 +126,11 @@ tester.run('no-restricted-class', rule, {
       errors: [
         {
           message: "'forbidden' class is not allowed.",
-          type: 'Literal'
+          type: 'Literal',
+          line: 1,
+          column: 35,
+          endLine: 1,
+          endColumn: 46
         }
       ],
       options: ['forbidden']
@@ -116,7 +140,11 @@ tester.run('no-restricted-class', rule, {
       errors: [
         {
           message: "'forbidden' class is not allowed.",
-          type: 'Literal'
+          type: 'Literal',
+          line: 1,
+          column: 35,
+          endLine: 1,
+          endColumn: 54
         }
       ],
       options: ['forbidden']

@@ -133,7 +133,7 @@ div {{ foo().bar }}
 
     // Sample source code on issue 689
     {
-      code: `<template lang="pug">div(:foo="\$gettext(\`bar\`)") {{\$gettext(\`bar\`)}}</template>`,
+      code: `<template lang="pug">div(:foo="$gettext(\`bar\`)") {{$gettext(\`bar\`)}}</template>`,
       options: [
         "CallExpression[callee.type='Identifier'][callee.name='$gettext'] TemplateLiteral"
       ],
@@ -185,7 +185,9 @@ div {{ foo().bar }}
         {
           message: 'Third argument of interpolate must be true',
           line: 1,
-          column: 58
+          column: 58,
+          endLine: 1,
+          endColumn: 63
         }
       ]
     },
@@ -207,7 +209,9 @@ div {{ foo().bar }}
         {
           message: 'Call expressions are not allowed.',
           line: 4,
-          column: 24
+          column: 24,
+          endLine: 4,
+          endColumn: 29
         }
       ]
     }

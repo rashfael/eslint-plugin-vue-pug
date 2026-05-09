@@ -292,7 +292,11 @@ tester.run('attributes-order', rule, {
       errors: [
         {
           message: 'Attribute "is" should go before "v-cloak".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 35,
+          endLine: 1,
+          endColumn: 46
         }
       ]
     },
@@ -303,11 +307,19 @@ tester.run('attributes-order', rule, {
       errors: [
         {
           message: 'Attribute "v-model" should go before "model".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 39,
+          endLine: 1,
+          endColumn: 55
         },
         {
           message: 'Attribute ":id" should go before "propOne".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 72,
+          endLine: 1,
+          endColumn: 81
         }
       ]
     },
@@ -318,11 +330,19 @@ tester.run('attributes-order', rule, {
       errors: [
         {
           message: 'Attribute "v-model" should go before "v-on".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 80,
+          endLine: 1,
+          endColumn: 96
         },
         {
           message: 'Attribute "propOne" should go before "v-on".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 98,
+          endLine: 1,
+          endColumn: 111
         }
       ]
     },
@@ -333,7 +353,11 @@ tester.run('attributes-order', rule, {
       errors: [
         {
           message: 'Attribute "is" should go before "aria-test".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 58,
+          endLine: 1,
+          endColumn: 69
         }
       ]
     },
@@ -361,7 +385,11 @@ tester.run('attributes-order', rule, {
       errors: [
         {
           message: 'Attribute "is" should go before "propone".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 56,
+          endLine: 1,
+          endColumn: 67
         }
       ]
     },
@@ -372,23 +400,43 @@ tester.run('attributes-order', rule, {
       errors: [
         {
           message: 'Attribute "v-for" should go before "v-if".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 49,
+          endLine: 1,
+          endColumn: 70
         },
         {
           message: 'Attribute "is" should go before "v-once".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 80,
+          endLine: 1,
+          endColumn: 91
         },
         {
           message: 'Attribute "ref" should go before "v-on:click".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 120,
+          endLine: 1,
+          endColumn: 132
         },
         {
           message: 'Attribute ":prop" should go before "v-on:click".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 134,
+          endLine: 1,
+          endColumn: 152
         },
         {
           message: 'Attribute "myProp" should go before "v-text".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 176,
+          endLine: 1,
+          endColumn: 189
         }
       ]
     },
@@ -416,19 +464,35 @@ tester.run('attributes-order', rule, {
       errors: [
         {
           message: 'Attribute "is" should go before "v-once".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 80,
+          endLine: 1,
+          endColumn: 91
         },
         {
           message: 'Attribute "v-on:click" should go before "v-once".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 93,
+          endLine: 1,
+          endColumn: 118
         },
         {
           message: 'Attribute "ref" should go before "v-once".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 120,
+          endLine: 1,
+          endColumn: 132
         },
         {
           message: 'Attribute "myProp" should go before "v-text".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 176,
+          endLine: 1,
+          endColumn: 189
         }
       ]
     },
@@ -438,7 +502,11 @@ tester.run('attributes-order', rule, {
       errors: [
         {
           message: 'Attribute "v-slot" should go before "v-model".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 71,
+          endLine: 1,
+          endColumn: 91
         }
       ]
     },
@@ -450,7 +518,11 @@ tester.run('attributes-order', rule, {
       errors: [
         {
           message: 'Attribute "a-prop" should go before "z-prop".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 38,
+          endLine: 1,
+          endColumn: 48
         }
       ]
     },
@@ -462,7 +534,11 @@ tester.run('attributes-order', rule, {
       errors: [
         {
           message: 'Attribute ":a-prop" should go before ":z-prop".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 39,
+          endLine: 1,
+          endColumn: 50
         }
       ]
     },
@@ -474,7 +550,11 @@ tester.run('attributes-order', rule, {
       errors: [
         {
           message: 'Attribute "@change" should go before "@input".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 40,
+          endLine: 1,
+          endColumn: 53
         }
       ]
     },
@@ -486,7 +566,11 @@ tester.run('attributes-order', rule, {
       errors: [
         {
           message: 'Attribute "boolean-prop" should go before "z-prop".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 42,
+          endLine: 1,
+          endColumn: 54
         }
       ]
     },
@@ -498,7 +582,11 @@ tester.run('attributes-order', rule, {
       errors: [
         {
           message: 'Attribute "v-on:[c]" should go before "v-on:click".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 53,
+          endLine: 1,
+          endColumn: 76
         }
       ]
     },
@@ -510,7 +598,11 @@ tester.run('attributes-order', rule, {
       errors: [
         {
           message: 'Attribute "v-on:click" should go before "v-text".',
-          type: 'VAttribute'
+          type: 'VAttribute',
+          line: 1,
+          column: 48,
+          endLine: 1,
+          endColumn: 73
         }
       ]
     },
@@ -521,7 +613,11 @@ tester.run('attributes-order', rule, {
       output: `<template lang="pug">div(v-if="bar", v-show="foo")</template>`,
       errors: [
         {
-          message: 'Attribute "v-if" should go before "v-show".'
+          message: 'Attribute "v-if" should go before "v-show".',
+          line: 1,
+          column: 40,
+          endLine: 1,
+          endColumn: 50
         }
       ]
     },
@@ -532,7 +628,11 @@ tester.run('attributes-order', rule, {
       output: `<template lang="pug">div(v-bar="bar", v-foo="foo")</template>`,
       errors: [
         {
-          message: 'Attribute "v-bar" should go before "v-foo".'
+          message: 'Attribute "v-bar" should go before "v-foo".',
+          line: 1,
+          column: 39,
+          endLine: 1,
+          endColumn: 50
         }
       ]
     },
@@ -543,7 +643,11 @@ tester.run('attributes-order', rule, {
       output: `<template lang="pug">div(v-foo.a="a", v-foo.b="b")</template>`,
       errors: [
         {
-          message: 'Attribute "v-foo.a" should go before "v-foo.b".'
+          message: 'Attribute "v-foo.a" should go before "v-foo.b".',
+          line: 1,
+          column: 39,
+          endLine: 1,
+          endColumn: 50
         }
       ]
     },
@@ -554,7 +658,11 @@ tester.run('attributes-order', rule, {
       output: `<template lang="pug">div(v-is="foo", v-cloak)</template>`,
       errors: [
         {
-          message: 'Attribute "v-is" should go before "v-cloak".'
+          message: 'Attribute "v-is" should go before "v-cloak".',
+          line: 1,
+          column: 35,
+          endLine: 1,
+          endColumn: 45
         }
       ]
     },
@@ -690,7 +798,11 @@ tester.run('attributes-order', rule, {
       output: `<template lang="pug">div(ref="foo", bar="baz", v-slot="{ qux }")</template>`,
       errors: [
         {
-          message: 'Attribute "bar" should go before "v-slot".'
+          message: 'Attribute "bar" should go before "v-slot".',
+          line: 1,
+          column: 55,
+          endLine: 1,
+          endColumn: 64
         }
       ]
     },
@@ -719,7 +831,11 @@ tester.run('attributes-order', rule, {
       output: `<template lang="pug">div(ref="foo", bar="baz", v-slot="{ qux }")</template>`,
       errors: [
         {
-          message: 'Attribute "ref" should go before "bar".'
+          message: 'Attribute "ref" should go before "bar".',
+          line: 1,
+          column: 37,
+          endLine: 1,
+          endColumn: 46
         }
       ]
     },

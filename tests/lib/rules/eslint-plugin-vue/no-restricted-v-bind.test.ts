@@ -70,7 +70,9 @@ tester.run('no-restricted-v-bind', rule, {
           message:
             'Using `:v-xxx` is not allowed. Instead, remove `:` and use it as directive.',
           line: 1,
-          column: 26
+          column: 26,
+          endLine: 1,
+          endColumn: 34
         }
       ]
     },

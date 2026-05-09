@@ -7,7 +7,13 @@ import rule from 'eslint-plugin-vue/dist/rules/no-restricted-html-elements'
 import vueEslintParser from 'vue-eslint-parser'
 
 const tester = new RuleTester({
-  languageOptions: { parser: vueEslintParser, ecmaVersion: 2015 }
+  languageOptions: {
+    parser: vueEslintParser,
+    ecmaVersion: 2015,
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
+  }
 })
 
 tester.run('no-restricted-html-elements', rule as RuleModule, {

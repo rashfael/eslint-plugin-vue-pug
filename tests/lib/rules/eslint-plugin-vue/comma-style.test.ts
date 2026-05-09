@@ -28,7 +28,7 @@ CustomButton(@click=\`() => fn({
     {
       code: `
         <template lang="pug">
-CustomButton(@click=\`(\$event,
+CustomButton(@click=\`($event,
 data) => fn()\`)
 </template>`,
       options: ['last', { exceptions: { ArrowFunctionExpression: false } }]
@@ -36,7 +36,7 @@ data) => fn()\`)
     {
       code: `
         <template lang="pug">
-CustomButton(@click=\`(\$event
+CustomButton(@click=\`($event
 , data) => fn()\`)
 </template>`,
       options: ['first', { exceptions: { ArrowFunctionExpression: false } }]
@@ -85,13 +85,13 @@ CustomButton(@click=\`() => fn({
     {
       code: `
         <template lang="pug">
-CustomButton(@click=\`(\$event
+CustomButton(@click=\`($event
 , data) => fn()\`)
 </template>`,
       options: ['last', { exceptions: { ArrowFunctionExpression: false } }],
       output: `
         <template lang="pug">
-CustomButton(@click=\`(\$event,
+CustomButton(@click=\`($event,
  data) => fn()\`)
 </template>`,
       errors: [
@@ -104,13 +104,13 @@ CustomButton(@click=\`(\$event,
     {
       code: `
         <template lang="pug">
-CustomButton(@click=\`(\$event,
+CustomButton(@click=\`($event,
 data) => fn()\`)
 </template>`,
       options: ['first', { exceptions: { ArrowFunctionExpression: false } }],
       output: `
         <template lang="pug">
-CustomButton(@click=\`(\$event
+CustomButton(@click=\`($event
 ,data) => fn()\`)
 </template>`,
       errors: [

@@ -54,11 +54,17 @@ button(:class=\`{
       errors: [
         {
           messageId: 'unexpected',
-          line: 1
+          line: 1,
+          column: 45,
+          endLine: 1,
+          endColumn: 46
         },
         {
           messageId: 'unexpected',
-          line: 1
+          line: 1,
+          column: 72,
+          endLine: 1,
+          endColumn: 73
         }
       ]
     },
@@ -78,7 +84,10 @@ button(:class=\`{
       errors: [
         {
           messageId: 'unexpected',
-          line: 3
+          line: 3,
+          column: 8,
+          endLine: 3,
+          endColumn: 9
         }
         // valid in eslint v6.0
         // {
@@ -93,7 +102,10 @@ button(:class=\`{
       errors: [
         {
           messageId: 'unexpected',
-          line: 1
+          line: 1,
+          column: 37,
+          endLine: 1,
+          endColumn: 38
         }
       ]
     },
@@ -103,19 +115,38 @@ button(:class=\`{
       errors: [
         {
           messageId: 'unexpected',
-          column: 37
+          line: 1,
+          column: 37,
+          endLine: 1,
+          endColumn: 38
         }
       ]
     },
     {
       code: `<template lang="pug">button(:class="(a+b) | filter")</template>`,
       output: `<template lang="pug">button(:class="a+b | filter")</template>`,
-      errors: [{ messageId: 'unexpected' }]
+      errors: [
+        {
+          messageId: 'unexpected',
+          line: 1,
+          column: 37,
+          endLine: 1,
+          endColumn: 38
+        }
+      ]
     },
     {
       code: `<template lang="pug">button(:class="((a+b | bitwise))")</template>`,
       output: `<template lang="pug">button(:class="(a+b | bitwise)")</template>`,
-      errors: [{ messageId: 'unexpected' }]
+      errors: [
+        {
+          messageId: 'unexpected',
+          line: 1,
+          column: 38,
+          endLine: 1,
+          endColumn: 39
+        }
+      ]
     },
     {
       code: `<template lang="pug">button {{ (foo + bar) }}</template>`,
@@ -123,49 +154,116 @@ button(:class=\`{
       errors: [
         {
           messageId: 'unexpected',
-          column: 32
+          line: 1,
+          column: 32,
+          endLine: 1,
+          endColumn: 33
         }
       ]
     },
     {
       code: `<template lang="pug">button {{ (foo + bar) | filter }}</template>`,
       output: `<template lang="pug">button {{ foo + bar | filter }}</template>`,
-      errors: [{ messageId: 'unexpected' }]
+      errors: [
+        {
+          messageId: 'unexpected',
+          line: 1,
+          column: 32,
+          endLine: 1,
+          endColumn: 33
+        }
+      ]
     },
     {
       code: `<template lang="pug">button {{ ((foo + bar | bitwise)) }}</template>`,
       output: `<template lang="pug">button {{ (foo + bar | bitwise) }}</template>`,
-      errors: [{ messageId: 'unexpected' }]
+      errors: [
+        {
+          messageId: 'unexpected',
+          line: 1,
+          column: 33,
+          endLine: 1,
+          endColumn: 34
+        }
+      ]
     },
     {
       code: `<template lang="pug">button {{ ((foo | bitwise)) | filter }}</template>`,
       output: `<template lang="pug">button {{ (foo | bitwise) | filter }}</template>`,
-      errors: [{ messageId: 'unexpected' }]
+      errors: [
+        {
+          messageId: 'unexpected',
+          line: 1,
+          column: 33,
+          endLine: 1,
+          endColumn: 34
+        }
+      ]
     },
     {
       code: `<template lang="pug">button {{ (foo(bar|bitwise)) }}</template>`,
       output: `<template lang="pug">button {{ foo(bar|bitwise) }}</template>`,
-      errors: [{ messageId: 'unexpected' }]
+      errors: [
+        {
+          messageId: 'unexpected',
+          line: 1,
+          column: 32,
+          endLine: 1,
+          endColumn: 33
+        }
+      ]
     },
     {
       code: `<template lang="pug">button {{ ([foo|bitwise]) }}</template>`,
       output: `<template lang="pug">button {{ [foo|bitwise] }}</template>`,
-      errors: [{ messageId: 'unexpected' }]
+      errors: [
+        {
+          messageId: 'unexpected',
+          line: 1,
+          column: 32,
+          endLine: 1,
+          endColumn: 33
+        }
+      ]
     },
     {
       code: `<template lang="pug">button {{ ({foo:bar|bitwise}) }}</template>`,
       output: `<template lang="pug">button {{ {foo:bar|bitwise} }}</template>`,
-      errors: [{ messageId: 'unexpected' }]
+      errors: [
+        {
+          messageId: 'unexpected',
+          line: 1,
+          column: 32,
+          endLine: 1,
+          endColumn: 33
+        }
+      ]
     },
     {
       code: `<template lang="pug">button {{ ((function () {} ())) }}</template>`,
       output: `<template lang="pug">button {{ (function () {} ()) }}</template>`,
-      errors: [{ messageId: 'unexpected' }]
+      errors: [
+        {
+          messageId: 'unexpected',
+          line: 1,
+          column: 33,
+          endLine: 1,
+          endColumn: 34
+        }
+      ]
     },
     {
       code: `<template lang="pug">button {{ ((function () {})()) }}</template>`,
       output: `<template lang="pug">button {{ (function () {})() }}</template>`,
-      errors: [{ messageId: 'unexpected' }]
+      errors: [
+        {
+          messageId: 'unexpected',
+          line: 1,
+          column: 32,
+          endLine: 1,
+          endColumn: 33
+        }
+      ]
     },
     // CSS vars injection
     {
@@ -181,7 +279,15 @@ button(:class=\`{
         color: v-bind('a')
       }
       </style>`,
-      errors: [{ messageId: 'unexpected' }]
+      errors: [
+        {
+          messageId: 'unexpected',
+          line: 4,
+          column: 24,
+          endLine: 4,
+          endColumn: 25
+        }
+      ]
     }
   ]
 })

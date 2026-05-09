@@ -7,7 +7,13 @@ import rule from 'eslint-plugin-vue/dist/rules/valid-v-bind-sync'
 import vueEslintParser from 'vue-eslint-parser'
 
 const tester = new RuleTester({
-  languageOptions: { parser: vueEslintParser, ecmaVersion: 2020 }
+  languageOptions: {
+    parser: vueEslintParser,
+    ecmaVersion: 2020,
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
+  }
 })
 
 tester.run('valid-v-bind-sync', rule, {
@@ -79,7 +85,7 @@ div
       code: `<template lang="pug">
 div
   div(v-for="x in list")
-    MyComponent(:foo.sync="foo[\`\${x}\`]")
+    MyComponent(:foo.sync="foo[\`${x}\`]")
 </template>`
     },
     {
@@ -87,7 +93,7 @@ div
       code: `<template lang="pug">
 div
   div(v-for="x in list")
-    MyComponent(:foo.sync="foo[\`prefix_\${x}\`]")
+    MyComponent(:foo.sync="foo[\`prefix_${x}\`]")
 </template>`
     },
     {
@@ -95,7 +101,7 @@ div
       code: `<template lang="pug">
 div
   div(v-for="x in list")
-    MyComponent(:foo.sync="foo[x ? x : \'_\']")
+    MyComponent(:foo.sync="foo[x ? x : '_']")
 </template>`
     },
     {
@@ -103,7 +109,7 @@ div
       code: `<template lang="pug">
 div
   div(v-for="x in list")
-    MyComponent(:foo.sync="foo[x || \'_\']")
+    MyComponent(:foo.sync="foo[x || '_']")
 </template>`
     },
     {
@@ -135,7 +141,7 @@ div
       code: `<template lang="pug">
 div
   div(v-for="x in list")
-    MyComponent(:foo.sync="foo[tag\`\${x}\`]")
+    MyComponent(:foo.sync="foo[tag\`${x}\`]")
 </template>`
     },
     // not .sync

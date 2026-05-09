@@ -66,6 +66,18 @@ const IGNORE_TESTS = [
   'no-multi-spaces', // Error type should be HTMLIdentifier, found PugIdentifier
   'this-in-template', // upstream uses multi-line `${suggestionPrefix(...)}` substitutions in `output:` that don't survive html→pug conversion
 
+  // Bucket E sub-bucket E2 — rule mechanic doesn't fire on pug at all (passInvalid==0).
+  // Either the rule walks HTML-only token shapes (HTMLWhitespace, VText, mustache `{{ }}`),
+  // or it reaches into JS-AST inside attribute values that the pug tokenizer doesn't expose
+  // the same way. See docs/test-triage.md "Bucket E" for the classification methodology.
+  'singleline-html-element-content-newline', // filters HTMLWhitespace tokens explicitly; pug emits none
+  'mustache-interpolation-spacing', // governs `{{ x }}` whitespace; pug template text uses different syntax
+  'no-useless-mustaches', // visits `VElement > VExpressionContainer`; not produced for pug text bodies
+  'no-bare-strings-in-template', // walks VText nodes; pug text tokens aren't VText
+  'no-duplicate-class-names', // pug class shorthand `.foo.foo` bypasses the `class="..."` selector; the `:class` selector also never fires
+  'no-multiple-objects-in-class', // walks ArrayExpression inside `:class`; the JS subtree isn't reached for pug attributes
+  'padding-line-between-tags', // enforces blank lines between sibling HTML tags; pug uses indentation-based layout — rule fires on every nested element (false positives on valid pug) and never sees its expected separator pattern on invalid pug. No clean pug analog.
+
   // tests without template content rules
   'block-lang',
   'no-restricted-call-after-await',
@@ -221,10 +233,24 @@ for (const testname of ruleTests) {
       `from 'eslint-plugin-vue/dist/processor'`
     )
     // Inject the pug template tokenizer into both shapes upstream uses.
-    // Modern: languageOptions: { parserOptions: {...} } at any nesting
+    // (1) Existing parserOptions: {...} — splice templateTokenizer into it.
     .replaceAll(
       /parserOptions: \{(.*?)\}/gs,
       "parserOptions: {$1, templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}"
+    )
+    // (2) languageOptions blocks WITHOUT a parserOptions key — add one.
+    //     Without templateTokenizer, vue-eslint-parser sees `<template lang="pug">…</template>`
+    //     as raw text and never invokes the pug tokenizer at all, so any
+    //     rule that walks the template AST silently sees nothing.
+    //     Match `languageOptions: {…}` (or `const languageOptions = {…}`) and
+    //     check the inner body for `parserOptions:`; if absent, append.
+    .replace(
+      /((?:languageOptions\s*[:=]|const\s+languageOptions\s*=)\s*)\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}/g,
+      (match, lhs, body) => {
+        if (/parserOptions\s*:/.test(body)) return match
+        const sep = body.trim() ? ',\n    ' : '\n    '
+        return `${lhs}{${body.replace(/\s+$/, '')}${sep}parserOptions: { templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' } }\n  }`
+      }
     )
     // Convert <template>...</template> snippets to pug equivalents.
     // try to get simple test cases

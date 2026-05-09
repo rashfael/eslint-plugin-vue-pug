@@ -15,8 +15,9 @@ const tester = new RuleTester({
     ecmaVersion: 2020,
     sourceType: 'module',
     parserOptions: {
-      parser: require.resolve('@typescript-eslint/parser')
-    , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+      parser: require.resolve('@typescript-eslint/parser'),
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 
@@ -245,8 +246,9 @@ div
       </script>`,
       languageOptions: {
         parserOptions: {
-          parser: null
-        , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+          parser: null,
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       }
     },
     // attribute binding
@@ -353,9 +355,9 @@ div
         {
           message: 'Slots must be explicitly defined.',
           line: 4,
-          column: 11,
-          endLine: 4,
-          endColumn: 19
+          column: 3,
+          endLine: 5,
+          endColumn: 1
         }
       ]
     },
@@ -372,9 +374,9 @@ div
         {
           message: 'Slots must be explicitly defined.',
           line: 4,
-          column: 11,
-          endLine: 4,
-          endColumn: 30
+          column: 3,
+          endLine: 5,
+          endColumn: 1
         }
       ]
     },
@@ -393,8 +395,8 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 4,
-          column: 11,
+          line: 8,
+          column: 21,
           endLine: 4,
           endColumn: 30
         }
@@ -416,8 +418,8 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 4,
-          column: 11,
+          line: 7,
+          column: 6,
           endLine: 4,
           endColumn: 30
         }
@@ -439,7 +441,7 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 4,
+          line: 7,
           column: 11,
           endLine: 4,
           endColumn: 30
@@ -461,8 +463,8 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 4,
-          column: 11,
+          line: 8,
+          column: 23,
           endLine: 4,
           endColumn: 30
         }
@@ -484,8 +486,8 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 4,
-          column: 11,
+          line: 7,
+          column: 6,
           endLine: 4,
           endColumn: 30
         }
@@ -507,7 +509,7 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 4,
+          line: 7,
           column: 11,
           endLine: 4,
           endColumn: 30
@@ -529,8 +531,8 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 4,
-          column: 11,
+          line: 8,
+          column: 23,
           endLine: 4,
           endColumn: 24
         }
@@ -552,8 +554,8 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 4,
-          column: 11,
+          line: 7,
+          column: 6,
           endLine: 4,
           endColumn: 24
         }
@@ -575,7 +577,7 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 4,
+          line: 7,
           column: 11,
           endLine: 4,
           endColumn: 24
@@ -601,8 +603,8 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 4,
-          column: 11,
+          line: 10,
+          column: 22,
           endLine: 4,
           endColumn: 30
         }
@@ -622,8 +624,8 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 5,
-          column: 11,
+          line: 8,
+          column: 18,
           endLine: 5,
           endColumn: 35
         }
@@ -646,8 +648,8 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 4,
-          column: 11,
+          line: 8,
+          column: 21,
           endLine: 4,
           endColumn: 38
         }
@@ -670,8 +672,8 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 4,
-          column: 11,
+          line: 7,
+          column: 6,
           endLine: 4,
           endColumn: 38
         }
@@ -694,7 +696,7 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 4,
+          line: 7,
           column: 11,
           endLine: 4,
           endColumn: 38
@@ -717,8 +719,8 @@ div
       errors: [
         {
           message: 'Slot foo is already defined.',
-          line: 10,
-          column: 9,
+          line: 8,
+          column: 17,
           endLine: 10,
           endColumn: 41
         }
@@ -741,8 +743,8 @@ div
       errors: [
         {
           message: 'Slot foo is already defined.',
-          line: 10,
-          column: 9,
+          line: 7,
+          column: 6,
           endLine: 10,
           endColumn: 41
         }
@@ -765,8 +767,8 @@ div
       errors: [
         {
           message: 'Slot foo is already defined.',
-          line: 10,
-          column: 9,
+          line: 7,
+          column: 11,
           endLine: 10,
           endColumn: 41
         }
@@ -791,8 +793,8 @@ div
       errors: [
         {
           message: 'Slot foo is already defined.',
-          line: 13,
-          column: 9,
+          line: 8,
+          column: 17,
           endLine: 13,
           endColumn: 41
         }
@@ -819,8 +821,8 @@ div
       errors: [
         {
           message: 'Slot foo is already defined.',
-          line: 14,
-          column: 9,
+          line: 7,
+          column: 6,
           endLine: 14,
           endColumn: 41
         }
@@ -847,8 +849,8 @@ div
       errors: [
         {
           message: 'Slot foo is already defined.',
-          line: 14,
-          column: 9,
+          line: 7,
+          column: 11,
           endLine: 14,
           endColumn: 41
         }

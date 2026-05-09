@@ -8,7 +8,13 @@ import rule from 'eslint-plugin-vue/dist/rules/no-static-inline-styles'
 import vueEslintParser from 'vue-eslint-parser'
 
 const tester = new RuleTester({
-  languageOptions: { parser: vueEslintParser, ecmaVersion: 2019 }
+  languageOptions: {
+    parser: vueEslintParser,
+    ecmaVersion: 2019,
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
+  }
 })
 
 tester.run('no-static-inline-styles', rule, {

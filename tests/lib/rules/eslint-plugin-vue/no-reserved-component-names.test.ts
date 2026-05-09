@@ -9,7 +9,15 @@ import { RuleTester } from '../../../eslint-compat'
 import vueEslintParser from 'vue-eslint-parser'
 import { readFileSync } from 'node:fs'
 
-const htmlElements = (JSON.parse(readFileSync(new URL('../../../../eslint-plugin-vue/lib/utils/html-elements.json', import.meta.url), 'utf8')))
+const htmlElements = JSON.parse(
+  readFileSync(
+    new URL(
+      '../../../../eslint-plugin-vue/lib/utils/html-elements.json',
+      import.meta.url
+    ),
+    'utf8'
+  )
+)
 const RESERVED_NAMES_IN_HTML = new Set([
   ...htmlElements,
   ...htmlElements.map(
@@ -251,12 +259,9 @@ const invalidElements = [
   'menuitem',
   'summary',
   'Summary',
-  'content',
-  'Content',
-  'element',
-  'Element',
-  'shadow',
-  'Shadow',
+  // (removed: 'content', 'Content', 'element', 'Element', 'shadow',
+  //  'Shadow' — these were dropped from upstream's html-elements.json
+  //  between 10.7 and 10.9 and are no longer flagged by the rule)
   'template',
   'Template',
   'slot',
@@ -282,8 +287,7 @@ const invalidElements = [
   'Defs',
   'desc',
   'Desc',
-  'discard',
-  'Discard',
+  // 'discard' / 'Discard' removed: dropped from upstream svg-elements.json
   'ellipse',
   'Ellipse',
   'feBlend',
@@ -355,8 +359,7 @@ const invalidElements = [
   'textPath',
   'tspan',
   'Tspan',
-  'unknown',
-  'Unknown',
+  // 'unknown' / 'Unknown' removed: dropped from upstream svg-elements.json
   'use',
   'Use',
   'view',
@@ -377,8 +380,7 @@ const invalidElements = [
   'Blink',
   'center',
   'Center',
-  'command',
-  'Command',
+  // 'command' / 'Command' removed: dropped from upstream deprecated-html-elements.json
   'dir',
   'Dir',
   'font',
@@ -430,7 +432,10 @@ const vue3BuiltInComponents = ['teleport', 'Teleport', 'suspense', 'Suspense']
 
 const languageOptions = {
   ecmaVersion: 2018,
-  sourceType: 'module'
+  sourceType: 'module',
+  parserOptions: {
+    templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+  }
 }
 
 const tester = new RuleTester()
@@ -511,9 +516,12 @@ tester.run('no-reserved-component-names', rule, {
         </script>
       `,
       languageOptions: {
-        cmaVersion: 2018,
+        ecmaVersion: 2018,
         sourceType: 'module',
-        parser: vueEslintParser
+        parser: vueEslintParser,
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       }
     },
     {
@@ -526,9 +534,12 @@ tester.run('no-reserved-component-names', rule, {
         </script>
       `,
       languageOptions: {
-        cmaVersion: 2018,
+        ecmaVersion: 2018,
         sourceType: 'module',
-        parser: vueEslintParser
+        parser: vueEslintParser,
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       }
     },
     // https://github.com/vuejs/eslint-plugin-vue/issues/1018

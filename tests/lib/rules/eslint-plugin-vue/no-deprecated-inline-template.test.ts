@@ -56,9 +56,9 @@ my-component(inline-template)
 </template>`,
       errors: [
         {
+          messageId: 'unexpected',
           line: 2,
           column: 14,
-          messageId: 'unexpected',
           endLine: 2,
           endColumn: 29
         }
@@ -70,7 +70,15 @@ my-component(inline-template)
 my-component(inline-template="foo")
   div
 </template>`,
-      errors: [{ messageId: 'unexpected' }]
+      errors: [
+        {
+          messageId: 'unexpected',
+          line: 2,
+          column: 14,
+          endLine: 2,
+          endColumn: 29
+        }
+      ]
     }
   ]
 })

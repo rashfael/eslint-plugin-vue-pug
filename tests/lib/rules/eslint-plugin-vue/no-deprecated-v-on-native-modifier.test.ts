@@ -48,9 +48,9 @@ tester.run('no-deprecated-v-on-native-modifier', rule, {
       code: `<template lang="pug">input(v-on:keyup.native='fore')</template>`,
       errors: [
         {
+          messageId: 'deprecated',
           line: 1,
           column: 39,
-          messageId: 'deprecated',
           endLine: 1,
           endColumn: 45
         }
@@ -61,9 +61,9 @@ tester.run('no-deprecated-v-on-native-modifier', rule, {
       code: `<template lang="pug">input(v-on:keyup.foo.native.bar='fore')</template>`,
       errors: [
         {
+          messageId: 'deprecated',
           line: 1,
           column: 43,
-          messageId: 'deprecated',
           endLine: 1,
           endColumn: 49
         }

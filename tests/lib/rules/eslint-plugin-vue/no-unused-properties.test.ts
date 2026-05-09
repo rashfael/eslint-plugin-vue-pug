@@ -18,7 +18,10 @@ const tester = new RuleTester({
   languageOptions: {
     parser: vueEslintParser,
     ecmaVersion: 2020,
-    sourceType: 'module'
+    sourceType: 'module',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 
@@ -648,7 +651,7 @@ tester.run('no-unused-properties', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">div {{ \$props.count }}</template>
+        <template lang="pug">div {{ $props.count }}</template>
         <script>
           export default {
             props: ['count']
@@ -659,7 +662,7 @@ tester.run('no-unused-properties', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">div {{ \$props }}</template>
+        <template lang="pug">div {{ $props }}</template>
         <script>
           export default {
             props: ['count']
@@ -682,7 +685,7 @@ tester.run('no-unused-properties', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">div {{ \$props.count1 + \$props.count2 }}</template>
+        <template lang="pug">div {{ $props.count1 + $props.count2 }}</template>
         <script>
           export default {
             props: ['count1', 'count2']
@@ -709,7 +712,7 @@ tester.run('no-unused-properties', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">div(v-if="\$props.count > 0")</template>
+        <template lang="pug">div(v-if="$props.count > 0")</template>
         <script>
           export default {
             props: {
@@ -741,7 +744,7 @@ tester.run('no-unused-properties', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">div(v-for="color in \$props.colors") {{ color }}</template>
+        <template lang="pug">div(v-for="color in $props.colors") {{ color }}</template>
         <script>
           export default {
             props: {
@@ -769,7 +772,7 @@ tester.run('no-unused-properties', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">div(v-html="\$props.message")</template>
+        <template lang="pug">div(v-html="$props.message")</template>
         <script>
           export default {
             props: ['message']
@@ -792,7 +795,7 @@ tester.run('no-unused-properties', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">counter(:count="\$props.count")</template>
+        <template lang="pug">counter(:count="$props.count")</template>
         <script>
           export default {
             props: ['count']
@@ -815,7 +818,7 @@ tester.run('no-unused-properties', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">button(@click="alert(\$props.count)")</template>
+        <template lang="pug">button(@click="alert($props.count)")</template>
         <script>
           export default {
             props: ['count']
@@ -826,7 +829,7 @@ tester.run('no-unused-properties', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">button(@click="alert(\$props)")</template>
+        <template lang="pug">button(@click="alert($props)")</template>
         <script>
           export default {
             props: ['count']
@@ -2259,8 +2262,9 @@ tester.run('no-unused-properties', rule, {
       </style>`,
       languageOptions: {
         parserOptions: {
-          parser: '@typescript-eslint/parser'
-        , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+          parser: '@typescript-eslint/parser',
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       }
     },
 
@@ -4581,9 +4585,9 @@ tester.run('no-unused-properties', rule, {
       errors: [
         {
           message: "'c' of property found, but never used.",
-          line: 6,
+          line: 4,
           column: 44,
-          endLine: 6,
+          endLine: 4,
           endColumn: 47
         }
       ]
@@ -5026,7 +5030,7 @@ tester.run('no-unused-properties', rule, {
         {
           message: "'baz' of property found, but never used.",
           line: 4,
-          column: 19,
+          column: 25,
           endLine: 4,
           endColumn: 24
         }
@@ -5061,7 +5065,7 @@ tester.run('no-unused-properties', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">div {{ \$props.foo }}</template>
+        <template lang="pug">div {{ $props.foo }}</template>
         <script>
           export default {
             props: ['foo', 'bar']
@@ -5089,9 +5093,9 @@ tester.run('no-unused-properties', rule, {
       errors: [
         {
           message: "'b' of property found, but never used.",
-          line: 6,
+          line: 4,
           column: 39,
-          endLine: 6,
+          endLine: 4,
           endColumn: 42
         }
       ]
@@ -5106,9 +5110,9 @@ tester.run('no-unused-properties', rule, {
       errors: [
         {
           message: "'b' of property found, but never used.",
-          line: 6,
+          line: 4,
           column: 37,
-          endLine: 6,
+          endLine: 4,
           endColumn: 40
         }
       ]
@@ -5126,7 +5130,7 @@ tester.run('no-unused-properties', rule, {
         {
           message: "'baz' of property found, but never used.",
           line: 3,
-          column: 61,
+          column: 75,
           endLine: 3,
           endColumn: 64
         }

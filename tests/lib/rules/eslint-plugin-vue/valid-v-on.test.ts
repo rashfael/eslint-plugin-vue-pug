@@ -10,7 +10,13 @@ import rule from 'eslint-plugin-vue/dist/rules/valid-v-on'
 import vueEslintParser from 'vue-eslint-parser'
 
 const tester = new RuleTester({
-  languageOptions: { parser: vueEslintParser, ecmaVersion: 2015 }
+  languageOptions: {
+    parser: vueEslintParser,
+    ecmaVersion: 2015,
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
+  }
 })
 
 tester.run('valid-v-on', rule, {
@@ -61,7 +67,7 @@ tester.run('valid-v-on', rule, {
     },
     {
       filename: 'test.vue',
-      code: `<!-- CONVERT ERROR -->Invalid end tag.<template><el-from @submit.native.prevent></el-form></template>`
+      code: `<template lang="pug">el-form(@submit.native.prevent)</template>`
     },
     {
       filename: 'test.vue',
@@ -73,7 +79,7 @@ tester.run('valid-v-on', rule, {
     },
     {
       filename: 'test.vue',
-      code: `<template lang="pug">div(v-on="\$listeners")</template>`
+      code: `<template lang="pug">div(v-on="$listeners")</template>`
     },
     {
       filename: 'test.vue',
@@ -117,9 +123,9 @@ tester.run('valid-v-on', rule, {
         {
           message: "'v-on' directives don't support the modifier 'aaa'.",
           line: 1,
-          column: 27,
+          column: 37,
           endLine: 1,
-          endColumn: 30
+          endColumn: 40
         }
       ]
     },
@@ -131,9 +137,9 @@ tester.run('valid-v-on', rule, {
           message:
             "'v-on' directives require a value or verb modifier (like 'stop' or 'prevent').",
           line: 1,
-          column: 16,
+          column: 26,
           endLine: 1,
-          endColumn: 26
+          endColumn: 36
         }
       ]
     },
@@ -145,9 +151,9 @@ tester.run('valid-v-on', rule, {
           message:
             "'v-on' directives require a value or verb modifier (like 'stop' or 'prevent').",
           line: 1,
-          column: 16,
+          column: 26,
           endLine: 1,
-          endColumn: 22
+          endColumn: 32
         }
       ]
     },
@@ -159,9 +165,9 @@ tester.run('valid-v-on', rule, {
         {
           message: "'v-on' directives don't support the modifier 'aaa'.",
           line: 1,
-          column: 29,
+          column: 39,
           endLine: 1,
-          endColumn: 32
+          endColumn: 42
         }
       ]
     },
@@ -173,9 +179,9 @@ tester.run('valid-v-on', rule, {
         {
           message: "'v-on' directives don't support the modifier 'bar'.",
           line: 1,
-          column: 25,
+          column: 35,
           endLine: 1,
-          endColumn: 28
+          endColumn: 38
         }
       ]
     },
@@ -186,9 +192,9 @@ tester.run('valid-v-on', rule, {
         {
           message: 'Avoid using JavaScript keyword as "v-on" value: "const".',
           line: 1,
-          column: 23,
+          column: 33,
           endLine: 1,
-          endColumn: 30
+          endColumn: 40
         }
       ]
     },
@@ -199,9 +205,9 @@ tester.run('valid-v-on', rule, {
         {
           message: 'Avoid using JavaScript keyword as "v-on" value: "delete".',
           line: 1,
-          column: 23,
+          column: 33,
           endLine: 1,
-          endColumn: 31
+          endColumn: 41
         }
       ]
     },

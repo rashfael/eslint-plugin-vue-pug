@@ -24,7 +24,7 @@ tester.run('no-deprecated-dollar-listeners-api', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">div(v-bind="\$attrs")</template>
+        <template lang="pug">div(v-bind="$attrs")</template>
         <script>
         export default {
           mounted () {
@@ -62,7 +62,7 @@ tester.run('no-deprecated-dollar-listeners-api', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">div(foo="\$listeners")</template>`
+        <template lang="pug">div(foo="$listeners")</template>`
     },
     {
       filename: 'test.vue',
@@ -110,7 +110,7 @@ export default {
     {
       filename: 'test.vue',
       code: `
-        <template lang="pug">div(v-on="\$listeners")</template>
+        <template lang="pug">div(v-on="$listeners")</template>
         <script>
         export default {
           computed: {
@@ -142,8 +142,8 @@ export default {
       filename: 'test.vue',
       code: `
         <template lang="pug">
-div(v-for="listener in \$listeners")
-div(:foo="\$listeners")
+div(v-for="listener in $listeners")
+div(:foo="$listeners")
 </template>
         <script>
         export default {

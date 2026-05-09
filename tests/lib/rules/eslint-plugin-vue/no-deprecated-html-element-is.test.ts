@@ -34,7 +34,7 @@ tester.run('no-deprecated-html-element-is', rule, {
     },
     {
       filename: 'test.vue',
-      code: `<template lang="pug">component(:is="\'foo\'")</template>`
+      code: `<template lang="pug">component(:is="'foo'")</template>`
     },
 
     // is="vue:xxx"
@@ -50,9 +50,9 @@ tester.run('no-deprecated-html-element-is', rule, {
       code: `<template lang="pug">div(is="foo")</template>`,
       errors: [
         {
+          messageId: 'unexpected',
           line: 1,
           column: 26,
-          messageId: 'unexpected',
           endLine: 1,
           endColumn: 34
         }
@@ -63,9 +63,11 @@ tester.run('no-deprecated-html-element-is', rule, {
       code: `<template lang="pug">div(:is="foo")</template>`,
       errors: [
         {
+          messageId: 'unexpected',
           line: 1,
           column: 26,
-          messageId: 'unexpected'
+          endLine: 1,
+          endColumn: 35
         }
       ]
     }

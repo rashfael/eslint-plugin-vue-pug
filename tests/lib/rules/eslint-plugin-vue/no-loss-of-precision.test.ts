@@ -4,10 +4,7 @@
  * @author Yosuke Ota
  * See LICENSE file in root directory for full license.
  */
-const {
-  RuleTester,
-  ESLint
-} = (await import('../../../eslint-compat'))
+const { RuleTester, ESLint } = await import('../../../eslint-compat')
 import semver from 'semver'
 import rule from 'eslint-plugin-vue/dist/rules/no-loss-of-precision'
 import vueEslintParser from 'vue-eslint-parser'

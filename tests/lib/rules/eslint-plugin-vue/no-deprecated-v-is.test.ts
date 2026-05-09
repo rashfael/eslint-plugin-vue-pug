@@ -25,7 +25,10 @@ tester.run('no-deprecated-v-is', rule, {
       errors: [
         {
           message: '`v-is` directive is deprecated.',
-          line: 1
+          line: 1,
+          column: 26,
+          endLine: 1,
+          endColumn: 30
         }
       ]
     }

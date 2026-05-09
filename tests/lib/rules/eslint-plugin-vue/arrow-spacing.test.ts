@@ -42,11 +42,17 @@ div(@click=\`
       errors: [
         {
           message: 'Missing space before =>.',
-          line: 2
+          line: 2,
+          column: 42,
+          endLine: 2,
+          endColumn: 43
         },
         {
           message: 'Missing space after =>.',
-          line: 2
+          line: 2,
+          column: 45,
+          endLine: 2,
+          endColumn: 46
         }
       ]
     },
@@ -58,11 +64,17 @@ div(@click=\`
       errors: [
         {
           message: 'Missing space before =>.',
-          line: 2
+          line: 2,
+          column: 43,
+          endLine: 2,
+          endColumn: 44
         },
         {
           message: 'Missing space after =>.',
-          line: 2
+          line: 2,
+          column: 46,
+          endLine: 2,
+          endColumn: 47
         }
       ]
     },
@@ -84,11 +96,17 @@ div(@click=\`
       errors: [
         {
           message: 'Missing space before =>.',
-          line: 4
+          line: 4,
+          column: 15,
+          endLine: 4,
+          endColumn: 16
         },
         {
           message: 'Missing space after =>.',
-          line: 4
+          line: 4,
+          column: 18,
+          endLine: 4,
+          endColumn: 19
         }
       ]
     },
@@ -101,11 +119,17 @@ div(@click=\`
       errors: [
         {
           message: 'Unexpected space before =>.',
-          line: 2
+          line: 2,
+          column: 42,
+          endLine: 2,
+          endColumn: 43
         },
         {
           message: 'Unexpected space after =>.',
-          line: 2
+          line: 2,
+          column: 47,
+          endLine: 2,
+          endColumn: 48
         }
       ]
     }

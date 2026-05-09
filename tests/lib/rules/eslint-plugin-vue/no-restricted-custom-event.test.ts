@@ -22,7 +22,7 @@ tester.run('no-restricted-custom-event', rule, {
   valid: [
     {
       filename: 'test.vue',
-      code: `<template lang="pug">button(@click="\$emit('click')")</template>
+      code: `<template lang="pug">button(@click="$emit('click')")</template>
       <script>
       export default {
         methods: {
@@ -36,7 +36,7 @@ tester.run('no-restricted-custom-event', rule, {
     },
     {
       filename: 'test.vue',
-      code: `<template lang="pug">button(@click="\$emit('click')")</template>
+      code: `<template lang="pug">button(@click="$emit('click')")</template>
       <script>
       export default {
         methods: {
@@ -51,7 +51,7 @@ tester.run('no-restricted-custom-event', rule, {
     {
       filename: 'test.vue',
       code: `<template lang="pug">
-button(@click="\$emit(0)")
+button(@click="$emit(0)")
 button(@click="emit('ignore')")
 </template>
       <script>
@@ -139,7 +139,9 @@ button(@click="emit('ignore')")
         {
           message: 'Using `bad` event is not allowed.',
           line: 7,
-          column: 24
+          column: 24,
+          endLine: 7,
+          endColumn: 29
         }
       ]
     },
@@ -164,11 +166,13 @@ button(@click="emit('ignore')")
       errors: [
         {
           message: 'Using `foo` event is not allowed.',
-          line: 6
+          line: 6,
+          column: 24,
+          endLine: 6,
+          endColumn: 29
         },
         {
           message: 'Use Bar instead',
-          line: 7,
           suggestions: [
             {
               desc: 'Instead, change to `Bar`.',
@@ -185,7 +189,11 @@ button(@click="emit('ignore')")
       </script>
       `
             }
-          ]
+          ],
+          line: 7,
+          column: 24,
+          endLine: 7,
+          endColumn: 29
         }
       ]
     },
@@ -208,28 +216,37 @@ button(@click="emit('ignore')")
       errors: [
         {
           message: 'Using `regexp1` event is not allowed.',
-          line: 6
+          line: 6,
+          column: 24,
+          endLine: 6,
+          endColumn: 33
         },
         {
           message: 'Using `regexp2` event is not allowed.',
-          line: 7
+          line: 7,
+          column: 24,
+          endLine: 7,
+          endColumn: 33
         }
       ]
     },
     {
       filename: 'test.vue',
-      code: `<template lang="pug">button(@click="\$emit('bad')")</template>`,
+      code: `<template lang="pug">button(@click="$emit('bad')")</template>`,
       options: [{ event: 'bad', suggest: "foo'" }],
       errors: [
         {
           message: 'Using `bad` event is not allowed.',
-          line: 1,
           suggestions: [
             {
               desc: "Instead, change to `foo'`.",
-              output: `<template lang="pug">button(@click="\$emit('foo\\'')")</template>`
+              output: `<template lang="pug">button(@click="$emit('foo\\'')")</template>`
             }
-          ]
+          ],
+          line: 1,
+          column: 43,
+          endLine: 1,
+          endColumn: 48
         }
       ]
     },

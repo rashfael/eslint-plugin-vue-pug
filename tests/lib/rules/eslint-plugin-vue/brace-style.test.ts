@@ -49,7 +49,10 @@ div(:attr=\`function foo() {
         {
           message:
             'Opening curly brace does not appear on the same line as controlling statement.',
-          line: 4
+          line: 4,
+          column: 1,
+          endLine: 4,
+          endColumn: 2
         }
       ]
     }

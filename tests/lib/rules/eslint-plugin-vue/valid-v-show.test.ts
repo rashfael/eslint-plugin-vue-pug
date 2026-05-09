@@ -10,7 +10,13 @@ import rule from 'eslint-plugin-vue/dist/rules/valid-v-show'
 import vueEslintParser from 'vue-eslint-parser'
 
 const tester = new RuleTester({
-  languageOptions: { parser: vueEslintParser, ecmaVersion: 2015 }
+  languageOptions: {
+    parser: vueEslintParser,
+    ecmaVersion: 2015,
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
+  }
 })
 
 tester.run('valid-v-show', rule, {
@@ -42,9 +48,9 @@ tester.run('valid-v-show', rule, {
         {
           message: "'v-show' directives require no argument.",
           line: 1,
-          column: 23,
+          column: 33,
           endLine: 1,
-          endColumn: 26
+          endColumn: 36
         }
       ]
     },
@@ -55,9 +61,9 @@ tester.run('valid-v-show', rule, {
         {
           message: "'v-show' directives require no modifier.",
           line: 1,
-          column: 23,
+          column: 33,
           endLine: 1,
-          endColumn: 26
+          endColumn: 36
         }
       ]
     },
@@ -68,9 +74,9 @@ tester.run('valid-v-show', rule, {
         {
           message: "'v-show' directives require that attribute value.",
           line: 1,
-          column: 16,
+          column: 26,
           endLine: 1,
-          endColumn: 22
+          endColumn: 32
         }
       ]
     },
@@ -95,9 +101,9 @@ tester.run('valid-v-show', rule, {
         {
           message: "'v-show' directives cannot be put on <template> tags.",
           line: 1,
-          column: 21,
+          column: 31,
           endLine: 1,
-          endColumn: 39
+          endColumn: 49
         }
       ]
     }

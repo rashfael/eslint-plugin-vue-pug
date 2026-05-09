@@ -44,19 +44,31 @@ div(@attr=\`() => {
       errors: [
         {
           message: 'Unexpected empty object pattern.',
-          line: 3
+          line: 3,
+          column: 9,
+          endLine: 3,
+          endColumn: 11
         },
         {
           message: 'Unexpected empty array pattern.',
-          line: 4
+          line: 4,
+          column: 9,
+          endLine: 4,
+          endColumn: 11
         },
         {
           message: 'Unexpected empty object pattern.',
-          line: 5
+          line: 5,
+          column: 13,
+          endLine: 5,
+          endColumn: 15
         },
         {
           message: 'Unexpected empty array pattern.',
-          line: 6
+          line: 6,
+          column: 13,
+          endLine: 6,
+          endColumn: 15
         }
       ]
     },
@@ -65,7 +77,10 @@ div(@attr=\`() => {
       errors: [
         {
           message: 'Unexpected empty object pattern.',
-          line: 1
+          line: 1,
+          column: 46,
+          endLine: 1,
+          endColumn: 48
         }
       ]
     },
@@ -74,7 +89,10 @@ div(@attr=\`() => {
       errors: [
         {
           message: 'Unexpected empty array pattern.',
-          line: 1
+          line: 1,
+          column: 46,
+          endLine: 1,
+          endColumn: 48
         }
       ]
     },
@@ -83,7 +101,10 @@ div(@attr=\`() => {
       errors: [
         {
           message: 'Unexpected empty object pattern.',
-          line: 1
+          line: 1,
+          column: 50,
+          endLine: 1,
+          endColumn: 52
         }
       ]
     },
@@ -92,7 +113,10 @@ div(@attr=\`() => {
       errors: [
         {
           message: 'Unexpected empty array pattern.',
-          line: 1
+          line: 1,
+          column: 50,
+          endLine: 1,
+          endColumn: 52
         }
       ]
     },
@@ -101,7 +125,10 @@ div(@attr=\`() => {
       errors: [
         {
           message: 'Unexpected empty object pattern.',
-          line: 1
+          line: 1,
+          column: 34,
+          endLine: 1,
+          endColumn: 36
         }
       ]
     },
@@ -110,7 +137,10 @@ div(@attr=\`() => {
       errors: [
         {
           message: 'Unexpected empty array pattern.',
-          line: 1
+          line: 1,
+          column: 34,
+          endLine: 1,
+          endColumn: 36
         }
       ]
     },
@@ -119,7 +149,10 @@ div(@attr=\`() => {
       errors: [
         {
           message: 'Unexpected empty object pattern.',
-          line: 1
+          line: 1,
+          column: 38,
+          endLine: 1,
+          endColumn: 40
         }
       ]
     },
@@ -128,7 +161,10 @@ div(@attr=\`() => {
       errors: [
         {
           message: 'Unexpected empty array pattern.',
-          line: 1
+          line: 1,
+          column: 38,
+          endLine: 1,
+          endColumn: 40
         }
       ]
     },
@@ -137,7 +173,10 @@ div(@attr=\`() => {
       errors: [
         {
           message: 'Unexpected empty object pattern.',
-          line: 1
+          line: 1,
+          column: 38,
+          endLine: 1,
+          endColumn: 40
         }
       ]
     },
@@ -146,7 +185,10 @@ div(@attr=\`() => {
       errors: [
         {
           message: 'Unexpected empty array pattern.',
-          line: 1
+          line: 1,
+          column: 38,
+          endLine: 1,
+          endColumn: 40
         }
       ]
     },
@@ -155,7 +197,10 @@ div(@attr=\`() => {
       errors: [
         {
           message: 'Unexpected empty object pattern.',
-          line: 1
+          line: 1,
+          column: 42,
+          endLine: 1,
+          endColumn: 44
         }
       ]
     },
@@ -164,7 +209,10 @@ div(@attr=\`() => {
       errors: [
         {
           message: 'Unexpected empty array pattern.',
-          line: 1
+          line: 1,
+          column: 42,
+          endLine: 1,
+          endColumn: 44
         }
       ]
     }

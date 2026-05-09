@@ -68,7 +68,10 @@ button(type="reset") Hello World
       errors: [
         {
           message: 'Missing an explicit type attribute for button.',
-          column: 22
+          line: 1,
+          column: 22,
+          endLine: 1,
+          endColumn: 28
         }
       ]
     },
@@ -88,7 +91,10 @@ button(type="reset") Hello World
       errors: [
         {
           message: 'A value must be set for button type attribute.',
-          column: 29
+          line: 1,
+          column: 29,
+          endLine: 1,
+          endColumn: 33
         }
       ]
     },
@@ -98,7 +104,10 @@ button(type="reset") Hello World
       errors: [
         {
           message: 'foo is an invalid value for button type attribute.',
-          column: 34
+          line: 1,
+          column: 34,
+          endLine: 1,
+          endColumn: 39
         }
       ]
     },
@@ -109,7 +118,10 @@ button(type="reset") Hello World
       errors: [
         {
           message: 'button is a forbidden value for button type attribute.',
-          column: 34
+          line: 1,
+          column: 34,
+          endLine: 1,
+          endColumn: 42
         }
       ]
     },
@@ -120,7 +132,10 @@ button(type="reset") Hello World
       errors: [
         {
           message: 'submit is a forbidden value for button type attribute.',
-          column: 34
+          line: 1,
+          column: 34,
+          endLine: 1,
+          endColumn: 42
         }
       ]
     },
@@ -131,7 +146,10 @@ button(type="reset") Hello World
       errors: [
         {
           message: 'reset is a forbidden value for button type attribute.',
-          column: 34
+          line: 1,
+          column: 34,
+          endLine: 1,
+          endColumn: 41
         }
       ]
     },
@@ -147,17 +165,23 @@ button(type="reset") Hello World
         {
           message: 'button is a forbidden value for button type attribute.',
           line: 2,
-          column: 13
+          column: 13,
+          endLine: 2,
+          endColumn: 21
         },
         {
           message: 'submit is a forbidden value for button type attribute.',
           line: 3,
-          column: 13
+          column: 13,
+          endLine: 3,
+          endColumn: 21
         },
         {
           message: 'reset is a forbidden value for button type attribute.',
           line: 4,
-          column: 13
+          column: 13,
+          endLine: 4,
+          endColumn: 20
         }
       ]
     },
@@ -175,7 +199,9 @@ button(type="foo") Hello World
         {
           message: 'reset is a forbidden value for button type attribute.',
           line: 4,
-          column: 13
+          column: 13,
+          endLine: 4,
+          endColumn: 20
         },
         // {
         //   message: 'A value must be set for button type attribute.',
@@ -185,7 +211,9 @@ button(type="foo") Hello World
         {
           message: 'foo is an invalid value for button type attribute.',
           line: 6,
-          column: 13
+          column: 13,
+          endLine: 6,
+          endColumn: 18
         }
       ]
     },
@@ -198,11 +226,17 @@ button Hello World
       errors: [
         {
           message: 'Missing an explicit type attribute for button.',
-          column: 1
+          line: 2,
+          column: 1,
+          endLine: 2,
+          endColumn: 7
         },
         {
           message: 'Missing an explicit type attribute for button.',
-          column: 1
+          line: 3,
+          column: 1,
+          endLine: 3,
+          endColumn: 7
         }
       ]
     },
@@ -212,7 +246,10 @@ button Hello World
       errors: [
         {
           message: 'A value must be set for button type attribute.',
-          column: 35
+          line: 1,
+          column: 35,
+          endLine: 1,
+          endColumn: 37
         }
       ]
     },

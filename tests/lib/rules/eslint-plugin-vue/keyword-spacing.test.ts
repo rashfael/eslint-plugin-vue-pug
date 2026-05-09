@@ -73,23 +73,38 @@ div(@event=\`
       errors: [
         {
           message: 'Expected space(s) after "if".',
-          line: 3
+          line: 3,
+          column: 3,
+          endLine: 3,
+          endColumn: 5
         },
         {
           message: 'Expected space(s) before "else".',
-          line: 5
+          line: 5,
+          column: 4,
+          endLine: 5,
+          endColumn: 8
         },
         {
           message: 'Expected space(s) after "if".',
-          line: 5
+          line: 5,
+          column: 9,
+          endLine: 5,
+          endColumn: 11
         },
         {
           message: 'Expected space(s) before "else".',
-          line: 7
+          line: 7,
+          column: 4,
+          endLine: 7,
+          endColumn: 8
         },
         {
           message: 'Expected space(s) after "else".',
-          line: 7
+          line: 7,
+          column: 4,
+          endLine: 7,
+          endColumn: 8
         }
       ]
     },
@@ -120,23 +135,38 @@ div(@event=\`
       errors: [
         {
           message: 'Unexpected space(s) after "if".',
-          line: 3
+          line: 3,
+          column: 5,
+          endLine: 3,
+          endColumn: 6
         },
         {
           message: 'Unexpected space(s) before "else".',
-          line: 5
+          line: 5,
+          column: 4,
+          endLine: 5,
+          endColumn: 5
         },
         {
           message: 'Unexpected space(s) after "if".',
-          line: 5
+          line: 5,
+          column: 12,
+          endLine: 5,
+          endColumn: 13
         },
         {
           message: 'Unexpected space(s) before "else".',
-          line: 7
+          line: 7,
+          column: 4,
+          endLine: 7,
+          endColumn: 5
         },
         {
           message: 'Unexpected space(s) after "else".',
-          line: 7
+          line: 7,
+          column: 9,
+          endLine: 7,
+          endColumn: 10
         }
       ]
     },
@@ -146,7 +176,10 @@ div(@event=\`
       errors: [
         {
           message: 'Expected space(s) after "return".',
-          line: 1
+          line: 1,
+          column: 68,
+          endLine: 1,
+          endColumn: 74
         }
       ]
     }

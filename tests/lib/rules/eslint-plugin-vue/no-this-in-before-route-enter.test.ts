@@ -56,7 +56,10 @@ const ruleTester = new RuleTester({
   languageOptions: {
     parser: vueEslintParser,
     ecmaVersion: 2020,
-    sourceType: 'module'
+    sourceType: 'module',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 ruleTester.run('no-this-in-before-route-enter', rule, {

@@ -9,7 +9,13 @@ import rule from 'eslint-plugin-vue/dist/rules/require-toggle-inside-transition'
 import vueEslintParser from 'vue-eslint-parser'
 
 const tester = new RuleTester({
-  languageOptions: { parser: vueEslintParser, ecmaVersion: 2015 }
+  languageOptions: {
+    parser: vueEslintParser,
+    ecmaVersion: 2015,
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
+  }
 })
 
 tester.run('require-toggle-inside-transition', rule, {
@@ -150,10 +156,10 @@ transition
       errors: [
         {
           messageId: 'expected',
-          line: 1,
-          column: 23,
-          endLine: 1,
-          endColumn: 30
+          line: 3,
+          column: 3,
+          endLine: 3,
+          endColumn: 6
         }
       ]
     },
@@ -166,10 +172,10 @@ Transition
       errors: [
         {
           messageId: 'expected',
-          line: 1,
-          column: 23,
-          endLine: 1,
-          endColumn: 30
+          line: 3,
+          column: 3,
+          endLine: 3,
+          endColumn: 6
         }
       ]
     },
@@ -183,10 +189,10 @@ transition
       errors: [
         {
           messageId: 'expected',
-          line: 1,
-          column: 23,
-          endLine: 1,
-          endColumn: 30
+          line: 3,
+          column: 3,
+          endLine: 3,
+          endColumn: 6
         }
       ]
     },
@@ -199,10 +205,10 @@ transition
       errors: [
         {
           messageId: 'expected',
-          line: 1,
-          column: 23,
-          endLine: 1,
-          endColumn: 48
+          line: 3,
+          column: 3,
+          endLine: 3,
+          endColumn: 25
         }
       ]
     },
@@ -216,10 +222,10 @@ svg(height="100", width="100")
       errors: [
         {
           messageId: 'expected',
-          line: 1,
-          column: 53,
-          endLine: 1,
-          endColumn: 63
+          line: 4,
+          column: 5,
+          endLine: 4,
+          endColumn: 11
         }
       ]
     },
@@ -233,10 +239,10 @@ transition
       errors: [
         {
           messageId: 'expected',
-          line: 1,
-          column: 23,
-          endLine: 1,
-          endColumn: 51
+          line: 3,
+          column: 3,
+          endLine: 3,
+          endColumn: 30
         }
       ]
     },
@@ -249,10 +255,10 @@ transition(:appear="false")
       errors: [
         {
           messageId: 'expected',
-          line: 1,
-          column: 39,
-          endLine: 1,
-          endColumn: 46
+          line: 3,
+          column: 3,
+          endLine: 3,
+          endColumn: 6
         }
       ]
     },
@@ -265,10 +271,10 @@ transition(@appear="isLoaded")
       errors: [
         {
           messageId: 'expected',
-          line: 1,
-          column: 42,
-          endLine: 1,
-          endColumn: 49
+          line: 3,
+          column: 3,
+          endLine: 3,
+          endColumn: 6
         }
       ]
     },
@@ -287,10 +293,10 @@ transition
         {
           messageId: 'expected',
           data: { allowedDirectives: '`v-if` or `v-show`' },
-          line: 1,
-          column: 23,
-          endLine: 1,
-          endColumn: 49
+          line: 3,
+          column: 3,
+          endLine: 3,
+          endColumn: 26
         }
       ]
     },
@@ -309,10 +315,10 @@ transition
         {
           messageId: 'expected',
           data: { allowedDirectives: '`v-if`, `v-show` or `v-dialog`' },
-          line: 1,
-          column: 23,
-          endLine: 1,
-          endColumn: 46
+          line: 3,
+          column: 3,
+          endLine: 3,
+          endColumn: 23
         }
       ]
     }

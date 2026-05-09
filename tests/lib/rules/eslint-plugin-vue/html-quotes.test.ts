@@ -56,12 +56,12 @@ tester.run('html-quotes', rule, {
     // avoidEscape
     {
       filename: 'test.vue',
-      code: `<template lang="pug">div(attr='foo\"bar')</template>`,
+      code: `<template lang="pug">div(attr='foo"bar')</template>`,
       options: ['double', { avoidEscape: true }]
     },
     {
       filename: 'test.vue',
-      code: `<template lang='pug'>div(attr="foo\'bar")</template>`,
+      code: `<template lang='pug'>div(attr="foo'bar")</template>`,
       options: ['single', { avoidEscape: true }]
     }
 

@@ -23,7 +23,7 @@ tester.run('custom-event-name-casing', rule, {
   valid: [
     {
       filename: 'test.vue',
-      code: `<template lang="pug">input(@click="\$emit('foo-bar')")</template>
+      code: `<template lang="pug">input(@click="$emit('foo-bar')")</template>
       <script>
       export default {
         setup(props, context) {
@@ -45,7 +45,7 @@ tester.run('custom-event-name-casing', rule, {
     },
     {
       filename: 'test.vue',
-      code: `<template lang="pug">input(@click="\$emit('update:fooBar', value)")</template>
+      code: `<template lang="pug">input(@click="$emit('update:fooBar', value)")</template>
       <script>
       export default {
         setup(props, {emit}) {
@@ -88,7 +88,7 @@ tester.run('custom-event-name-casing', rule, {
     },
     {
       filename: 'test.vue',
-      code: `<template lang="pug">input(@click="\$emit(fooBar)")</template>
+      code: `<template lang="pug">input(@click="$emit(fooBar)")</template>
       <script>
       export default {
         setup(props, context) {
@@ -159,7 +159,7 @@ tester.run('custom-event-name-casing', rule, {
     },
     {
       filename: 'test.vue',
-      code: `<template lang="pug">input(@click="\$emit('fooBar')")</template>
+      code: `<template lang="pug">input(@click="$emit('fooBar')")</template>
       <script>
       export default {
         setup(props, context) {
@@ -181,9 +181,9 @@ tester.run('custom-event-name-casing', rule, {
     {
       filename: 'test.vue',
       code: `<template lang="pug">
-input(@click="\$emit('input:update')")
-input(@click="\$emit('search:update')")
-input(@click="\$emit('click:row')")
+input(@click="$emit('input:update')")
+input(@click="$emit('search:update')")
+input(@click="$emit('click:row')")
 </template>
       <script>
       export default {
@@ -211,17 +211,13 @@ input(@click="\$emit('click:row')")
       ]
     },
 
-    // For backward compatibility
-    {
-      filename: 'test.vue',
-      code: `<template lang="pug">input(@click="\$emit('fooBar')")</template>`,
-      options: [{ ignores: ['fooBar'] }]
-    },
+    // (removed: upstream dropped the backward-compat single-object form
+    //  of `options:`; schema now requires [caseEnum, optionsObject])
 
     // camelCase
     {
       filename: 'test.vue',
-      code: `<template lang="pug">input(@click="\$emit('fooBar')")</template>
+      code: `<template lang="pug">input(@click="$emit('fooBar')")</template>
       <script>
       export default {
         setup(props, context) {
@@ -243,7 +239,7 @@ input(@click="\$emit('click:row')")
     // Default
     {
       filename: 'test.vue',
-      code: `<template lang="pug">input(@click="\$emit('fooBar')")</template>
+      code: `<template lang="pug">input(@click="$emit('fooBar')")</template>
       <script>
       export default {
         setup(props, context) {
@@ -265,7 +261,7 @@ input(@click="\$emit('click:row')")
     // kebab-case
     {
       filename: 'test.vue',
-      code: `<template lang="pug">input(@click="\$emit('foo-bar')")</template>
+      code: `<template lang="pug">input(@click="$emit('foo-bar')")</template>
       <script>
       export default {
         setup(props, context) {
@@ -288,7 +284,7 @@ input(@click="\$emit('click:row')")
   invalid: [
     {
       filename: 'test.vue',
-      code: `<template lang="pug">input(@click="\$emit('fooBar')")</template>
+      code: `<template lang="pug">input(@click="$emit('fooBar')")</template>
       <script>
       export default {
         setup(props, context) {
@@ -332,7 +328,7 @@ input(@click="\$emit('click:row')")
     },
     {
       filename: 'test.vue',
-      code: `<template lang="pug">input(@click="\$emit?.('fooBar')")</template>
+      code: `<template lang="pug">input(@click="$emit?.('fooBar')")</template>
       <script>
       export default {
         setup(props, context) {
@@ -358,7 +354,7 @@ input(@click="\$emit('click:row')")
     },
     {
       filename: 'test.vue',
-      code: `<template lang="pug">input(@click="\$emit?.('fooBar')")</template>
+      code: `<template lang="pug">input(@click="$emit?.('fooBar')")</template>
       <script>
       export default {
         setup(props, context) {
@@ -384,7 +380,7 @@ input(@click="\$emit('click:row')")
     },
     {
       filename: 'test.vue',
-      code: `<template lang="pug">input(@click="\$emit('input/update')")</template>
+      code: `<template lang="pug">input(@click="$emit('input/update')")</template>
       <script>
       export default {
         setup(props, context) {
@@ -413,7 +409,7 @@ input(@click="\$emit('click:row')")
     },
     {
       filename: 'test.vue',
-      code: `<template lang="pug">input(@click="\$emit('input/update')")</template>
+      code: `<template lang="pug">input(@click="$emit('input/update')")</template>
       <script>
       export default {
         setup(props, context) {
@@ -443,7 +439,7 @@ input(@click="\$emit('click:row')")
     // camelCase
     {
       filename: 'test.vue',
-      code: `<template lang="pug">input(@click="\$emit('foo-bar')")</template>
+      code: `<template lang="pug">input(@click="$emit('foo-bar')")</template>
       <script>
       export default {
         setup(props, context) {
@@ -470,7 +466,7 @@ input(@click="\$emit('click:row')")
     // Default
     {
       filename: 'test.vue',
-      code: `<template lang="pug">input(@click="\$emit('foo-bar')")</template>
+      code: `<template lang="pug">input(@click="$emit('foo-bar')")</template>
       <script>
       export default {
         setup(props, context) {
@@ -505,7 +501,10 @@ input(@click="\$emit('click:row')")
       errors: [
         {
           message: "Custom event name 'foo-bar' must be camelCase.",
-          line: 5
+          line: 5,
+          column: 12,
+          endLine: 5,
+          endColumn: 21
         }
       ]
     }

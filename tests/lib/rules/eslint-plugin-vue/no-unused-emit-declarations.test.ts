@@ -12,7 +12,10 @@ const tester = new RuleTester({
   languageOptions: {
     parser: vueEslintParser,
     ecmaVersion: 2020,
-    sourceType: 'module'
+    sourceType: 'module',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 
@@ -55,7 +58,7 @@ tester.run('no-unused-emit-declarations', rule, {
     {
       filename: 'test.vue',
       code: `
-      <template lang="pug">button(@click="\$emit('bar')") Bar</template>
+      <template lang="pug">button(@click="$emit('bar')") Bar</template>
       <script>
         export default {
           emits: ['foo', 'bar'],
@@ -70,7 +73,7 @@ tester.run('no-unused-emit-declarations', rule, {
     {
       filename: 'test.vue',
       code: `
-      <template lang="pug">button(@click="this.\$emit('bar')") Bar</template>
+      <template lang="pug">button(@click="this.$emit('bar')") Bar</template>
       <script>
         export default {
           emits: ['bar'],
@@ -80,7 +83,7 @@ tester.run('no-unused-emit-declarations', rule, {
     {
       filename: 'test.vue',
       code: `<!-- CONVERT ERROR -->Element is missing end tag.
-      <template lang="pug">button(@click="\$emit('bar')") Bar</template>
+      <template lang="pug">button(@click="$emit('bar')") Bar</template>
       <script setup>
         const emit = defineEmits(['foo', 'bar'])
         const setFoo = () => {
@@ -156,7 +159,7 @@ tester.run('no-unused-emit-declarations', rule, {
     {
       filename: 'test.vue',
       code: `
-      <template lang="pug">button(@click="\$emit('bar')") Bar</template>`
+      <template lang="pug">button(@click="$emit('bar')") Bar</template>`
     },
     {
       filename: 'test.vue',
@@ -330,7 +333,10 @@ tester.run('no-unused-emit-declarations', rule, {
       const change = () => emit('foo');
       `,
       languageOptions: {
-        parserOptions: { parser: require.resolve('@typescript-eslint/parser') , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+        parserOptions: {
+          parser: require.resolve('@typescript-eslint/parser'),
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       }
     },
     {
@@ -420,7 +426,7 @@ tester.run('no-unused-emit-declarations', rule, {
     {
       filename: 'test.vue',
       code: `
-      <template lang="pug">button(@click="\$emit('bar')") Foo</template>
+      <template lang="pug">button(@click="$emit('bar')") Foo</template>
       <script>
         export default {
           emits: ['foo', 'bar'],
@@ -458,7 +464,7 @@ tester.run('no-unused-emit-declarations', rule, {
     {
       filename: 'test.vue',
       code: `<!-- CONVERT ERROR -->Element is missing end tag.
-      <template lang="pug">button(@click="\$emit('bar')") Bar</template>
+      <template lang="pug">button(@click="$emit('bar')") Bar</template>
       <script setup>
         const emit = defineEmits(['foo', 'bar'])
       `,
@@ -540,7 +546,7 @@ tester.run('no-unused-emit-declarations', rule, {
     {
       filename: 'test.vue',
       code: `
-      <template lang="pug">button(@click="\$emit('bar')") Bar</template>
+      <template lang="pug">button(@click="$emit('bar')") Bar</template>
       <script>
         // @vue/component
         const Foo = {
@@ -665,7 +671,10 @@ tester.run('no-unused-emit-declarations', rule, {
         const change = () => emit('foo');
       `,
       languageOptions: {
-        parserOptions: { parser: require.resolve('@typescript-eslint/parser') , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+        parserOptions: {
+          parser: require.resolve('@typescript-eslint/parser'),
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       },
       errors: [
         {
@@ -703,7 +712,10 @@ tester.run('no-unused-emit-declarations', rule, {
       </script>
       `,
       languageOptions: {
-        parserOptions: { parser: require.resolve('@typescript-eslint/parser') , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+        parserOptions: {
+          parser: require.resolve('@typescript-eslint/parser'),
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       },
       errors: [
         {

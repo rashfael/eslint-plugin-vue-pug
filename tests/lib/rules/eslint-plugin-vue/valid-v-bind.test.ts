@@ -10,7 +10,13 @@ import rule from 'eslint-plugin-vue/dist/rules/valid-v-bind'
 import vueEslintParser from 'vue-eslint-parser'
 
 const tester = new RuleTester({
-  languageOptions: { parser: vueEslintParser, ecmaVersion: 2015 }
+  languageOptions: {
+    parser: vueEslintParser,
+    ecmaVersion: 2015,
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
+  }
 })
 
 tester.run('valid-v-bind', rule, {
@@ -61,7 +67,7 @@ tester.run('valid-v-bind', rule, {
     },
     {
       filename: 'test.vue',
-      code: `<template lang="pug">input(v-bind="'\$attrs'")</template>`
+      code: `<template lang="pug">input(v-bind="'$attrs'")</template>`
     },
     // v-bind same-name shorthand (Vue 3.4+)
     {
@@ -91,9 +97,9 @@ tester.run('valid-v-bind', rule, {
         {
           message: "'v-bind' directives require an attribute value.",
           line: 1,
-          column: 16,
+          column: 26,
           endLine: 1,
-          endColumn: 22
+          endColumn: 32
         }
       ]
     },
@@ -104,9 +110,9 @@ tester.run('valid-v-bind', rule, {
         {
           message: "'v-bind' directives don't support the modifier 'unknown'.",
           line: 1,
-          column: 21,
+          column: 31,
           endLine: 1,
-          endColumn: 28
+          endColumn: 38
         }
       ]
     },

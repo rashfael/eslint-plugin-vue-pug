@@ -51,7 +51,7 @@ div
   input(v-model="prop2")
   input(v-model="this.prop3.text")
   input(v-model="this.prop4")
-  input(:value="prop5.text", @input="\$emit('input', \$event.target.value)")
+  input(:value="prop5.text", @input="$emit('input', $event.target.value)")
   div(v-for="prop5 of data")
     input(v-model="prop5")
   div(v-for="(prop6, index) of data")
@@ -163,7 +163,7 @@ div(v-if="prop")
 div
   button(@click="foo++")
   button(@click="foo+=1")
-  button(@click="foo.push(\$event)")
+  button(@click="foo.push($event)")
   input(v-model="foo")
   input(v-model="this.foo")
 </template>`

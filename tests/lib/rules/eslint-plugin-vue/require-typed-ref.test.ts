@@ -11,7 +11,10 @@ const tester = new RuleTester({
   languageOptions: {
     parser: tsEslintParser,
     ecmaVersion: 2020,
-    sourceType: 'module'
+    sourceType: 'module',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 
@@ -85,7 +88,12 @@ tester.run('require-typed-ref', rule, {
           const count = ref()
         </script>
       `,
-      languageOptions: { parser: vueEslintParser }
+      languageOptions: {
+        parser: vueEslintParser,
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
+      }
     },
     {
       filename: 'test.vue',
@@ -99,7 +107,12 @@ tester.run('require-typed-ref', rule, {
           }
         </script>
       `,
-      languageOptions: { parser: vueEslintParser }
+      languageOptions: {
+        parser: vueEslintParser,
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
+      }
     },
     {
       filename: 'test.js',
@@ -221,7 +234,12 @@ tester.run('require-typed-ref', rule, {
           const count = ref()
         </script>
       `,
-      languageOptions: { parser: vueEslintParser },
+      languageOptions: {
+        parser: vueEslintParser,
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
+      },
       errors: [
         {
           messageId: 'noType',
@@ -244,7 +262,12 @@ tester.run('require-typed-ref', rule, {
           }
         </script>
       `,
-      languageOptions: { parser: vueEslintParser },
+      languageOptions: {
+        parser: vueEslintParser,
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
+      },
       errors: [
         {
           messageId: 'noType',

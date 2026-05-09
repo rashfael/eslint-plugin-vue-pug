@@ -14,7 +14,13 @@ import tsParser from '@typescript-eslint/parser'
 import vueEslintParser from 'vue-eslint-parser'
 
 const ruleTester = new RuleTester({
-  languageOptions: { ecmaVersion: 2020, sourceType: 'module' }
+  languageOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
+  }
 })
 ruleTester.run('require-prop-types', rule, {
   valid: [
@@ -191,8 +197,9 @@ ruleTester.run('require-prop-types', rule, {
         ecmaVersion: 6,
         sourceType: 'module',
         parserOptions: {
-          parser: require.resolve('@typescript-eslint/parser')
-        , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+          parser: require.resolve('@typescript-eslint/parser'),
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       }
     },
     {
@@ -235,8 +242,9 @@ ruleTester.run('require-prop-types', rule, {
         ecmaVersion: 6,
         sourceType: 'module',
         parserOptions: {
-          parser: require.resolve('@typescript-eslint/parser')
-        , templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug'}}
+          parser: require.resolve('@typescript-eslint/parser'),
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
       }
     }
   ],
@@ -401,7 +409,7 @@ ruleTester.run('require-prop-types', rule, {
         {
           message: 'Prop "foo" should define at least its type.',
           line: 4,
-          column: 13,
+          column: 21,
           endLine: 4,
           endColumn: 43
         }
@@ -424,8 +432,8 @@ ruleTester.run('require-prop-types', rule, {
       errors: [
         {
           message: 'Prop "foo" should define at least its type.',
-          line: 4,
-          column: 13,
+          line: 2,
+          column: 29,
           endLine: 4,
           endColumn: 43
         }

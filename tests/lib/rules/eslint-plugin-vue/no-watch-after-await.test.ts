@@ -10,7 +10,10 @@ const tester = new RuleTester({
   languageOptions: {
     parser: vueEslintParser,
     ecmaVersion: 2020,
-    sourceType: 'module'
+    sourceType: 'module',
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 
@@ -130,7 +133,12 @@ tester.run('no-watch-after-await', rule, {
       await doSomething()
       </script>
       `,
-      languageOptions: { ecmaVersion: 2022 }
+      languageOptions: {
+        ecmaVersion: 2022,
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
+      }
     },
     {
       filename: 'test.vue',
@@ -143,7 +151,12 @@ tester.run('no-watch-after-await', rule, {
       watchEffect(() => { /* ... */ }) // not error
       </script>
       `,
-      languageOptions: { ecmaVersion: 2022 }
+      languageOptions: {
+        ecmaVersion: 2022,
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
+      }
     },
     {
       filename: 'test.vue',
@@ -156,7 +169,12 @@ tester.run('no-watch-after-await', rule, {
       watchEffect(() => { /* ... */ }) // not error
       </script>
       `,
-      languageOptions: { ecmaVersion: 2022 }
+      languageOptions: {
+        ecmaVersion: 2022,
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
+      }
     },
     {
       filename: 'test.vue',
@@ -170,7 +188,12 @@ tester.run('no-watch-after-await', rule, {
       watch(foo, () => { /* ... */ })
       </script>
       `,
-      languageOptions: { ecmaVersion: 2022 }
+      languageOptions: {
+        ecmaVersion: 2022,
+        parserOptions: {
+          templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+        }
+      }
     }
   ],
   invalid: [
