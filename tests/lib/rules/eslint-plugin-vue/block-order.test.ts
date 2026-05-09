@@ -19,7 +19,10 @@ const eslint = new ESLint({
     files: ['**/*.vue'],
     languageOptions: {
       parser: parserVue,
-      ecmaVersion: 2015
+      ecmaVersion: 2015,
+      parserOptions: {
+        templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+      }
     },
     plugins: { vue: pluginVue },
     rules: {
@@ -34,7 +37,10 @@ const eslint = new ESLint({
 const tester = new RuleTester({
   languageOptions: {
     parser: parserVue,
-    ecmaVersion: 2020
+    ecmaVersion: 2020,
+    parserOptions: {
+      templateTokenizer: { pug: 'vue-eslint-parser-template-tokenizer-pug' }
+    }
   }
 })
 
@@ -179,9 +185,11 @@ tester.run('block-order', rule, {
 
     `<script></script><style></style>`,
 
-    // Invalid EOF
-    `<!-- CONVERT ERROR -->Unexpected EOF in tag.<template><div a=">test</div></template><style></style>`,
-    `<!-- CONVERT ERROR -->Unexpected EOF in comment.<template><div><!--test</div></template><style></style>`
+    // Invalid EOF — block-order asserts no error on malformed SFC source
+    // (these are HTML-only edge cases; no pug analog needed since the
+    // rule operates on the SFC's block ordering, not inner template body)
+    `<template><div a=">test</div></template><style></style>`,
+    `<template><div><!--test</div></template><style></style>`
   ],
   invalid: [
     {

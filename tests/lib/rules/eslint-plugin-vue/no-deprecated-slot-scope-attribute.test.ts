@@ -65,7 +65,10 @@ LinkList
       errors: [
         {
           message: '`slot-scope` are deprecated.',
-          line: 3
+          line: 3,
+          column: 12,
+          endLine: 3,
+          endColumn: 22
         }
       ]
     },
@@ -83,21 +86,35 @@ LinkList
       errors: [
         {
           message: '`slot-scope` are deprecated.',
-          line: 3
+          line: 3,
+          column: 12,
+          endLine: 3,
+          endColumn: 22
         }
       ]
     },
-    // cannot fix
+    // FAILING — upstream rule's text-replacement fixer wraps the
+    // non-template element in literal HTML `<template v-slot>...</template>`
+    // tags, which is malformed when interleaved with pug indentation.
+    // Expected output below is the pug-equivalent autofix shape; actual
+    // output is broken pug+HTML mix.
     {
       code: `<template lang="pug">
 LinkList
   a(slot-scope="{a}")
 </template>`,
-      output: null,
+      output: `<template lang="pug">
+LinkList
+  template(v-slot="{a}")
+    a
+</template>`,
       errors: [
         {
           message: '`slot-scope` are deprecated.',
-          line: 3
+          line: 3,
+          column: 5,
+          endLine: 3,
+          endColumn: 15
         }
       ]
     },
@@ -111,7 +128,10 @@ LinkList
       errors: [
         {
           message: '`slot-scope` are deprecated.',
-          line: 3
+          line: 3,
+          column: 12,
+          endLine: 3,
+          endColumn: 22
         }
       ]
     },
@@ -125,7 +145,10 @@ LinkList
       errors: [
         {
           message: '`slot-scope` are deprecated.',
-          line: 3
+          line: 3,
+          column: 12,
+          endLine: 3,
+          endColumn: 22
         }
       ]
     },

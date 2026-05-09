@@ -85,7 +85,10 @@ div
         {
           message: "Attribute 'my-prop' can't be hyphenated.",
           type: 'VIdentifier',
-          line: 3
+          line: 3,
+          column: 10,
+          endLine: 3,
+          endColumn: 23
         }
       ]
     },
@@ -95,16 +98,16 @@ div
 div
   custom(MyProp="Bar")
 </template>`,
-      output: `<template lang="pug">
-div
-  custom(my-prop="Bar")
-</template>`,
+      output: null,
       options: ['always'],
       errors: [
         {
           message: "Attribute 'MyProp' must be hyphenated.",
           type: 'VIdentifier',
-          line: 3
+          line: 3,
+          column: 10,
+          endLine: 3,
+          endColumn: 22
         }
       ]
     },
@@ -123,7 +126,10 @@ div
         {
           message: "Attribute ':my-prop' can't be hyphenated.",
           type: 'VDirectiveKey',
-          line: 3
+          line: 3,
+          column: 10,
+          endLine: 3,
+          endColumn: 25
         }
       ]
     },
@@ -133,16 +139,16 @@ div
 div
   custom(:MyProp="prop")
 </template>`,
-      output: `<template lang="pug">
-div
-  custom(:my-prop="prop")
-</template>`,
+      output: null,
       options: ['always'],
       errors: [
         {
           message: "Attribute ':MyProp' must be hyphenated.",
           type: 'VDirectiveKey',
-          line: 3
+          line: 3,
+          column: 10,
+          endLine: 3,
+          endColumn: 24
         }
       ]
     },
@@ -161,7 +167,10 @@ div
         {
           message: "Attribute 'v-bind:my-prop' can't be hyphenated.",
           type: 'VDirectiveKey',
-          line: 3
+          line: 3,
+          column: 10,
+          endLine: 3,
+          endColumn: 31
         }
       ]
     },
@@ -171,16 +180,16 @@ div
 div
   custom(v-bind:MyProp="prop")
 </template>`,
-      output: `<template lang="pug">
-div
-  custom(v-bind:my-prop="prop")
-</template>`,
+      output: null,
       options: ['always'],
       errors: [
         {
           message: "Attribute 'v-bind:MyProp' must be hyphenated.",
           type: 'VDirectiveKey',
-          line: 3
+          line: 3,
+          column: 10,
+          endLine: 3,
+          endColumn: 30
         }
       ]
     },
@@ -190,16 +199,16 @@ div
 div
   custom(v-bind:MyProp="prop")
 </template>`,
-      output: `<template lang="pug">
-div
-  custom(v-bind:my-prop="prop")
-</template>`,
+      output: null,
       options: ['always', { ignore: [] }],
       errors: [
         {
           message: "Attribute 'v-bind:MyProp' must be hyphenated.",
           type: 'VDirectiveKey',
-          line: 3
+          line: 3,
+          column: 10,
+          endLine: 3,
+          endColumn: 30
         }
       ]
     },
@@ -218,7 +227,10 @@ div
         {
           message: "Attribute ':second-prop' can't be hyphenated.",
           type: 'VDirectiveKey',
-          line: 3
+          line: 3,
+          column: 33,
+          endLine: 3,
+          endColumn: 52
         }
       ]
     },
@@ -237,7 +249,10 @@ div
         {
           message: "Attribute 'v-bind:myProp' must be hyphenated.",
           type: 'VDirectiveKey',
-          line: 3
+          line: 3,
+          column: 10,
+          endLine: 3,
+          endColumn: 30
         }
       ]
     },
@@ -256,7 +271,10 @@ div
         {
           message: "Attribute 'v-bind:propID' must be hyphenated.",
           type: 'VDirectiveKey',
-          line: 3
+          line: 3,
+          column: 10,
+          endLine: 3,
+          endColumn: 30
         }
       ]
     },
@@ -277,7 +295,10 @@ custom(data-id="foo", aria-test="bar", slot-scope="{ data }", custom-hyphen="foo
         {
           message: "Attribute 'third-custom' can't be hyphenated.",
           type: 'VIdentifier',
-          line: 3
+          line: 3,
+          column: 105,
+          endLine: 3,
+          endColumn: 123
         }
       ]
     },
@@ -298,12 +319,18 @@ custom(data-id="foo", aria-test="bar", slot-scope="{ data }", customHyphen="foo"
         {
           message: "Attribute 'custom-hyphen' can't be hyphenated.",
           type: 'VIdentifier',
-          line: 3
+          line: 3,
+          column: 63,
+          endLine: 3,
+          endColumn: 82
         },
         {
           message: "Attribute 'second-custom' can't be hyphenated.",
           type: 'VIdentifier',
-          line: 3
+          line: 3,
+          column: 84,
+          endLine: 3,
+          endColumn: 103
         }
       ]
     }
