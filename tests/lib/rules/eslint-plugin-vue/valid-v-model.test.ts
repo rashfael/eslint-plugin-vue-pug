@@ -505,9 +505,9 @@ div
           message:
             "'v-model' directives require the attribute value which is valid as LHS.",
           line: 1,
-          column: 33,
+          column: 43,
           endLine: 1,
-          endColumn: 46
+          endColumn: 56
         }
       ]
     },
@@ -525,9 +525,9 @@ div
           message:
             "'v-model' directives require the attribute value which is valid as LHS.",
           line: 1,
-          column: 33,
+          column: 43,
           endLine: 1,
-          endColumn: 37
+          endColumn: 47
         }
       ]
     },
@@ -545,9 +545,9 @@ div
           message:
             "'v-model' directives require the attribute value which is valid as LHS.",
           line: 1,
-          column: 33,
+          column: 43,
           endLine: 1,
-          endColumn: 57
+          endColumn: 67
         }
       ]
     },
@@ -565,9 +565,9 @@ div
           message:
             "'v-model' directives require the attribute value which is valid as LHS.",
           line: 1,
-          column: 33,
+          column: 43,
           endLine: 1,
-          endColumn: 40
+          endColumn: 50
         }
       ]
     },
@@ -585,9 +585,9 @@ div
           message:
             "'v-model' directives require the attribute value which is valid as LHS.",
           line: 1,
-          column: 33,
+          column: 43,
           endLine: 1,
-          endColumn: 66
+          endColumn: 76
         }
       ]
     }

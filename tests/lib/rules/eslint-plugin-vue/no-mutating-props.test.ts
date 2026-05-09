@@ -948,8 +948,10 @@ input(v-model="props.value")
       errors: [
         {
           message: 'Unexpected mutation of "value" prop.',
-          line: 3,
-          column: 54
+          line: 6,
+          column: 9,
+          endLine: 6,
+          endColumn: 22
         }
       ]
     },

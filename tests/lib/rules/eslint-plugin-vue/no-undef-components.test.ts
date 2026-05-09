@@ -649,49 +649,49 @@ HelloWorld5
           message:
             "The '<Foo>' component has been used, but 'Foo' only refers to a type.",
           line: 12,
-          column: 9,
+          column: 1,
           endLine: 12,
-          endColumn: 16
+          endColumn: 4
         },
         {
           message:
             "The '<HelloWorld1>' component has been used, but 'HelloWorld1' only refers to a type.",
           line: 13,
-          column: 9,
+          column: 1,
           endLine: 13,
-          endColumn: 24
+          endColumn: 12
         },
         {
           message:
             "The '<HelloWorld2>' component has been used, but 'HelloWorld2' only refers to a type.",
           line: 14,
-          column: 9,
+          column: 1,
           endLine: 14,
-          endColumn: 24
+          endColumn: 12
         },
         {
           message:
             "The '<HelloWorld3>' component has been used, but 'HelloWorld3' only refers to a type.",
           line: 15,
-          column: 9,
+          column: 1,
           endLine: 15,
-          endColumn: 24
+          endColumn: 12
         },
         {
           message:
             "The '<HelloWorld4>' component has been used, but 'HelloWorld4' only refers to a type.",
           line: 16,
-          column: 9,
+          column: 1,
           endLine: 16,
-          endColumn: 24
+          endColumn: 12
         },
         {
           message:
             "The '<HelloWorld5>' component has been used, but 'HelloWorld5' only refers to a type.",
           line: 17,
-          column: 9,
+          column: 1,
           endLine: 17,
-          endColumn: 24
+          endColumn: 12
         }
       ]
     },
@@ -717,10 +717,10 @@ HelloWorld5
         {
           message:
             "The '<Foo>' component has been used, but 'Foo' only refers to a type.",
-          line: 3,
-          column: 13,
-          endLine: 7,
-          endColumn: 16
+          line: 6,
+          column: 28,
+          endLine: 6,
+          endColumn: 31
         }
       ]
     },

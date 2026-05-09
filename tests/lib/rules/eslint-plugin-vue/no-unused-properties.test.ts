@@ -3489,38 +3489,38 @@ tester.run('no-unused-properties', rule, {
       errors: [
         {
           message: "'a' of property found, but never used.",
-          line: 7,
+          line: 5,
           column: 21,
-          endLine: 7,
+          endLine: 5,
           endColumn: 24
         },
         {
           message: "'b' of data found, but never used.",
-          line: 9,
+          line: 7,
           column: 23,
-          endLine: 9,
+          endLine: 7,
           endColumn: 24
         },
         {
           message: "'c' of computed property found, but never used.",
-          line: 12,
+          line: 10,
           column: 15,
-          endLine: 12,
+          endLine: 10,
           endColumn: 16
         },
         {
           message: "'d' of method found, but never used.",
-          line: 17,
+          line: 15,
           column: 15,
-          endLine: 17,
+          endLine: 15,
           endColumn: 16
         },
         {
           message:
             "'e' of property returned from `setup()` found, but never used.",
-          line: 20,
+          line: 18,
           column: 23,
-          endLine: 20,
+          endLine: 18,
           endColumn: 24
         }
       ]
@@ -4165,9 +4165,9 @@ tester.run('no-unused-properties', rule, {
       errors: [
         {
           message: "'foo.baz.b' of data found, but never used.",
-          line: 14,
+          line: 12,
           column: 21,
-          endLine: 14,
+          endLine: 12,
           endColumn: 22
         }
       ]
@@ -4622,30 +4622,30 @@ tester.run('no-unused-properties', rule, {
       errors: [
         {
           message: "'b' of property found, but never used.",
-          line: 8,
+          line: 6,
           column: 22,
-          endLine: 8,
+          endLine: 6,
           endColumn: 25
         },
         {
           message: "'d' of data found, but never used.",
-          line: 12,
+          line: 10,
           column: 13,
-          endLine: 12,
+          endLine: 10,
           endColumn: 14
         },
         {
           message: "'f' of computed property found, but never used.",
-          line: 17,
+          line: 15,
           column: 11,
-          endLine: 17,
+          endLine: 15,
           endColumn: 12
         },
         {
           message: "'h' of method found, but never used.",
-          line: 21,
+          line: 19,
           column: 11,
-          endLine: 21,
+          endLine: 19,
           endColumn: 12
         }
       ]

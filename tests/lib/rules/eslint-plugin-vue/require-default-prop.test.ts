@@ -752,8 +752,8 @@ div {{ required }}
       errors: [
         {
           message: "Prop 'bar' requires default value to be set.",
-          line: 7,
-          column: 19,
+          line: 8,
+          column: 9,
           endLine: 8,
           endColumn: 22
         }
@@ -780,8 +780,8 @@ div {{ required }}
       errors: [
         {
           message: "Prop 'foo' requires default value to be set.",
-          line: 3,
-          column: 6,
+          line: 4,
+          column: 9,
           endLine: 4,
           endColumn: 21
         }
@@ -856,7 +856,7 @@ div {{ required }}
         {
           message: "Prop 'foo' requires default value to be set.",
           line: 3,
-          column: 41,
+          column: 39,
           endLine: 3,
           endColumn: 52
         }

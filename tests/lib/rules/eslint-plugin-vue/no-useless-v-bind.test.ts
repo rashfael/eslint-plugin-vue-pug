@@ -115,16 +115,16 @@ div(:id="'\r'")
         {
           message: 'Unexpected `v-bind` with a string literal value.',
           line: 3,
-          column: 14,
+          column: 5,
           endLine: 3,
-          endColumn: 24
+          endColumn: 15
         },
         {
           message: 'Unexpected `v-bind` with a string literal value.',
           line: 4,
-          column: 14,
+          column: 5,
           endLine: 4,
-          endColumn: 24
+          endColumn: 15
         }
       ]
     },

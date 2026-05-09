@@ -395,10 +395,10 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 8,
-          column: 21,
-          endLine: 4,
-          endColumn: 30
+          line: 4,
+          column: 3,
+          endLine: 5,
+          endColumn: 1
         }
       ]
     },
@@ -418,10 +418,10 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 7,
-          column: 6,
-          endLine: 4,
-          endColumn: 30
+          line: 4,
+          column: 3,
+          endLine: 5,
+          endColumn: 1
         }
       ]
     },
@@ -441,10 +441,10 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 7,
-          column: 11,
-          endLine: 4,
-          endColumn: 30
+          line: 4,
+          column: 3,
+          endLine: 5,
+          endColumn: 1
         }
       ]
     },
@@ -463,10 +463,10 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 8,
-          column: 23,
-          endLine: 4,
-          endColumn: 30
+          line: 4,
+          column: 3,
+          endLine: 5,
+          endColumn: 1
         }
       ]
     },
@@ -486,10 +486,10 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 7,
-          column: 6,
-          endLine: 4,
-          endColumn: 30
+          line: 4,
+          column: 3,
+          endLine: 5,
+          endColumn: 1
         }
       ]
     },
@@ -509,10 +509,10 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 7,
-          column: 11,
-          endLine: 4,
-          endColumn: 30
+          line: 4,
+          column: 3,
+          endLine: 5,
+          endColumn: 1
         }
       ]
     },
@@ -531,10 +531,10 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 8,
-          column: 23,
-          endLine: 4,
-          endColumn: 24
+          line: 4,
+          column: 3,
+          endLine: 5,
+          endColumn: 1
         }
       ]
     },
@@ -554,10 +554,10 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 7,
-          column: 6,
-          endLine: 4,
-          endColumn: 24
+          line: 4,
+          column: 3,
+          endLine: 5,
+          endColumn: 1
         }
       ]
     },
@@ -577,10 +577,10 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 7,
-          column: 11,
-          endLine: 4,
-          endColumn: 24
+          line: 4,
+          column: 3,
+          endLine: 5,
+          endColumn: 1
         }
       ]
     },
@@ -603,10 +603,10 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 10,
-          column: 22,
-          endLine: 4,
-          endColumn: 30
+          line: 4,
+          column: 3,
+          endLine: 5,
+          endColumn: 1
         }
       ]
     },
@@ -648,10 +648,10 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 8,
-          column: 21,
-          endLine: 4,
-          endColumn: 38
+          line: 4,
+          column: 3,
+          endLine: 5,
+          endColumn: 1
         }
       ]
     },
@@ -672,10 +672,10 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 7,
-          column: 6,
-          endLine: 4,
-          endColumn: 38
+          line: 4,
+          column: 3,
+          endLine: 5,
+          endColumn: 1
         }
       ]
     },
@@ -696,10 +696,10 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 7,
-          column: 11,
-          endLine: 4,
-          endColumn: 38
+          line: 4,
+          column: 3,
+          endLine: 5,
+          endColumn: 1
         }
       ]
     },
@@ -719,9 +719,9 @@ div
       errors: [
         {
           message: 'Slot foo is already defined.',
-          line: 8,
-          column: 17,
-          endLine: 10,
+          line: 9,
+          column: 9,
+          endLine: 9,
           endColumn: 41
         }
       ]
@@ -743,9 +743,9 @@ div
       errors: [
         {
           message: 'Slot foo is already defined.',
-          line: 7,
-          column: 6,
-          endLine: 10,
+          line: 9,
+          column: 9,
+          endLine: 9,
           endColumn: 41
         }
       ]
@@ -767,9 +767,9 @@ div
       errors: [
         {
           message: 'Slot foo is already defined.',
-          line: 7,
-          column: 11,
-          endLine: 10,
+          line: 9,
+          column: 9,
+          endLine: 9,
           endColumn: 41
         }
       ]
@@ -793,9 +793,9 @@ div
       errors: [
         {
           message: 'Slot foo is already defined.',
-          line: 8,
-          column: 17,
-          endLine: 13,
+          line: 12,
+          column: 9,
+          endLine: 12,
           endColumn: 41
         }
       ]
@@ -821,9 +821,9 @@ div
       errors: [
         {
           message: 'Slot foo is already defined.',
-          line: 7,
-          column: 6,
-          endLine: 14,
+          line: 13,
+          column: 9,
+          endLine: 13,
           endColumn: 41
         }
       ]
@@ -849,9 +849,9 @@ div
       errors: [
         {
           message: 'Slot foo is already defined.',
-          line: 7,
-          column: 11,
-          endLine: 14,
+          line: 13,
+          column: 9,
+          endLine: 13,
           endColumn: 41
         }
       ]

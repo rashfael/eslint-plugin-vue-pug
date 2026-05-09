@@ -2024,10 +2024,10 @@ emits: {'foo': null},
         {
           message:
             'The "bar" event has been triggered but not declared on `defineEmits`.',
-          line: 5,
-          column: 8,
-          endLine: 3,
-          endColumn: 33
+          line: 2,
+          column: 46,
+          endLine: 2,
+          endColumn: 51
         }
       ]
     },
@@ -2048,10 +2048,10 @@ emits: {'foo': null},
         {
           message:
             'The "bar" event has been triggered but not declared on `defineEmits`.',
-          line: 4,
-          column: 20,
-          endLine: 3,
-          endColumn: 33
+          line: 2,
+          column: 46,
+          endLine: 2,
+          endColumn: 51
         }
       ]
     },
@@ -2091,8 +2091,8 @@ emits: {'foo': null},
         {
           message:
             'The "bar" event has been triggered but not declared on `defineEmits`.',
-          line: 3,
-          column: 33,
+          line: 5,
+          column: 12,
           endLine: 5,
           endColumn: 17
         }
@@ -2150,8 +2150,8 @@ emits: {'foo': null},
         {
           message:
             'The "bar" event has been triggered but not declared on `defineEmits`.',
-          line: 3,
-          column: 42,
+          line: 5,
+          column: 12,
           endLine: 5,
           endColumn: 17
         }
@@ -2178,8 +2178,8 @@ emits: {'foo': null},
         {
           message:
             'The "bar" event has been triggered but not declared on `defineEmits`.',
-          line: 3,
-          column: 11,
+          line: 6,
+          column: 12,
           endLine: 6,
           endColumn: 17
         }
@@ -2224,10 +2224,10 @@ emits: {'foo': null},
         {
           message:
             'The "bar" event has been triggered but not declared on `defineEmits`.',
-          line: 4,
-          column: 33,
-          endLine: 3,
-          endColumn: 32
+          line: 2,
+          column: 45,
+          endLine: 2,
+          endColumn: 50
         }
       ]
     }
