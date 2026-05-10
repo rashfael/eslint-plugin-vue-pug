@@ -602,8 +602,8 @@ ruleTester.run('match-component-file-name', rule, {
       `
             }
           ],
-          line: 4,
-          column: 29,
+          line: 3,
+          column: 17,
           endLine: 3,
           endColumn: 29
         }
@@ -634,8 +634,8 @@ ruleTester.run('match-component-file-name', rule, {
       `
             }
           ],
-          line: 4,
-          column: 29,
+          line: 3,
+          column: 17,
           endLine: 3,
           endColumn: 29
         }
@@ -666,8 +666,8 @@ ruleTester.run('match-component-file-name', rule, {
       `
             }
           ],
-          line: 4,
-          column: 29,
+          line: 3,
+          column: 17,
           endLine: 3,
           endColumn: 29
         }
@@ -698,8 +698,8 @@ ruleTester.run('match-component-file-name', rule, {
       `
             }
           ],
-          line: 4,
-          column: 29,
+          line: 3,
+          column: 17,
           endLine: 3,
           endColumn: 29
         }
@@ -1159,8 +1159,8 @@ ruleTester.run('match-component-file-name', rule, {
       `
             }
           ],
-          line: 4,
-          column: 29,
+          line: 3,
+          column: 17,
           endLine: 3,
           endColumn: 31
         }
@@ -1191,8 +1191,8 @@ ruleTester.run('match-component-file-name', rule, {
       `
             }
           ],
-          line: 4,
-          column: 29,
+          line: 3,
+          column: 17,
           endLine: 3,
           endColumn: 30
         }

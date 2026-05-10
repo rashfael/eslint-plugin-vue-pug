@@ -80,14 +80,22 @@ const IGNORE_TESTS = [
 
   // tests without template content rules
   'block-lang',
+  'block-order', // SFC block ordering — pug doesn't change script/template/style ordering
   'no-restricted-call-after-await',
   'script-indent',
   'component-api-style',
   'component-definition-name-casing',
   'component-options-name-casing',
   'component-tags-order',
+  'define-emits-declaration', // <script setup> emits
+  'define-macros-order', // script-only macro ordering
+  'define-props-declaration', // <script setup> props
+  'define-props-destructuring', // <script setup> destructuring
+  'enforce-style-attribute', // SFC <style> block — not template
   'experimental-script-setup-vars',
   'jsx-uses-vars',
+  'match-component-import-name', // import-name match
+  'max-props', // <script setup> defineProps count
   'multi-word-component-names',
   'name-property-casing',
   'new-line-between-multi-line-property',
@@ -97,38 +105,63 @@ const IGNORE_TESTS = [
   'no-boolean-default',
   'no-computed-properties-in-data',
   'no-deprecated-data-object-declaration',
+  'no-deprecated-delete-set', // Vue.delete/Vue.set in script
   'no-deprecated-destroyed-lifecycle',
   'no-deprecated-events-api',
+  'no-deprecated-model-definition', // Vue 2 model option
   'no-deprecated-vue-config-keycodes',
   'no-dupe-keys',
   'no-empty-component-block',
   'no-export-in-script-setup',
   'no-expose-after-await',
+  'no-import-compiler-macros', // import of compiler macros
   'no-invalid-model-keys',
   'no-lifecycle-after-await',
   'no-multiple-slot-args',
   'no-potential-component-option-typo',
   'no-ref-as-operand',
+  'no-ref-object-reactivity-loss', // ref unwrapping in script
+  'no-required-prop-with-default', // props validation
+  'no-reserved-keys', // reserved keys on options object
   'no-reserved-props',
   'no-restricted-block',
+  'no-restricted-component-names', // name option
   'no-restricted-component-options',
   'no-restricted-props',
   'no-setup-props-destructure',
+  'no-setup-props-reactivity-loss', // setup() reactivity
   'no-shared-component-data',
   'no-side-effects-in-computed-properties',
+  'no-static-inline-styles', // all upstream test cases were CONVERT ERROR'd; rule targets `style="..."` — re-enable when fixtures are hand-converted
+  'no-watch-after-await', // setup() async
   'one-component-per-file',
+  'order-in-components', // options ordering
+  'padding-line-between-blocks', // SFC block padding — not template
+  'padding-lines-in-component-definition', // options padding
+  'prefer-define-options',
   'prefer-import-from-vue',
+  'prefer-prop-type-boolean-first', // props ordering
   'prop-name-casing',
   'require-direct-export',
+  'require-emit-validator', // emits options
   'require-expose',
+  'require-macro-variable-name', // <script setup>
   'require-name-property',
+  'require-prop-comment', // props JSDoc
   'require-prop-type-constructor',
+  'require-prop-types', // props types
   'require-render-return',
   'require-slots-as-functions',
+  'require-typed-object-prop', // typed props
+  'require-typed-ref', // typed refs
+  'require-valid-default-prop', // props validation
   'return-in-computed-property',
   'return-in-emits-validator',
+  'sort-keys', // JS object key order
   'valid-define-emits',
+  'valid-define-options', // <script setup>
   'valid-define-props',
+  'valid-model-definition', // model option
   'valid-next-tick'
 ]
 
