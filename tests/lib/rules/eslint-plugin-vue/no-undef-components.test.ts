@@ -594,26 +594,9 @@ HelloWorld1
         }
       ]
     },
-    {
-      filename: 'test.vue',
-      code: `
-      <script setup>
-      import * as Form from './form-components'
-      </script>
-
-      <template lang="pug">Foo.Input</template>
-      `,
-      errors: [
-        {
-          message:
-            "The '<Foo.Input>' component has been used, but not defined.",
-          line: 6,
-          column: 28,
-          endLine: 6,
-          endColumn: 37
-        }
-      ]
-    },
+    // upstream `<Foo.Input />` (nested component reference): pug parses
+    // `Foo.Input` as `<Foo class="Input">` — dotted component refs have
+    // no pug analog, so this case is not portable.
     {
       filename: 'test.vue',
       code: `

@@ -77,21 +77,21 @@ button(:foo="console.log") {{ console.log(&apos;test&apos;) }}
     {
       filename: 'test.vue',
       code: `
-      <template lang="pug">button(:foo="console.log") {{ console.log(&apos;test&apos;) }}</template>`,
+      <template lang="pug">button(:foo="console.log") {{ console.log('test') }}</template>`,
       errors: [
         {
           message: 'Unexpected console statement.',
-          line: 3,
-          column: 23,
-          endLine: 3,
-          endColumn: 30
+          line: 2,
+          column: 41,
+          endLine: 2,
+          endColumn: 48
         },
         {
           message: 'Unexpected console statement.',
-          line: 3,
-          column: 39,
-          endLine: 3,
-          endColumn: 46
+          line: 2,
+          column: 58,
+          endLine: 2,
+          endColumn: 65
         }
       ]
     },

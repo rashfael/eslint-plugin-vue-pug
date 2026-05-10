@@ -79,28 +79,28 @@ tester.run('quote-props', rule, {
       code: `
       <template lang="pug">
 div(:style="{'height': '100vh'}")
-div(:style=''{"height": "100vh"}'')
+div(:style='{"height": "100vh"}')
 </template>`,
       output: `
       <template lang="pug">
 div(:style="{height: '100vh'}")
-div(:style=''{height: "100vh"}'')
+div(:style='{height: "100vh"}')
 </template>`,
       options: ['as-needed'],
       errors: [
         {
           message: "Unnecessarily quoted property 'height' found.",
           line: 3,
-          column: 23,
+          column: 14,
           endLine: 3,
-          endColumn: 40
+          endColumn: 31
         },
         {
           message: "Unnecessarily quoted property 'height' found.",
           line: 4,
-          column: 23,
+          column: 14,
           endLine: 4,
-          endColumn: 40
+          endColumn: 31
         }
       ]
     },
@@ -109,7 +109,7 @@ div(:style=''{height: "100vh"}'')
       code: `
       <template lang="pug">| {{ ({foo:42}).foo }}</template>`,
       output: `
-      <template lang="pug">| {{ ({&quot;foo&quot;:42}).foo }}</template>`,
+      <template lang="pug">| {{ ({"foo":42}).foo }}</template>`,
       errors: [
         {
           message: "Unquoted property 'foo' found.",

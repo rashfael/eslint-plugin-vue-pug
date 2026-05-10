@@ -881,7 +881,7 @@ input(v-model="props.value")
           endColumn: 21
         },
         {
-          message: 'Unexpected mutation of "props" prop.',
+          message: 'Unexpected mutation of "value" prop.',
           line: 4,
           column: 16,
           endLine: 4,

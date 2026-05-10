@@ -255,11 +255,11 @@ button Hello World
     },
     {
       filename: 'test.vue',
-      code: `<template lang="pug">button(v-bind:type) Hello World</template>`,
+      code: `<template lang="pug">button(v-bind:type="") Hello World</template>`,
       errors: [
         {
           message: 'A value must be set for button type attribute.',
-          column: 29
+          column: 41
         }
       ]
     }

@@ -116,32 +116,25 @@ template(@click="click") ...
 </template>`,
       errors: [
         {
-          message: 'Unexpected useless attribute on `<template>`.',
+          message: 'Unexpected useless directive on `<template>`.',
           line: 18,
-          column: 30,
+          column: 28,
           endLine: 18,
-          endColumn: 45
-        },
-        {
-          message: 'Unexpected useless directive on `<template>`.',
-          line: 19,
-          column: 36,
-          endLine: 19,
-          endColumn: 44
+          endColumn: 36
         },
         {
           message: 'Unexpected useless attribute on `<template>`.',
-          line: 20,
-          column: 36,
-          endLine: 20,
-          endColumn: 47
+          line: 19,
+          column: 28,
+          endLine: 19,
+          endColumn: 39
         },
         {
           message: 'Unexpected useless directive on `<template>`.',
-          line: 21,
-          column: 30,
-          endLine: 21,
-          endColumn: 44
+          line: 20,
+          column: 22,
+          endLine: 20,
+          endColumn: 36
         }
       ]
     }

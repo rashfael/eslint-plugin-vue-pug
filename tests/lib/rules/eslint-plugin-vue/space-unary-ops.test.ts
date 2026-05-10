@@ -80,17 +80,20 @@ tester.run('space-unary-ops', rule, {
         }
       ]
     },
+    // upstream `:[!a]="!a"` exercised the dynamic-argument form; pug
+    // doesn't parse `:[expr]` as a dynamic argument, so the dynamic
+    // form is dropped here in favor of the plain attribute case.
     {
-      code: `<template lang="pug">div(:[!a]="!a")</template>`,
-      output: `<template lang="pug">div(:[!a]="! a")</template>`,
+      code: `<template lang="pug">div(:foo="!a")</template>`,
+      output: `<template lang="pug">div(:foo="! a")</template>`,
       options: [{ nonwords: true }],
       errors: [
         {
           message: "Unary operator '!' must be followed by whitespace.",
           line: 1,
-          column: 23,
+          column: 32,
           endLine: 1,
-          endColumn: 25
+          endColumn: 34
         }
       ]
     },

@@ -43,7 +43,10 @@ tester.run('max-lines-per-block', rule, {
   invalid: [
     {
       code: `
-      <template lang="pug">div</template>`,
+      <template lang="pug">
+div
+  span
+</template>`,
       options: [{ template: 1 }],
       errors: [
         {
@@ -51,7 +54,7 @@ tester.run('max-lines-per-block', rule, {
           line: 2,
           column: 7,
           endLine: 5,
-          endColumn: 18
+          endColumn: 12
         }
       ]
     },

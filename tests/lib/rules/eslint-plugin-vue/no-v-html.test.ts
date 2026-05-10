@@ -44,7 +44,7 @@ ruleTester.run('no-v-html', rule, {
     {
       filename: 'test.vue',
       code: `<template lang="pug">div(v-html="$sanitize(test)")</template>`,
-      options: [{ ignorePattern: String.raw`^$sanitize\(` }]
+      options: [{ ignorePattern: String.raw`^\$sanitize\(` }]
     }
   ],
   invalid: [

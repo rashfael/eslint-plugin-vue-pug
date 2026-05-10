@@ -650,18 +650,21 @@ div
     // Many components and one in middle is no present
     {
       filename: 'test.vue',
+      // upstream uses the dotted component name `fio.fio`; pug parses
+      // `fio.fio` as `<fio class="fio">`, so the dotted name is renamed
+      // to `Fio` here.
       code: `
         <template lang="pug">
 div
   Foo
-  fio.fio
+  Fio
   baz
 </template>
         <script>
           export default {
             components: {
               Foo,
-              'fio.fio': FioFio,
+              Fio,
               Bar,
               Baz
             },
@@ -670,9 +673,9 @@ div
       errors: [
         {
           message: 'The "Bar" component has been registered but not used.',
-          line: 14,
+          line: 13,
           column: 15,
-          endLine: 14,
+          endLine: 13,
           endColumn: 18
         }
       ]
