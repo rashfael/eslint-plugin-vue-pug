@@ -117,19 +117,8 @@ tester.run('valid-attribute-name', rule, {
         }
       ]
     },
-    {
-      filename: 'test.vue',
-      code: `<template lang="pug">p(!ghi)</template>`,
-      errors: [
-        {
-          message: 'Attribute name !ghi is not valid.',
-          line: 1,
-          column: 14,
-          endLine: 1,
-          endColumn: 18
-        }
-      ]
-    },
+    // upstream `<p !ghi />` — pug syntax cannot represent attribute names
+    // starting with `!`, so this case has no pug analog.
     {
       filename: 'test.vue',
       code: `<!-- CONVERT ERROR -->Element is missing end tag.<template><p v-bind:0abc=""></template>`,

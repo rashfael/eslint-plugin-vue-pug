@@ -101,14 +101,14 @@ tester.run('valid-v-once', rule, {
     // empty value
     {
       filename: 'comment-value.vue',
-      code: `<template lang="pug">MyComponent(v-once=)</template>`,
+      code: `<template lang="pug">MyComponent(v-once="")</template>`,
       errors: [
         {
           message: "'v-once' directives require no attribute value.",
           line: 1,
-          column: 31,
+          column: 41,
           endLine: 1,
-          endColumn: 33
+          endColumn: 43
         }
       ]
     }

@@ -519,7 +519,7 @@ tester.run('prefer-single-event-payload', rule, {
           message:
             'Declare a single payload parameter instead of multiple parameters for the "change" event.',
           line: 4,
-          column: 8,
+          column: 39,
           endLine: 4,
           endColumn: 53
         }
@@ -541,7 +541,7 @@ tester.run('prefer-single-event-payload', rule, {
           message:
             'Declare a single payload parameter instead of multiple parameters for the "change" event.',
           line: 4,
-          column: 23,
+          column: 34,
           endLine: 4,
           endColumn: 48
         }
@@ -563,7 +563,7 @@ tester.run('prefer-single-event-payload', rule, {
           message:
             'Declare a single payload parameter instead of multiple parameters for the "change" event.',
           line: 4,
-          column: 21,
+          column: 32,
           endLine: 4,
           endColumn: 46
         }
@@ -584,17 +584,17 @@ tester.run('prefer-single-event-payload', rule, {
         {
           message:
             'Pass a single payload object instead of multiple arguments when emitting the "change" event.',
-          line: 3,
-          column: 45,
-          endLine: 3,
-          endColumn: 50
+          line: 2,
+          column: 63,
+          endLine: 2,
+          endColumn: 68
         },
         {
           message:
             'Declare a single payload parameter instead of multiple parameters for the "change" event.',
-          line: 7,
+          line: 5,
           column: 35,
-          endLine: 7,
+          endLine: 5,
           endColumn: 44
         }
       ]

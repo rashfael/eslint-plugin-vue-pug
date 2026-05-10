@@ -1559,10 +1559,10 @@ div {{ unknown }}
       errors: [
         {
           message: "'unknown' is not defined.",
-          line: 3,
-          column: 18,
+          line: 11,
+          column: 8,
           endLine: 11,
-          endColumn: 22
+          endColumn: 15
         }
       ],
       ...getTypeScriptFixtureTestOptions()

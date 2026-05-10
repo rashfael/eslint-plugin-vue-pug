@@ -99,14 +99,14 @@ tester.run('valid-v-memo', rule, {
     // empty value
     {
       filename: 'empty-value.vue',
-      code: `<template lang="pug">div(v-memo=)</template>`,
+      code: `<template lang="pug">div(v-memo="")</template>`,
       errors: [
         {
           message: "'v-memo' directives require that attribute value.",
           line: 1,
-          column: 16,
+          column: 26,
           endLine: 1,
-          endColumn: 25
+          endColumn: 35
         }
       ]
     },

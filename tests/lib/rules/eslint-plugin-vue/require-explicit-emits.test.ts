@@ -2199,8 +2199,8 @@ emits: {'foo': null},
         {
           message:
             'The "qux" event has been triggered but not declared on `defineEmits`.',
-          line: 4,
-          column: 38,
+          line: 8,
+          column: 12,
           endLine: 8,
           endColumn: 17
         }

@@ -399,14 +399,14 @@ div
     // empty value
     {
       filename: 'empty-value.vue',
-      code: `<template lang="pug">MyComponent(v-model=)</template>`,
+      code: `<template lang="pug">MyComponent(v-model="")</template>`,
       errors: [
         {
           message: "'v-model' directives require that attribute value.",
           line: 1,
-          column: 24,
+          column: 34,
           endLine: 1,
-          endColumn: 34
+          endColumn: 44
         }
       ]
     },

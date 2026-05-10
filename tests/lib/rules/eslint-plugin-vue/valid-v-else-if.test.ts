@@ -45,13 +45,9 @@ div
     {
       filename: 'test.vue',
       code: `<template lang="pug">
-| \n
 c1(v-if="1")
-| \n
 c2(v-else-if="1")
-| \n
 c3(v-else)
-| \n
 </template>`
     },
     // parsing error
@@ -267,15 +263,15 @@ div
       filename: 'empty-value.vue',
       code: `<template lang="pug">
 div(v-if="foo")
-div(v-else-if=)
+div(v-else-if="")
 </template>`,
       errors: [
         {
           message: "'v-else-if' directives require that attribute value.",
-          line: 1,
-          column: 38,
-          endLine: 1,
-          endColumn: 50
+          line: 3,
+          column: 5,
+          endLine: 3,
+          endColumn: 17
         }
       ]
     }

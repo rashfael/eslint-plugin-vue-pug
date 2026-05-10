@@ -131,15 +131,15 @@ div
       filename: 'empty-value.vue',
       code: `<template lang="pug">
 div
-  div(v-if=)
+  div(v-if="")
 </template>`,
       errors: [
         {
           message: "'v-if' directives require that attribute value.",
-          line: 1,
-          column: 21,
-          endLine: 1,
-          endColumn: 28
+          line: 3,
+          column: 7,
+          endLine: 3,
+          endColumn: 14
         }
       ]
     }

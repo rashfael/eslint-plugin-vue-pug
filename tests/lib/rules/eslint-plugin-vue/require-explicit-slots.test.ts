@@ -624,10 +624,10 @@ div
       errors: [
         {
           message: 'Slots must be explicitly defined.',
-          line: 8,
-          column: 18,
-          endLine: 5,
-          endColumn: 35
+          line: 5,
+          column: 3,
+          endLine: 6,
+          endColumn: 1
         }
       ],
       ...getTypeScriptFixtureTestOptions()

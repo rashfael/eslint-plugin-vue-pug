@@ -101,14 +101,14 @@ tester.run('valid-v-cloak', rule, {
     // empty value
     {
       filename: 'empty-value.vue',
-      code: `<template lang="pug">div(v-cloak=)</template>`,
+      code: `<template lang="pug">div(v-cloak="")</template>`,
       errors: [
         {
           message: "'v-cloak' directives require no attribute value.",
           line: 1,
-          column: 24,
+          column: 34,
           endLine: 1,
-          endColumn: 26
+          endColumn: 36
         }
       ]
     }

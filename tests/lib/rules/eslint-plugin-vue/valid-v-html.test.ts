@@ -83,14 +83,14 @@ tester.run('valid-v-html', rule, {
     // empty value
     {
       filename: 'empty-value.vue',
-      code: `<template lang="pug">div(v-html=)</template>`,
+      code: `<template lang="pug">div(v-html="")</template>`,
       errors: [
         {
           message: "'v-html' directives require that attribute value.",
           line: 1,
-          column: 16,
+          column: 26,
           endLine: 1,
-          endColumn: 25
+          endColumn: 35
         }
       ]
     }

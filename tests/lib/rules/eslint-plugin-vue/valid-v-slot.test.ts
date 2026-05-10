@@ -661,16 +661,16 @@ MyComponent(v-slot="/**/")
     {
       filename: 'empty-value.vue',
       code: `<template lang="pug">
-MyComponent(v-slot=)
+MyComponent(v-slot="")
   div
 </template>`,
       errors: [
         {
           messageId: 'requireAttributeValue',
-          line: 1,
-          column: 24,
-          endLine: 1,
-          endColumn: 33
+          line: 2,
+          column: 13,
+          endLine: 2,
+          endColumn: 22
         }
       ]
     }

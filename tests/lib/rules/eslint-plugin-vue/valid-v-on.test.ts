@@ -214,15 +214,15 @@ tester.run('valid-v-on', rule, {
     // empty value
     {
       filename: 'empty-value.vue',
-      code: `<template lang="pug">MyComponent(v-on:keydown=)</template>`,
+      code: `<template lang="pug">MyComponent(v-on:keydown="")</template>`,
       errors: [
         {
           message:
             "'v-on' directives require a value or verb modifier (like 'stop' or 'prevent').",
           line: 1,
-          column: 24,
+          column: 34,
           endLine: 1,
-          endColumn: 39
+          endColumn: 49
         }
       ]
     }

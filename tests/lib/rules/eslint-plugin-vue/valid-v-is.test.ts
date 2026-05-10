@@ -88,14 +88,14 @@ tester.run('valid-v-is', rule, {
     },
     {
       filename: 'test.vue',
-      code: `<template lang="pug">div(v-is=)</template>`,
+      code: `<template lang="pug">div(v-is="")</template>`,
       errors: [
         {
           message: "'v-is' directives require that attribute value.",
           line: 1,
-          column: 16,
+          column: 26,
           endLine: 1,
-          endColumn: 23
+          endColumn: 33
         }
       ]
     },

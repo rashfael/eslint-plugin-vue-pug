@@ -522,8 +522,8 @@ div {{ required }}
       errors: [
         {
           message: `Prop 'a' requires default value to be set.`,
-          line: 2,
-          column: 29,
+          line: 4,
+          column: 13,
           endLine: 6,
           endColumn: 37
         }
@@ -544,8 +544,8 @@ div {{ required }}
       errors: [
         {
           message: `Prop 'a' requires default value to be set.`,
-          line: 6,
-          column: 15,
+          line: 4,
+          column: 13,
           endLine: 6,
           endColumn: 37
         }

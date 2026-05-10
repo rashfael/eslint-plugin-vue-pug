@@ -45,13 +45,9 @@ div
     {
       filename: 'test.vue',
       code: `<template lang="pug">
-| \n
 c1(v-if="1")
-| \n
 c2(v-else-if="1")
-| \n
 c3(v-else)
-| \n
 </template>`
     }
   ],
@@ -285,15 +281,15 @@ div(v-else="/**/")
       filename: 'empty-value.vue',
       code: `<template lang="pug">
 div(v-if="foo")
-div(v-else=)
+div(v-else="")
 </template>`,
       errors: [
         {
           message: "'v-else' directives require no attribute value.",
-          line: 1,
-          column: 45,
-          endLine: 1,
-          endColumn: 47
+          line: 3,
+          column: 12,
+          endLine: 3,
+          endColumn: 14
         }
       ]
     }

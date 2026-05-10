@@ -5030,7 +5030,7 @@ tester.run('no-unused-properties', rule, {
         {
           message: "'baz' of property found, but never used.",
           line: 4,
-          column: 25,
+          column: 19,
           endLine: 4,
           endColumn: 24
         }
@@ -5130,7 +5130,7 @@ tester.run('no-unused-properties', rule, {
         {
           message: "'baz' of property found, but never used.",
           line: 3,
-          column: 75,
+          column: 61,
           endLine: 3,
           endColumn: 64
         }

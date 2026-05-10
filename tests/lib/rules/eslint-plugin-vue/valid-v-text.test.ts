@@ -87,14 +87,14 @@ tester.run('valid-v-text', rule, {
     // empty value
     {
       filename: 'empty-value.vue',
-      code: `<template lang="pug">div(v-text=)</template>`,
+      code: `<template lang="pug">div(v-text="")</template>`,
       errors: [
         {
           message: "'v-text' directives require that attribute value.",
           line: 1,
-          column: 16,
+          column: 26,
           endLine: 1,
-          endColumn: 25
+          endColumn: 35
         }
       ]
     }

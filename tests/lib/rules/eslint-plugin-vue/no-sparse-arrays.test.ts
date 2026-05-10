@@ -31,11 +31,11 @@ tester.run('no-sparse-arrays', rule, {
       errors: [
         {
           message: 'Unexpected comma in middle of array.',
-          line: 3,
-          endLine: 3,
+          line: 2,
+          endLine: 2,
           ...(semver.gte(ESLint.version, '9.5.0')
-            ? { column: 23, endColumn: 24 }
-            : { column: 22, endColumn: 38 })
+            ? { column: 41, endColumn: 42 }
+            : { column: 40, endColumn: 56 })
         }
       ]
     },

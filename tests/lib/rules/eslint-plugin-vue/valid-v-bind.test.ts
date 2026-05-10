@@ -119,14 +119,14 @@ tester.run('valid-v-bind', rule, {
     // empty value
     {
       filename: 'empty-value.vue',
-      code: `<template lang="pug">MyComponent(:foo=)</template>`,
+      code: `<template lang="pug">MyComponent(:foo="")</template>`,
       errors: [
         {
           message: "'v-bind' directives require an attribute value.",
           line: 1,
-          column: 24,
+          column: 34,
           endLine: 1,
-          endColumn: 31
+          endColumn: 41
         }
       ]
     }

@@ -654,14 +654,14 @@ template(v-for="x in xs")
     // empty value
     {
       filename: 'empty-value.vue',
-      code: `<template lang="pug">div(v-for=)</template>`,
+      code: `<template lang="pug">div(v-for="")</template>`,
       errors: [
         {
           message: "'v-for' directives require that attribute value.",
           line: 1,
-          column: 16,
+          column: 26,
           endLine: 1,
-          endColumn: 24
+          endColumn: 34
         }
       ]
     },
