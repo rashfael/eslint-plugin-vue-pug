@@ -1,5 +1,5 @@
 import type { Rule } from 'eslint'
-import utils from 'eslint-plugin-vue/dist/utils'
+import utils from '../utils.ts'
 
 const ILLEGAL_TOKEN_TYPES: Record<string, string> = {
   PugCode: 'inline javascript code',

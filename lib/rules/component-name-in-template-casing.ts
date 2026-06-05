@@ -3,7 +3,7 @@
  * issue https://github.com/vuejs/eslint-plugin-vue/issues/250
  */
 import type { Rule } from 'eslint'
-import utils from 'eslint-plugin-vue/dist/utils'
+import utils from '../utils.ts'
 import {
   getChecker,
   getExactConverter,
